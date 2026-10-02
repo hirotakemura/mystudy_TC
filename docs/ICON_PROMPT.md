@@ -3,16 +3,16 @@
 画像生成AI（ChatGPT / DALL·E、Midjourney、Gemini など）に渡すプロンプトです。
 アプリの配色（濃紺 `#14233F` ＋ 青 `#1F5BD8` ＋ 白）に合わせています。
 
-> 「TOEIC」は ETS の登録商標です。アイコンには公式ロゴや「TOEIC」の文字を入れず、頭文字「P」を使った独自のデザインにしています（画像生成AIは長い文字列を崩しやすいのも理由です）。
+> アイコンにはアプリ名や文字を入れず、アプリの内容（英語のリスニング・音読と、スコアアップ）を図柄だけで表現します。「TOEIC」は ETS の登録商標なので、公式ロゴや文字も使いません。
 
 ## プロンプト（英語・推奨）
 
 ```
-A modern, minimal app icon for "Presta", an English study app for busy commuters preparing for an English listening and reading test (vocabulary flashcards, shadowing practice, and score tracking).
+A modern, minimal app icon for an English study app for busy commuters: vocabulary flashcards, shadowing (listening and repeating aloud), and test score tracking.
 Flat vector style, square canvas 1024x1024, full-bleed background (no rounded corners, no transparency, no border, no drop shadow outside the icon).
 Background: solid deep navy #14233F.
-Center motif: a bold, geometric capital letter "P" in bright blue #1F5BD8. The round bowl of the "P" is shaped like a speech bubble, and inside the bowl there are three short white (#FFFFFF) sound-wave bars of increasing height, suggesting listening, speaking aloud, and a rising score.
-The only letter in the image is that single "P". No other text, words, numbers, or logos of real companies or tests.
+Center motif: a bold, rounded speech bubble in bright blue #1F5BD8. Inside the bubble, three white (#FFFFFF) sound-wave bars of increasing height from left to right, and the tallest bar turns into a small upward arrow, suggesting listening, speaking aloud, and a rising score.
+Absolutely no text, letters, numbers, or logos of real companies or tests.
 Geometric, clean lines, generous padding: keep all important shapes inside the central 70% of the canvas so it can be cropped into a circle or rounded square.
 No gradients or only a very subtle one, high contrast, clearly readable at 48x48 px.
 ```
@@ -20,11 +20,11 @@ No gradients or only a very subtle one, high contrast, clearly readable at 48x48
 ## プロンプト（日本語）
 
 ```
-「Presta」という、通勤中に英語試験（リスニング＆リーディング）の対策をする社会人向け学習アプリのアイコンを作成してください。単語のフラッシュカード、シャドーイング、スコア管理ができるアプリです。
+通勤中に英語試験（リスニング＆リーディング）の対策をする社会人向け学習アプリのアイコンを作成してください。単語のフラッシュカード、シャドーイング（聞いて声に出す練習）、スコア管理ができるアプリです。
 フラットなベクタースタイル、1024×1024の正方形。角丸や透過、枠線、外側の影は付けず、背景は全面塗りつぶし。
 背景色：濃紺 #14233F。
-中央のモチーフ：明るい青 #1F5BD8 の、太く幾何学的な大文字の「P」。Pの丸い部分を吹き出しの形にし、その中に白 #FFFFFF の短い音声波形のバーを3本、左から右へ少しずつ高くなるように配置する（聞く・声に出す・スコアが上がる、を表現）。
-画像内の文字はこの「P」1文字だけ。ほかの文字・単語・数字、実在する企業や試験のロゴは入れない。
+中央のモチーフ：明るい青 #1F5BD8 の、太く丸みのある吹き出し。吹き出しの中に白 #FFFFFF の音声波形のバーを3本、左から右へ少しずつ高くなるように並べ、いちばん高いバーの先端を小さな上向きの矢印にする（聞く・声に出す・スコアが上がる、を表現）。
+文字・数字・実在する企業や試験のロゴは一切入れない。
 幾何学的で整った線。重要な要素はキャンバス中央70%以内に収め、円形や角丸に切り抜いても欠けないようにする。
 グラデーションは使わないか、ごく控えめに。48×48pxでも判別できる高いコントラスト。
 ```
@@ -33,9 +33,10 @@ No gradients or only a very subtle one, high contrast, clearly readable at 48x48
 
 英語プロンプトの「Center motif: …」の段落を、次のどれかに差し替えてください。
 
-- もっとシンプルに：`Center motif: a bold blue (#1F5BD8) letter "P" whose bowl contains a single white upward arrow.`
-- 通勤・音声を強く：`Center motif: a bold blue (#1F5BD8) letter "P" whose bowl is a pair of headphones, with small white sound waves on the right.`
-- 単語学習を強く：`Center motif: a white flashcard tilted slightly, with a bold blue (#1F5BD8) letter "P" printed on it and a small blue check mark in the corner.`
+- もっとシンプルに：`Center motif: a bright blue (#1F5BD8) rounded speech bubble containing a single bold white upward arrow.`
+- 通勤・音声を強く：`Center motif: a pair of bright blue (#1F5BD8) headphones, with three white sound-wave bars of increasing height between the ear cups.`
+- 単語学習を強く：`Center motif: two overlapping flashcards, the front one bright blue (#1F5BD8) with a white check mark, the back one white, tilted slightly.`
+- 学習とスコアアップ：`Center motif: an open book in white, with a bright blue (#1F5BD8) upward arrow rising from the center of the pages.`
 
 ## 生成後の差し替え手順
 
