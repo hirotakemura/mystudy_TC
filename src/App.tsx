@@ -59,7 +59,7 @@ export default function App() {
             <Icon name="logo" />
           </span>
           <div className="brand-text">
-            <small>TOEIC L&amp;R STUDY</small>
+            <small>PRESTA FOR TOEIC</small>
             <h1>{TITLES[route]}</h1>
           </div>
         </div>

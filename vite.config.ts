@@ -13,8 +13,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['icons/favicon-64.png', 'icons/apple-touch-icon.png'],
       manifest: {
-        name: 'TOEIC 学習管理',
-        short_name: 'TOEIC学習',
+        name: 'Presta For TOEIC',
+        short_name: 'Presta',
         description: 'TOEIC L&R の通勤学習・ロードマップ・スコアを管理するアプリ',
         lang: 'ja',
         display: 'standalone',

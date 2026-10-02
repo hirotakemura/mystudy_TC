@@ -1,9 +1,11 @@
-# TOEIC 学習管理PWA
+# Presta For TOEIC
 
 TOEIC L&R（2026年12月19日・目標650点）に向けた、通勤時間中心の学習を管理するスマホ向けPWAアプリです。
 ホーム画面に追加でき、オフラインでも動作します。データは端末のブラウザ（localStorage）に保存されます。
 
 > 作成時のプロンプト（仕様）は [docs/TOEIC_APP_PROMPT.md](docs/TOEIC_APP_PROMPT.md) にあります。
+
+> アプリアイコンを画像生成AIで作るためのプロンプトは [docs/ICON_PROMPT.md](docs/ICON_PROMPT.md) にあります。
 
 ## 機能
 
