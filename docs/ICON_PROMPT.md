@@ -41,7 +41,7 @@ No gradients or only a very subtle one, high contrast, clearly readable at 48x48
 ## 生成後の差し替え手順
 
 1. 生成した正方形の画像を `docs/icon-source.png` として保存する。
-2. `npm run icons` を実行すると、`public/icons/` の各PNG（512・192・180・64・マスカブル512）が生成される。モチーフが小さい／大きい場合は `scripts/gen-icons.mjs` の `CROP`（切り抜く範囲）を調整する。
+2. `npm run icons` を実行すると、`public/icons/` の各PNG（512・192・180・64・マスカブル512）が生成される。画像のサイズは自動で合わせる。モチーフが小さい／大きい場合は `scripts/gen-icons.mjs` の `CROP`・`TIGHT`（切り抜く範囲。画像の幅に対する割合）を調整する。
 3. コミットして `main` に push すると GitHub Pages に反映される。インストール済みのPWAはアイコンの更新に時間がかかることがある（ホーム画面から削除して追加し直すと確実に反映）。
 
 画像をこのリポジトリに追加してもらえれば、各サイズへの書き出しと差し替えはこちらで行えます。
