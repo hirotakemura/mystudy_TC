@@ -3,7 +3,10 @@ import { Recorder } from '../components/Recorder'
 import { setCheck, setMinimumDone, toggleCommute } from '../lib/actions'
 import { addDays, diffDays, formatJa, formatMinutes, todayKey, weekStart } from '../lib/date'
 import { cautions, commuteKey, commuteTotal, planPosition } from '../lib/plan'
+import { loadWords, useLoad } from '../lib/content'
 import { navigate } from '../lib/router'
+import { dueWords, newWords } from '../lib/srs'
+import { setPracticeTab, type PracticeTab } from './Practice'
 import { useData } from '../lib/store'
 import { minimumAchieved, minutesBetween, streak } from '../lib/stats'
 import type { Phase, Roadmap } from '../types'
@@ -66,6 +69,8 @@ function HomeBody({ roadmap }: { roadmap: Roadmap }) {
       <PhaseCard roadmap={roadmap} today={today} />
 
       {pos.kind === 'phase' && <CommuteCard phase={pos.phase} today={today} />}
+
+      <PracticeCard today={today} />
 
       <Recorder date={today} title="今日の学習時間" />
 
@@ -201,7 +206,10 @@ function CommuteCard({ phase, today }: { phase: Phase; today: string }) {
           {formatMinutes(doneMin)} / {formatMinutes(total)}
         </span>
       </div>
-      <p className="small muted">やった項目を「行き」「帰り」でタップすると学習時間に加算されます（もう一度タップで取り消し）。</p>
+      <p className="small muted">
+        単語帳・問題集などアプリ以外でやった項目を「行き」「帰り」でタップすると、学習時間に加算されます（もう一度タップで取り消し）。
+        アプリの演習（単語・シャドーイング）の時間は自動で記録されるので、チェックは不要です。
+      </p>
       <ul className="commute">
         {phase.commute.map((c, i) => {
           const slot = slotOf(i)
@@ -227,6 +235,36 @@ function CommuteCard({ phase, today }: { phase: Phase; today: string }) {
           )
         })}
       </ul>
+    </section>
+  )
+}
+
+function PracticeCard({ today }: { today: string }) {
+  const data = useData()
+  const words = useLoad(loadWords)
+  const open = (tab: PracticeTab) => {
+    setPracticeTab(tab)
+    navigate('practice')
+  }
+  const due = words.status === 'ok' ? dueWords(data, words.value, today).length : null
+  const fresh = words.status === 'ok' ? newWords(data, words.value).length : null
+
+  return (
+    <section className="card">
+      <h2>アプリで演習</h2>
+      <div className="start-list">
+        <button className="start-btn primary" onClick={() => open('vocab')}>
+          <b>単語</b>
+          <span>
+            {due === null ? '読み込み中…' : due > 0 ? `今日の復習 ${due}語` : '今日の復習は完了'}
+            {fresh ? `・未学習 ${fresh}語` : ''}
+          </span>
+        </button>
+        <button className="start-btn" onClick={() => open('shadowing')}>
+          <b>シャドーイング</b>
+          <span>Part 1〜4 の英文を聞いて声に出す</span>
+        </button>
+      </div>
     </section>
   )
 }

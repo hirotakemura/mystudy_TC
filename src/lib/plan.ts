@@ -1,37 +1,5 @@
-import { useEffect, useState } from 'react'
 import type { Category, CommuteItem, Phase, Roadmap } from '../types'
 import { addDays, diffDays, fromKey } from './date'
-
-// 計画データはアプリ本体と分離して public/data 配下の JSON から読み込む
-let cache: Promise<Roadmap> | null = null
-
-export function loadRoadmap(): Promise<Roadmap> {
-  if (!cache) {
-    cache = fetch(`${import.meta.env.BASE_URL}data/plan/toeic-roadmap.json`).then((res) => {
-      if (!res.ok) throw new Error(`計画データの読み込みに失敗しました (${res.status})`)
-      return res.json() as Promise<Roadmap>
-    })
-    cache.catch(() => (cache = null))
-  }
-  return cache
-}
-
-export type Loadable<T> = { status: 'loading' } | { status: 'error'; error: string } | { status: 'ok'; value: T }
-
-export function useRoadmap(): Loadable<Roadmap> {
-  const [state, setState] = useState<Loadable<Roadmap>>({ status: 'loading' })
-  useEffect(() => {
-    let alive = true
-    loadRoadmap().then(
-      (value) => alive && setState({ status: 'ok', value }),
-      (e: unknown) => alive && setState({ status: 'error', error: e instanceof Error ? e.message : String(e) }),
-    )
-    return () => {
-      alive = false
-    }
-  }, [])
-  return state
-}
 
 /** 今日がロードマップのどこにいるか */
 export type PlanPosition =

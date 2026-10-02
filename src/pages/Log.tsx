@@ -3,7 +3,7 @@ import { CategoryLegend, DayBar } from '../components/DayBar'
 import { Recorder } from '../components/Recorder'
 import { formatJa, formatMinutes, todayKey } from '../lib/date'
 import { useData } from '../lib/store'
-import { minutesByCategory, minutesOn } from '../lib/stats'
+import { minutesByCategory, minutesOn, studyDates } from '../lib/stats'
 import type { Category } from '../types'
 
 const PAGE = 30
@@ -14,10 +14,10 @@ export default function Log() {
   const [date, setDate] = useState(today)
   const [shown, setShown] = useState(PAGE)
 
-  const dates = [...new Set(data.studyLogs.map((l) => l.date))].sort().reverse()
+  const dates = studyDates(data)
   const visible = dates.slice(0, shown)
   const max = Math.max(60, ...visible.map((d) => minutesOn(data, d)))
-  const used = new Set<Category>(data.studyLogs.map((l) => l.category))
+  const used = new Set<Category>(dates.flatMap((d) => Object.keys(minutesByCategory(data, d)) as Category[]))
 
   return (
     <div className="stack">

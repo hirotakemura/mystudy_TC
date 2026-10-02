@@ -14,7 +14,10 @@ export function emptyData(): AppData {
     reviewMemos: {},
     legacyMemos: {},
     vocabRounds: [],
-    settings: { theme: 'system', weeklyGoalMinutes: DEFAULT_WEEKLY_GOAL },
+    autoSeconds: {},
+    wordProgress: {},
+    shadowProgress: {},
+    settings: { theme: 'system', weeklyGoalMinutes: DEFAULT_WEEKLY_GOAL, speechRate: 0.9, autoSpeak: true },
   }
 }
 

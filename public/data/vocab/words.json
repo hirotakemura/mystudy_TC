@@ -1,0 +1,1694 @@
+[
+ {
+  "id": "w001",
+  "word": "agenda",
+  "pos": "名",
+  "meaning": "議題、予定表",
+  "example": "Let's review the agenda before the meeting starts.",
+  "exampleJa": "会議が始まる前に議題を確認しましょう。",
+  "level": 1
+ },
+ {
+  "id": "w002",
+  "word": "appointment",
+  "pos": "名",
+  "meaning": "（面会の）約束、予約",
+  "example": "I have an appointment with a client at three.",
+  "exampleJa": "3時に顧客との約束があります。",
+  "level": 1
+ },
+ {
+  "id": "w003",
+  "word": "available",
+  "pos": "形",
+  "meaning": "利用できる、手が空いている",
+  "example": "Is the conference room available this afternoon?",
+  "exampleJa": "今日の午後、会議室は使えますか。",
+  "level": 1
+ },
+ {
+  "id": "w004",
+  "word": "branch",
+  "pos": "名",
+  "meaning": "支店",
+  "example": "She was transferred to the Osaka branch last year.",
+  "exampleJa": "彼女は昨年、大阪支店に異動した。",
+  "level": 1
+ },
+ {
+  "id": "w005",
+  "word": "brochure",
+  "pos": "名",
+  "meaning": "パンフレット",
+  "example": "Please take a brochure on your way out.",
+  "exampleJa": "お帰りの際にパンフレットをお取りください。",
+  "level": 1
+ },
+ {
+  "id": "w006",
+  "word": "budget",
+  "pos": "名",
+  "meaning": "予算",
+  "example": "The project was completed under budget.",
+  "exampleJa": "そのプロジェクトは予算内で完了した。",
+  "level": 1
+ },
+ {
+  "id": "w007",
+  "word": "colleague",
+  "pos": "名",
+  "meaning": "同僚",
+  "example": "I asked a colleague to check my report.",
+  "exampleJa": "同僚に報告書の確認を頼んだ。",
+  "level": 1
+ },
+ {
+  "id": "w008",
+  "word": "customer",
+  "pos": "名",
+  "meaning": "顧客",
+  "example": "Customer satisfaction is our top priority.",
+  "exampleJa": "顧客満足が私たちの最優先事項です。",
+  "level": 1
+ },
+ {
+  "id": "w009",
+  "word": "deadline",
+  "pos": "名",
+  "meaning": "締め切り",
+  "example": "The deadline for the proposal is Friday.",
+  "exampleJa": "提案書の締め切りは金曜日です。",
+  "level": 1
+ },
+ {
+  "id": "w010",
+  "word": "delivery",
+  "pos": "名",
+  "meaning": "配達",
+  "example": "We offer free delivery on orders over 50 dollars.",
+  "exampleJa": "50ドルを超えるご注文は配送無料です。",
+  "level": 1
+ },
+ {
+  "id": "w011",
+  "word": "department",
+  "pos": "名",
+  "meaning": "部署、売り場",
+  "example": "He works in the accounting department.",
+  "exampleJa": "彼は経理部で働いている。",
+  "level": 1
+ },
+ {
+  "id": "w012",
+  "word": "employee",
+  "pos": "名",
+  "meaning": "従業員",
+  "example": "All employees must attend the safety training.",
+  "exampleJa": "全従業員が安全研修に出席しなければならない。",
+  "level": 1
+ },
+ {
+  "id": "w013",
+  "word": "equipment",
+  "pos": "名",
+  "meaning": "機器、設備",
+  "example": "The new equipment will arrive next week.",
+  "exampleJa": "新しい機器は来週届く予定だ。",
+  "level": 1
+ },
+ {
+  "id": "w014",
+  "word": "estimate",
+  "pos": "名",
+  "meaning": "見積もり",
+  "example": "Could you send me a cost estimate?",
+  "exampleJa": "費用の見積もりを送っていただけますか。",
+  "level": 1
+ },
+ {
+  "id": "w015",
+  "word": "invoice",
+  "pos": "名",
+  "meaning": "請求書",
+  "example": "The invoice is attached to this e-mail.",
+  "exampleJa": "請求書はこのメールに添付してあります。",
+  "level": 1
+ },
+ {
+  "id": "w016",
+  "word": "item",
+  "pos": "名",
+  "meaning": "品物、項目",
+  "example": "This item is currently out of stock.",
+  "exampleJa": "この商品は現在在庫切れです。",
+  "level": 1
+ },
+ {
+  "id": "w017",
+  "word": "location",
+  "pos": "名",
+  "meaning": "場所、店舗",
+  "example": "The store has moved to a new location.",
+  "exampleJa": "その店は新しい場所に移転した。",
+  "level": 1
+ },
+ {
+  "id": "w018",
+  "word": "manager",
+  "pos": "名",
+  "meaning": "管理者、部長",
+  "example": "Please speak to the store manager.",
+  "exampleJa": "店長にお話しください。",
+  "level": 1
+ },
+ {
+  "id": "w019",
+  "word": "order",
+  "pos": "動",
+  "meaning": "注文する",
+  "example": "I ordered some office supplies online.",
+  "exampleJa": "オンラインで事務用品を注文した。",
+  "level": 1
+ },
+ {
+  "id": "w020",
+  "word": "package",
+  "pos": "名",
+  "meaning": "小包",
+  "example": "A package arrived for you this morning.",
+  "exampleJa": "今朝あなた宛ての小包が届きました。",
+  "level": 1
+ },
+ {
+  "id": "w021",
+  "word": "purchase",
+  "pos": "動",
+  "meaning": "購入する",
+  "example": "You can purchase tickets at the entrance.",
+  "exampleJa": "チケットは入口で購入できます。",
+  "level": 1
+ },
+ {
+  "id": "w022",
+  "word": "receipt",
+  "pos": "名",
+  "meaning": "領収書",
+  "example": "Please keep your receipt for any returns.",
+  "exampleJa": "返品に備えて領収書を保管してください。",
+  "level": 1
+ },
+ {
+  "id": "w023",
+  "word": "reservation",
+  "pos": "名",
+  "meaning": "予約",
+  "example": "I'd like to make a reservation for two.",
+  "exampleJa": "2名で予約したいのですが。",
+  "level": 1
+ },
+ {
+  "id": "w024",
+  "word": "schedule",
+  "pos": "名",
+  "meaning": "予定、スケジュール",
+  "example": "The train is running behind schedule.",
+  "exampleJa": "電車は予定より遅れている。",
+  "level": 1
+ },
+ {
+  "id": "w025",
+  "word": "staff",
+  "pos": "名",
+  "meaning": "職員、スタッフ",
+  "example": "Our staff will be happy to assist you.",
+  "exampleJa": "スタッフが喜んでお手伝いします。",
+  "level": 1
+ },
+ {
+  "id": "w026",
+  "word": "supply",
+  "pos": "名",
+  "meaning": "供給、（複数形で）備品",
+  "example": "We are running low on paper supplies.",
+  "exampleJa": "紙の備品が少なくなってきている。",
+  "level": 1
+ },
+ {
+  "id": "w027",
+  "word": "client",
+  "pos": "名",
+  "meaning": "顧客、依頼人",
+  "example": "We are meeting a new client tomorrow.",
+  "exampleJa": "明日、新しい顧客と会う予定です。",
+  "level": 1
+ },
+ {
+  "id": "w028",
+  "word": "conference",
+  "pos": "名",
+  "meaning": "会議、協議会",
+  "example": "She will speak at the conference in May.",
+  "exampleJa": "彼女は5月の会議で講演する。",
+  "level": 1
+ },
+ {
+  "id": "w029",
+  "word": "confirm",
+  "pos": "動",
+  "meaning": "確認する",
+  "example": "Please confirm your attendance by Monday.",
+  "exampleJa": "月曜日までに出欠をご確認ください。",
+  "level": 1
+ },
+ {
+  "id": "w030",
+  "word": "contact",
+  "pos": "動",
+  "meaning": "連絡する",
+  "example": "Feel free to contact me if you have any questions.",
+  "exampleJa": "質問があれば気軽に連絡してください。",
+  "level": 1
+ },
+ {
+  "id": "w031",
+  "word": "discount",
+  "pos": "名",
+  "meaning": "割引",
+  "example": "Members receive a ten percent discount.",
+  "exampleJa": "会員は10%の割引を受けられる。",
+  "level": 1
+ },
+ {
+  "id": "w032",
+  "word": "document",
+  "pos": "名",
+  "meaning": "書類",
+  "example": "Please sign the documents and return them.",
+  "exampleJa": "書類に署名して返送してください。",
+  "level": 1
+ },
+ {
+  "id": "w033",
+  "word": "expense",
+  "pos": "名",
+  "meaning": "費用、経費",
+  "example": "Travel expenses will be reimbursed.",
+  "exampleJa": "出張費は払い戻されます。",
+  "level": 1
+ },
+ {
+  "id": "w034",
+  "word": "facility",
+  "pos": "名",
+  "meaning": "施設",
+  "example": "The facility is open to the public on weekends.",
+  "exampleJa": "その施設は週末に一般公開されている。",
+  "level": 1
+ },
+ {
+  "id": "w035",
+  "word": "fee",
+  "pos": "名",
+  "meaning": "料金、手数料",
+  "example": "There is no fee for early registration.",
+  "exampleJa": "早期登録には料金がかからない。",
+  "level": 1
+ },
+ {
+  "id": "w036",
+  "word": "hire",
+  "pos": "動",
+  "meaning": "雇う",
+  "example": "The company plans to hire twenty new workers.",
+  "exampleJa": "その会社は20人の新しい従業員を雇う予定だ。",
+  "level": 1
+ },
+ {
+  "id": "w037",
+  "word": "inform",
+  "pos": "動",
+  "meaning": "知らせる",
+  "example": "We will inform you of any changes.",
+  "exampleJa": "変更があればお知らせします。",
+  "level": 1
+ },
+ {
+  "id": "w038",
+  "word": "install",
+  "pos": "動",
+  "meaning": "設置する、インストールする",
+  "example": "A technician will install the new printer.",
+  "exampleJa": "技術者が新しいプリンターを設置する。",
+  "level": 1
+ },
+ {
+  "id": "w039",
+  "word": "instruction",
+  "pos": "名",
+  "meaning": "指示、説明書",
+  "example": "Follow the instructions on the screen.",
+  "exampleJa": "画面の指示に従ってください。",
+  "level": 1
+ },
+ {
+  "id": "w040",
+  "word": "inventory",
+  "pos": "名",
+  "meaning": "在庫、在庫目録",
+  "example": "We check our inventory every month.",
+  "exampleJa": "毎月在庫を確認している。",
+  "level": 1
+ },
+ {
+  "id": "w041",
+  "word": "launch",
+  "pos": "動",
+  "meaning": "（新製品を）発売する、開始する",
+  "example": "The company will launch a new smartphone next month.",
+  "exampleJa": "その会社は来月新しいスマートフォンを発売する。",
+  "level": 1
+ },
+ {
+  "id": "w042",
+  "word": "notice",
+  "pos": "名",
+  "meaning": "通知、お知らせ",
+  "example": "The office will be closed until further notice.",
+  "exampleJa": "追って通知があるまで事務所は閉鎖される。",
+  "level": 1
+ },
+ {
+  "id": "w043",
+  "word": "offer",
+  "pos": "動",
+  "meaning": "提供する、申し出る",
+  "example": "The hotel offers free breakfast to guests.",
+  "exampleJa": "そのホテルは宿泊客に無料の朝食を提供している。",
+  "level": 1
+ },
+ {
+  "id": "w044",
+  "word": "participant",
+  "pos": "名",
+  "meaning": "参加者",
+  "example": "Each participant will receive a certificate.",
+  "exampleJa": "各参加者は修了証を受け取る。",
+  "level": 1
+ },
+ {
+  "id": "w045",
+  "word": "position",
+  "pos": "名",
+  "meaning": "職、地位",
+  "example": "She applied for the sales manager position.",
+  "exampleJa": "彼女は営業部長の職に応募した。",
+  "level": 1
+ },
+ {
+  "id": "w046",
+  "word": "product",
+  "pos": "名",
+  "meaning": "製品",
+  "example": "Our products are sold in over thirty countries.",
+  "exampleJa": "当社の製品は30か国以上で販売されている。",
+  "level": 1
+ },
+ {
+  "id": "w047",
+  "word": "quarter",
+  "pos": "名",
+  "meaning": "四半期",
+  "example": "Sales increased in the second quarter.",
+  "exampleJa": "第2四半期に売上が伸びた。",
+  "level": 1
+ },
+ {
+  "id": "w048",
+  "word": "recently",
+  "pos": "副",
+  "meaning": "最近",
+  "example": "The restaurant was recently renovated.",
+  "exampleJa": "そのレストランは最近改装された。",
+  "level": 1
+ },
+ {
+  "id": "w049",
+  "word": "register",
+  "pos": "動",
+  "meaning": "登録する",
+  "example": "You need to register for the workshop online.",
+  "exampleJa": "ワークショップにはオンラインで登録する必要があります。",
+  "level": 1
+ },
+ {
+  "id": "w050",
+  "word": "repair",
+  "pos": "名",
+  "meaning": "修理",
+  "example": "The elevator is under repair.",
+  "exampleJa": "エレベーターは修理中です。",
+  "level": 1
+ },
+ {
+  "id": "w051",
+  "word": "request",
+  "pos": "名",
+  "meaning": "依頼、要望",
+  "example": "We received your request for a refund.",
+  "exampleJa": "返金のご依頼を受け付けました。",
+  "level": 1
+ },
+ {
+  "id": "w052",
+  "word": "review",
+  "pos": "動",
+  "meaning": "見直す、検討する",
+  "example": "The manager will review your application.",
+  "exampleJa": "部長があなたの申請書を検討します。",
+  "level": 1
+ },
+ {
+  "id": "w053",
+  "word": "sales",
+  "pos": "名",
+  "meaning": "売上、販売",
+  "example": "Sales of the new product exceeded expectations.",
+  "exampleJa": "新製品の売上は予想を上回った。",
+  "level": 1
+ },
+ {
+  "id": "w054",
+  "word": "shipment",
+  "pos": "名",
+  "meaning": "発送、積み荷",
+  "example": "The shipment was delayed due to bad weather.",
+  "exampleJa": "悪天候のため発送が遅れた。",
+  "level": 1
+ },
+ {
+  "id": "w055",
+  "word": "submit",
+  "pos": "動",
+  "meaning": "提出する",
+  "example": "Please submit your report by noon.",
+  "exampleJa": "正午までに報告書を提出してください。",
+  "level": 1
+ },
+ {
+  "id": "w056",
+  "word": "survey",
+  "pos": "名",
+  "meaning": "調査、アンケート",
+  "example": "Customers were asked to complete a short survey.",
+  "exampleJa": "顧客は短いアンケートへの回答を求められた。",
+  "level": 1
+ },
+ {
+  "id": "w057",
+  "word": "update",
+  "pos": "動",
+  "meaning": "更新する",
+  "example": "We regularly update our website.",
+  "exampleJa": "当社は定期的にウェブサイトを更新している。",
+  "level": 1
+ },
+ {
+  "id": "w058",
+  "word": "warehouse",
+  "pos": "名",
+  "meaning": "倉庫",
+  "example": "The goods are stored in a warehouse near the port.",
+  "exampleJa": "商品は港の近くの倉庫に保管されている。",
+  "level": 1
+ },
+ {
+  "id": "w059",
+  "word": "workshop",
+  "pos": "名",
+  "meaning": "研修会、作業場",
+  "example": "The workshop focuses on time management.",
+  "exampleJa": "その研修会は時間管理に焦点を当てている。",
+  "level": 1
+ },
+ {
+  "id": "w060",
+  "word": "attend",
+  "pos": "動",
+  "meaning": "出席する",
+  "example": "Over two hundred people attended the event.",
+  "exampleJa": "200人以上がそのイベントに出席した。",
+  "level": 1
+ },
+ {
+  "id": "w061",
+  "word": "arrange",
+  "pos": "動",
+  "meaning": "手配する、並べる",
+  "example": "I will arrange a taxi to the airport.",
+  "exampleJa": "空港までのタクシーを手配します。",
+  "level": 1
+ },
+ {
+  "id": "w062",
+  "word": "board",
+  "pos": "動",
+  "meaning": "（乗り物に）乗る",
+  "example": "Passengers may now board the plane.",
+  "exampleJa": "乗客の皆さまはご搭乗いただけます。",
+  "level": 1
+ },
+ {
+  "id": "w063",
+  "word": "cancel",
+  "pos": "動",
+  "meaning": "取り消す",
+  "example": "The flight was canceled because of the storm.",
+  "exampleJa": "嵐のためその便は欠航になった。",
+  "level": 1
+ },
+ {
+  "id": "w064",
+  "word": "charge",
+  "pos": "名",
+  "meaning": "料金、責任",
+  "example": "Delivery is free of charge.",
+  "exampleJa": "配送は無料です。",
+  "level": 1
+ },
+ {
+  "id": "w065",
+  "word": "due",
+  "pos": "形",
+  "meaning": "期限が来て、到着予定で",
+  "example": "The rent is due on the first of the month.",
+  "exampleJa": "家賃は毎月1日が支払期限だ。",
+  "level": 1
+ },
+ {
+  "id": "w066",
+  "word": "extend",
+  "pos": "動",
+  "meaning": "延長する",
+  "example": "The store has extended its business hours.",
+  "exampleJa": "その店は営業時間を延長した。",
+  "level": 1
+ },
+ {
+  "id": "w067",
+  "word": "form",
+  "pos": "名",
+  "meaning": "用紙、書式",
+  "example": "Please fill out this form.",
+  "exampleJa": "この用紙にご記入ください。",
+  "level": 1
+ },
+ {
+  "id": "w068",
+  "word": "lease",
+  "pos": "名",
+  "meaning": "賃貸契約",
+  "example": "We signed a two-year lease for the office.",
+  "exampleJa": "事務所について2年間の賃貸契約を結んだ。",
+  "level": 1
+ },
+ {
+  "id": "w069",
+  "word": "note",
+  "pos": "動",
+  "meaning": "注意する、言及する",
+  "example": "Please note that the office is closed on Monday.",
+  "exampleJa": "月曜日は事務所が休みですのでご注意ください。",
+  "level": 1
+ },
+ {
+  "id": "w070",
+  "word": "plant",
+  "pos": "名",
+  "meaning": "工場、植物",
+  "example": "The plant produces car parts.",
+  "exampleJa": "その工場は自動車部品を生産している。",
+  "level": 1
+ },
+ {
+  "id": "w071",
+  "word": "recommend",
+  "pos": "動",
+  "meaning": "勧める",
+  "example": "I recommend booking your tickets early.",
+  "exampleJa": "チケットは早めに予約することをお勧めします。",
+  "level": 1
+ },
+ {
+  "id": "w072",
+  "word": "refund",
+  "pos": "名",
+  "meaning": "返金",
+  "example": "You can get a full refund within thirty days.",
+  "exampleJa": "30日以内なら全額返金を受けられます。",
+  "level": 1
+ },
+ {
+  "id": "w073",
+  "word": "renovation",
+  "pos": "名",
+  "meaning": "改装、修復",
+  "example": "The lobby is closed for renovation.",
+  "exampleJa": "ロビーは改装のため閉鎖中です。",
+  "level": 1
+ },
+ {
+  "id": "w074",
+  "word": "replace",
+  "pos": "動",
+  "meaning": "取り替える",
+  "example": "We need to replace the old copier.",
+  "exampleJa": "古いコピー機を取り替える必要がある。",
+  "level": 1
+ },
+ {
+  "id": "w075",
+  "word": "reschedule",
+  "pos": "動",
+  "meaning": "予定を変更する",
+  "example": "Can we reschedule the meeting to Thursday?",
+  "exampleJa": "会議を木曜日に変更できますか。",
+  "level": 1
+ },
+ {
+  "id": "w076",
+  "word": "ship",
+  "pos": "動",
+  "meaning": "発送する",
+  "example": "Your order will be shipped within two days.",
+  "exampleJa": "ご注文は2日以内に発送されます。",
+  "level": 1
+ },
+ {
+  "id": "w077",
+  "word": "vehicle",
+  "pos": "名",
+  "meaning": "乗り物、車両",
+  "example": "Please do not leave your vehicle unattended.",
+  "exampleJa": "車を放置しないでください。",
+  "level": 1
+ },
+ {
+  "id": "w078",
+  "word": "accommodate",
+  "pos": "動",
+  "meaning": "収容する、（要望に）応じる",
+  "example": "The hall can accommodate up to five hundred people.",
+  "exampleJa": "そのホールは最大500人を収容できる。",
+  "level": 2
+ },
+ {
+  "id": "w079",
+  "word": "acquire",
+  "pos": "動",
+  "meaning": "獲得する、買収する",
+  "example": "The firm acquired a small software company.",
+  "exampleJa": "その会社は小さなソフトウェア会社を買収した。",
+  "level": 2
+ },
+ {
+  "id": "w080",
+  "word": "adjacent",
+  "pos": "形",
+  "meaning": "隣接した",
+  "example": "The parking lot is adjacent to the building.",
+  "exampleJa": "駐車場は建物に隣接している。",
+  "level": 2
+ },
+ {
+  "id": "w081",
+  "word": "allocate",
+  "pos": "動",
+  "meaning": "割り当てる",
+  "example": "More funds were allocated to marketing.",
+  "exampleJa": "マーケティングにより多くの資金が割り当てられた。",
+  "level": 2
+ },
+ {
+  "id": "w082",
+  "word": "anticipate",
+  "pos": "動",
+  "meaning": "予期する",
+  "example": "We anticipate a rise in demand this summer.",
+  "exampleJa": "今年の夏は需要の増加を見込んでいる。",
+  "level": 2
+ },
+ {
+  "id": "w083",
+  "word": "applicant",
+  "pos": "名",
+  "meaning": "応募者",
+  "example": "All applicants must submit a résumé.",
+  "exampleJa": "すべての応募者は履歴書を提出しなければならない。",
+  "level": 2
+ },
+ {
+  "id": "w084",
+  "word": "approve",
+  "pos": "動",
+  "meaning": "承認する",
+  "example": "The board approved the new budget.",
+  "exampleJa": "取締役会は新しい予算を承認した。",
+  "level": 2
+ },
+ {
+  "id": "w085",
+  "word": "assign",
+  "pos": "動",
+  "meaning": "割り当てる、任命する",
+  "example": "She was assigned to the new project.",
+  "exampleJa": "彼女は新しいプロジェクトに配属された。",
+  "level": 2
+ },
+ {
+  "id": "w086",
+  "word": "attract",
+  "pos": "動",
+  "meaning": "引きつける",
+  "example": "The festival attracts thousands of visitors.",
+  "exampleJa": "その祭りは何千人もの観光客を引きつける。",
+  "level": 2
+ },
+ {
+  "id": "w087",
+  "word": "candidate",
+  "pos": "名",
+  "meaning": "候補者",
+  "example": "We interviewed three candidates for the job.",
+  "exampleJa": "その職に3人の候補者を面接した。",
+  "level": 2
+ },
+ {
+  "id": "w088",
+  "word": "collaborate",
+  "pos": "動",
+  "meaning": "協力する",
+  "example": "The two companies collaborated on the design.",
+  "exampleJa": "2社はデザインで協力した。",
+  "level": 2
+ },
+ {
+  "id": "w089",
+  "word": "commute",
+  "pos": "名",
+  "meaning": "通勤",
+  "example": "My commute takes about an hour each way.",
+  "exampleJa": "通勤は片道約1時間かかる。",
+  "level": 2
+ },
+ {
+  "id": "w090",
+  "word": "complimentary",
+  "pos": "形",
+  "meaning": "無料の",
+  "example": "Guests receive a complimentary breakfast.",
+  "exampleJa": "宿泊客は無料の朝食を受けられる。",
+  "level": 2
+ },
+ {
+  "id": "w091",
+  "word": "comply",
+  "pos": "動",
+  "meaning": "従う、準拠する",
+  "example": "All products comply with safety standards.",
+  "exampleJa": "すべての製品は安全基準に準拠している。",
+  "level": 2
+ },
+ {
+  "id": "w092",
+  "word": "contract",
+  "pos": "名",
+  "meaning": "契約（書）",
+  "example": "Both parties signed the contract yesterday.",
+  "exampleJa": "昨日双方が契約書に署名した。",
+  "level": 2
+ },
+ {
+  "id": "w093",
+  "word": "convenient",
+  "pos": "形",
+  "meaning": "便利な、都合のよい",
+  "example": "What time is convenient for you?",
+  "exampleJa": "何時がご都合よろしいですか。",
+  "level": 2
+ },
+ {
+  "id": "w094",
+  "word": "coordinate",
+  "pos": "動",
+  "meaning": "調整する",
+  "example": "She coordinates events for the company.",
+  "exampleJa": "彼女は会社のイベントを取りまとめている。",
+  "level": 2
+ },
+ {
+  "id": "w095",
+  "word": "demonstrate",
+  "pos": "動",
+  "meaning": "実演する、示す",
+  "example": "The salesperson demonstrated how the machine works.",
+  "exampleJa": "販売員はその機械の動かし方を実演した。",
+  "level": 2
+ },
+ {
+  "id": "w096",
+  "word": "distribute",
+  "pos": "動",
+  "meaning": "配布する、流通させる",
+  "example": "Please distribute these handouts to everyone.",
+  "exampleJa": "これらの資料を皆に配ってください。",
+  "level": 2
+ },
+ {
+  "id": "w097",
+  "word": "efficient",
+  "pos": "形",
+  "meaning": "効率的な",
+  "example": "The new system is more efficient than the old one.",
+  "exampleJa": "新しいシステムは古いものより効率的だ。",
+  "level": 2
+ },
+ {
+  "id": "w098",
+  "word": "eligible",
+  "pos": "形",
+  "meaning": "資格のある",
+  "example": "Full-time employees are eligible for the bonus.",
+  "exampleJa": "正社員はボーナスを受ける資格がある。",
+  "level": 2
+ },
+ {
+  "id": "w099",
+  "word": "enclose",
+  "pos": "動",
+  "meaning": "同封する",
+  "example": "I have enclosed a copy of my certificate.",
+  "exampleJa": "証明書のコピーを同封しました。",
+  "level": 2
+ },
+ {
+  "id": "w100",
+  "word": "ensure",
+  "pos": "動",
+  "meaning": "確実にする",
+  "example": "Please ensure that all doors are locked.",
+  "exampleJa": "すべてのドアに鍵がかかっていることを確認してください。",
+  "level": 2
+ },
+ {
+  "id": "w101",
+  "word": "evaluate",
+  "pos": "動",
+  "meaning": "評価する",
+  "example": "Managers evaluate staff performance twice a year.",
+  "exampleJa": "管理職は年に2回スタッフの業績を評価する。",
+  "level": 2
+ },
+ {
+  "id": "w102",
+  "word": "expand",
+  "pos": "動",
+  "meaning": "拡大する",
+  "example": "The company plans to expand into Asia.",
+  "exampleJa": "その会社はアジアへの進出を計画している。",
+  "level": 2
+ },
+ {
+  "id": "w103",
+  "word": "expertise",
+  "pos": "名",
+  "meaning": "専門知識",
+  "example": "We need someone with expertise in finance.",
+  "exampleJa": "財務の専門知識を持つ人が必要だ。",
+  "level": 2
+ },
+ {
+  "id": "w104",
+  "word": "feature",
+  "pos": "動",
+  "meaning": "特徴とする、取り上げる",
+  "example": "The magazine featured our new café.",
+  "exampleJa": "その雑誌は私たちの新しいカフェを特集した。",
+  "level": 2
+ },
+ {
+  "id": "w105",
+  "word": "feedback",
+  "pos": "名",
+  "meaning": "意見、反応",
+  "example": "Thank you for your valuable feedback.",
+  "exampleJa": "貴重なご意見をありがとうございます。",
+  "level": 2
+ },
+ {
+  "id": "w106",
+  "word": "headquarters",
+  "pos": "名",
+  "meaning": "本社",
+  "example": "The headquarters is located in Tokyo.",
+  "exampleJa": "本社は東京にある。",
+  "level": 2
+ },
+ {
+  "id": "w107",
+  "word": "implement",
+  "pos": "動",
+  "meaning": "実施する",
+  "example": "The new policy will be implemented in April.",
+  "exampleJa": "新しい方針は4月に実施される。",
+  "level": 2
+ },
+ {
+  "id": "w108",
+  "word": "indicate",
+  "pos": "動",
+  "meaning": "示す",
+  "example": "The survey indicates strong demand for the product.",
+  "exampleJa": "調査はその製品への強い需要を示している。",
+  "level": 2
+ },
+ {
+  "id": "w109",
+  "word": "inquiry",
+  "pos": "名",
+  "meaning": "問い合わせ",
+  "example": "We will respond to your inquiry within 24 hours.",
+  "exampleJa": "お問い合わせには24時間以内にお返事します。",
+  "level": 2
+ },
+ {
+  "id": "w110",
+  "word": "inspection",
+  "pos": "名",
+  "meaning": "点検、検査",
+  "example": "The building passed its safety inspection.",
+  "exampleJa": "その建物は安全点検に合格した。",
+  "level": 2
+ },
+ {
+  "id": "w111",
+  "word": "merger",
+  "pos": "名",
+  "meaning": "合併",
+  "example": "The merger will create the largest bank in the region.",
+  "exampleJa": "この合併で地域最大の銀行が誕生する。",
+  "level": 2
+ },
+ {
+  "id": "w112",
+  "word": "negotiate",
+  "pos": "動",
+  "meaning": "交渉する",
+  "example": "They negotiated a lower price with the supplier.",
+  "exampleJa": "彼らは供給業者と価格の引き下げを交渉した。",
+  "level": 2
+ },
+ {
+  "id": "w113",
+  "word": "objective",
+  "pos": "名",
+  "meaning": "目標、目的",
+  "example": "The main objective is to reduce costs.",
+  "exampleJa": "主な目的はコスト削減だ。",
+  "level": 2
+ },
+ {
+  "id": "w114",
+  "word": "outstanding",
+  "pos": "形",
+  "meaning": "傑出した、未払いの",
+  "example": "She received an award for outstanding service.",
+  "exampleJa": "彼女は優れた貢献で賞を受けた。",
+  "level": 2
+ },
+ {
+  "id": "w115",
+  "word": "overtime",
+  "pos": "名",
+  "meaning": "残業",
+  "example": "Many employees worked overtime last week.",
+  "exampleJa": "先週は多くの従業員が残業した。",
+  "level": 2
+ },
+ {
+  "id": "w116",
+  "word": "permit",
+  "pos": "名",
+  "meaning": "許可証",
+  "example": "You need a permit to park here.",
+  "exampleJa": "ここに駐車するには許可証が必要です。",
+  "level": 2
+ },
+ {
+  "id": "w117",
+  "word": "postpone",
+  "pos": "動",
+  "meaning": "延期する",
+  "example": "The game was postponed due to rain.",
+  "exampleJa": "試合は雨のため延期された。",
+  "level": 2
+ },
+ {
+  "id": "w118",
+  "word": "preference",
+  "pos": "名",
+  "meaning": "好み、優先",
+  "example": "Please indicate your seating preference.",
+  "exampleJa": "座席のご希望をお知らせください。",
+  "level": 2
+ },
+ {
+  "id": "w119",
+  "word": "proposal",
+  "pos": "名",
+  "meaning": "提案（書）",
+  "example": "The committee accepted our proposal.",
+  "exampleJa": "委員会は私たちの提案を受け入れた。",
+  "level": 2
+ },
+ {
+  "id": "w120",
+  "word": "qualified",
+  "pos": "形",
+  "meaning": "資格のある、適任の",
+  "example": "We are looking for qualified engineers.",
+  "exampleJa": "資格のある技術者を募集している。",
+  "level": 2
+ },
+ {
+  "id": "w121",
+  "word": "reasonable",
+  "pos": "形",
+  "meaning": "手頃な、妥当な",
+  "example": "The hotel offers rooms at reasonable prices.",
+  "exampleJa": "そのホテルは手頃な料金で部屋を提供している。",
+  "level": 2
+ },
+ {
+  "id": "w122",
+  "word": "reimburse",
+  "pos": "動",
+  "meaning": "払い戻す",
+  "example": "The company will reimburse your travel costs.",
+  "exampleJa": "会社が交通費を払い戻します。",
+  "level": 2
+ },
+ {
+  "id": "w123",
+  "word": "relocate",
+  "pos": "動",
+  "meaning": "移転する",
+  "example": "Our office will relocate to the downtown area.",
+  "exampleJa": "当社の事務所は中心街に移転します。",
+  "level": 2
+ },
+ {
+  "id": "w124",
+  "word": "representative",
+  "pos": "名",
+  "meaning": "担当者、代表者",
+  "example": "A sales representative will call you soon.",
+  "exampleJa": "営業担当者がまもなくお電話します。",
+  "level": 2
+ },
+ {
+  "id": "w125",
+  "word": "requirement",
+  "pos": "名",
+  "meaning": "必要条件",
+  "example": "A driver's license is a requirement for this job.",
+  "exampleJa": "この仕事には運転免許が必要条件だ。",
+  "level": 2
+ },
+ {
+  "id": "w126",
+  "word": "retail",
+  "pos": "名",
+  "meaning": "小売り",
+  "example": "She has ten years of experience in retail.",
+  "exampleJa": "彼女は小売業で10年の経験がある。",
+  "level": 2
+ },
+ {
+  "id": "w127",
+  "word": "revenue",
+  "pos": "名",
+  "meaning": "収益",
+  "example": "Annual revenue grew by fifteen percent.",
+  "exampleJa": "年間収益は15%増加した。",
+  "level": 2
+ },
+ {
+  "id": "w128",
+  "word": "specify",
+  "pos": "動",
+  "meaning": "明記する",
+  "example": "Please specify the size and color you want.",
+  "exampleJa": "ご希望のサイズと色を明記してください。",
+  "level": 2
+ },
+ {
+  "id": "w129",
+  "word": "subscription",
+  "pos": "名",
+  "meaning": "定期購読、会員登録",
+  "example": "Your subscription will expire next month.",
+  "exampleJa": "定期購読は来月で期限が切れます。",
+  "level": 2
+ },
+ {
+  "id": "w130",
+  "word": "supervisor",
+  "pos": "名",
+  "meaning": "上司、監督者",
+  "example": "Ask your supervisor for permission.",
+  "exampleJa": "上司に許可を求めてください。",
+  "level": 2
+ },
+ {
+  "id": "w131",
+  "word": "venue",
+  "pos": "名",
+  "meaning": "会場",
+  "example": "The venue for the conference has changed.",
+  "exampleJa": "会議の会場が変更になった。",
+  "level": 2
+ },
+ {
+  "id": "w132",
+  "word": "warranty",
+  "pos": "名",
+  "meaning": "保証（書）",
+  "example": "The laptop comes with a one-year warranty.",
+  "exampleJa": "そのノートパソコンには1年間の保証が付いている。",
+  "level": 2
+ },
+ {
+  "id": "w133",
+  "word": "abroad",
+  "pos": "副",
+  "meaning": "海外へ",
+  "example": "He often travels abroad on business.",
+  "exampleJa": "彼はよく出張で海外に行く。",
+  "level": 2
+ },
+ {
+  "id": "w134",
+  "word": "accurate",
+  "pos": "形",
+  "meaning": "正確な",
+  "example": "Please make sure the figures are accurate.",
+  "exampleJa": "数字が正確であることを確認してください。",
+  "level": 2
+ },
+ {
+  "id": "w135",
+  "word": "announce",
+  "pos": "動",
+  "meaning": "発表する",
+  "example": "The company announced its quarterly results.",
+  "exampleJa": "その会社は四半期決算を発表した。",
+  "level": 2
+ },
+ {
+  "id": "w136",
+  "word": "assemble",
+  "pos": "動",
+  "meaning": "組み立てる、集まる",
+  "example": "The workers assemble the parts by hand.",
+  "exampleJa": "作業員は部品を手で組み立てる。",
+  "level": 2
+ },
+ {
+  "id": "w137",
+  "word": "benefit",
+  "pos": "名",
+  "meaning": "利益、手当",
+  "example": "The job offers excellent benefits.",
+  "exampleJa": "その仕事は福利厚生が充実している。",
+  "level": 2
+ },
+ {
+  "id": "w138",
+  "word": "consult",
+  "pos": "動",
+  "meaning": "相談する、参照する",
+  "example": "Consult the manual before using the device.",
+  "exampleJa": "機器を使う前に説明書を参照してください。",
+  "level": 2
+ },
+ {
+  "id": "w139",
+  "word": "decline",
+  "pos": "動",
+  "meaning": "減少する、断る",
+  "example": "Profits declined slightly last year.",
+  "exampleJa": "昨年は利益がわずかに減少した。",
+  "level": 2
+ },
+ {
+  "id": "w140",
+  "word": "deliver",
+  "pos": "動",
+  "meaning": "配達する、（演説を）行う",
+  "example": "The CEO will deliver a speech at the ceremony.",
+  "exampleJa": "CEOが式典でスピーチを行う。",
+  "level": 2
+ },
+ {
+  "id": "w141",
+  "word": "exhibit",
+  "pos": "名",
+  "meaning": "展示（品）",
+  "example": "The museum has a new exhibit on ancient Egypt.",
+  "exampleJa": "その博物館では古代エジプトの新しい展示がある。",
+  "level": 2
+ },
+ {
+  "id": "w142",
+  "word": "explore",
+  "pos": "動",
+  "meaning": "探る、検討する",
+  "example": "We are exploring ways to cut costs.",
+  "exampleJa": "コストを削減する方法を検討している。",
+  "level": 2
+ },
+ {
+  "id": "w143",
+  "word": "fill",
+  "pos": "動",
+  "meaning": "（職・注文を）満たす",
+  "example": "The position has already been filled.",
+  "exampleJa": "その職はすでに埋まっています。",
+  "level": 2
+ },
+ {
+  "id": "w144",
+  "word": "issue",
+  "pos": "名",
+  "meaning": "問題、（雑誌の）号",
+  "example": "The next issue will be published in June.",
+  "exampleJa": "次の号は6月に発行される。",
+  "level": 2
+ },
+ {
+  "id": "w145",
+  "word": "operate",
+  "pos": "動",
+  "meaning": "操作する、営業する",
+  "example": "Only trained staff may operate this machine.",
+  "exampleJa": "訓練を受けた者のみこの機械を操作できる。",
+  "level": 2
+ },
+ {
+  "id": "w146",
+  "word": "promote",
+  "pos": "動",
+  "meaning": "昇進させる、宣伝する",
+  "example": "He was promoted to senior manager.",
+  "exampleJa": "彼は上級管理職に昇進した。",
+  "level": 2
+ },
+ {
+  "id": "w147",
+  "word": "property",
+  "pos": "名",
+  "meaning": "不動産、物件",
+  "example": "The company manages several rental properties.",
+  "exampleJa": "その会社はいくつかの賃貸物件を管理している。",
+  "level": 2
+ },
+ {
+  "id": "w148",
+  "word": "regarding",
+  "pos": "前",
+  "meaning": "〜に関して",
+  "example": "I am writing regarding your recent order.",
+  "exampleJa": "最近のご注文に関してご連絡しています。",
+  "level": 2
+ },
+ {
+  "id": "w149",
+  "word": "remind",
+  "pos": "動",
+  "meaning": "思い出させる",
+  "example": "Please remind me to call the client.",
+  "exampleJa": "顧客に電話するよう私に念を押してください。",
+  "level": 2
+ },
+ {
+  "id": "w150",
+  "word": "respond",
+  "pos": "動",
+  "meaning": "返答する、反応する",
+  "example": "Please respond to this e-mail by Friday.",
+  "exampleJa": "金曜日までにこのメールにご返信ください。",
+  "level": 2
+ },
+ {
+  "id": "w151",
+  "word": "amend",
+  "pos": "動",
+  "meaning": "修正する",
+  "example": "The contract was amended to include a new clause.",
+  "exampleJa": "新たな条項を入れるため契約が修正された。",
+  "level": 3
+ },
+ {
+  "id": "w152",
+  "word": "commence",
+  "pos": "動",
+  "meaning": "始まる、開始する",
+  "example": "Construction will commence in early spring.",
+  "exampleJa": "工事は早春に始まる。",
+  "level": 3
+ },
+ {
+  "id": "w153",
+  "word": "consecutive",
+  "pos": "形",
+  "meaning": "連続した",
+  "example": "Sales have risen for three consecutive years.",
+  "exampleJa": "売上は3年連続で増加している。",
+  "level": 3
+ },
+ {
+  "id": "w154",
+  "word": "discrepancy",
+  "pos": "名",
+  "meaning": "不一致、食い違い",
+  "example": "We found a discrepancy in the figures.",
+  "exampleJa": "数字に食い違いが見つかった。",
+  "level": 3
+ },
+ {
+  "id": "w155",
+  "word": "expedite",
+  "pos": "動",
+  "meaning": "早める、促進する",
+  "example": "We paid extra to expedite the shipment.",
+  "exampleJa": "発送を早めるために追加料金を払った。",
+  "level": 3
+ },
+ {
+  "id": "w156",
+  "word": "incentive",
+  "pos": "名",
+  "meaning": "奨励策、報奨",
+  "example": "The company offers incentives to top performers.",
+  "exampleJa": "その会社は成績上位者に報奨を提供している。",
+  "level": 3
+ },
+ {
+  "id": "w157",
+  "word": "inclement",
+  "pos": "形",
+  "meaning": "（天候が）荒れた",
+  "example": "The event will be held indoors in case of inclement weather.",
+  "exampleJa": "悪天候の場合、イベントは屋内で開催される。",
+  "level": 3
+ },
+ {
+  "id": "w158",
+  "word": "itinerary",
+  "pos": "名",
+  "meaning": "旅程表",
+  "example": "I've attached the itinerary for your business trip.",
+  "exampleJa": "出張の旅程表を添付しました。",
+  "level": 3
+ },
+ {
+  "id": "w159",
+  "word": "lucrative",
+  "pos": "形",
+  "meaning": "もうかる",
+  "example": "It turned out to be a lucrative business.",
+  "exampleJa": "それはもうかる事業であることがわかった。",
+  "level": 3
+ },
+ {
+  "id": "w160",
+  "word": "mandatory",
+  "pos": "形",
+  "meaning": "義務的な、必須の",
+  "example": "Attendance at the meeting is mandatory.",
+  "exampleJa": "その会議への出席は必須です。",
+  "level": 3
+ },
+ {
+  "id": "w161",
+  "word": "meticulous",
+  "pos": "形",
+  "meaning": "細心の、几帳面な",
+  "example": "She is meticulous about checking details.",
+  "exampleJa": "彼女は細部の確認に非常に几帳面だ。",
+  "level": 3
+ },
+ {
+  "id": "w162",
+  "word": "patronage",
+  "pos": "名",
+  "meaning": "ひいき、愛顧",
+  "example": "Thank you for your continued patronage.",
+  "exampleJa": "日頃のご愛顧に感謝いたします。",
+  "level": 3
+ },
+ {
+  "id": "w163",
+  "word": "prestigious",
+  "pos": "形",
+  "meaning": "名声のある",
+  "example": "He graduated from a prestigious university.",
+  "exampleJa": "彼は名門大学を卒業した。",
+  "level": 3
+ },
+ {
+  "id": "w164",
+  "word": "procurement",
+  "pos": "名",
+  "meaning": "調達",
+  "example": "She is in charge of procurement.",
+  "exampleJa": "彼女は調達を担当している。",
+  "level": 3
+ },
+ {
+  "id": "w165",
+  "word": "prospective",
+  "pos": "形",
+  "meaning": "見込みのある、将来の",
+  "example": "We met with several prospective clients.",
+  "exampleJa": "何社かの見込み顧客と会った。",
+  "level": 3
+ },
+ {
+  "id": "w166",
+  "word": "reinforce",
+  "pos": "動",
+  "meaning": "強化する",
+  "example": "The bridge was reinforced with steel beams.",
+  "exampleJa": "その橋は鉄骨で補強された。",
+  "level": 3
+ },
+ {
+  "id": "w167",
+  "word": "remuneration",
+  "pos": "名",
+  "meaning": "報酬",
+  "example": "Remuneration will depend on experience.",
+  "exampleJa": "報酬は経験によって決まる。",
+  "level": 3
+ },
+ {
+  "id": "w168",
+  "word": "streamline",
+  "pos": "動",
+  "meaning": "合理化する",
+  "example": "We need to streamline our ordering process.",
+  "exampleJa": "発注手続きを合理化する必要がある。",
+  "level": 3
+ },
+ {
+  "id": "w169",
+  "word": "tentative",
+  "pos": "形",
+  "meaning": "仮の",
+  "example": "We have set a tentative date for the launch.",
+  "exampleJa": "発売の仮の日程を決めた。",
+  "level": 3
+ },
+ {
+  "id": "w170",
+  "word": "unanimous",
+  "pos": "形",
+  "meaning": "満場一致の",
+  "example": "The decision was unanimous.",
+  "exampleJa": "その決定は満場一致だった。",
+  "level": 3
+ },
+ {
+  "id": "w171",
+  "word": "vacant",
+  "pos": "形",
+  "meaning": "空いている",
+  "example": "There are no vacant rooms tonight.",
+  "exampleJa": "今夜は空室がありません。",
+  "level": 3
+ },
+ {
+  "id": "w172",
+  "word": "waive",
+  "pos": "動",
+  "meaning": "（権利・料金を）免除する",
+  "example": "The bank agreed to waive the fee.",
+  "exampleJa": "銀行は手数料の免除に同意した。",
+  "level": 3
+ },
+ {
+  "id": "w173",
+  "word": "adhere",
+  "pos": "動",
+  "meaning": "守る、固執する",
+  "example": "All staff must adhere to the dress code.",
+  "exampleJa": "全スタッフは服装規定を守らなければならない。",
+  "level": 3
+ },
+ {
+  "id": "w174",
+  "word": "attribute",
+  "pos": "動",
+  "meaning": "（〜の）せいにする",
+  "example": "He attributed the success to his team.",
+  "exampleJa": "彼はその成功をチームのおかげだとした。",
+  "level": 3
+ },
+ {
+  "id": "w175",
+  "word": "compensate",
+  "pos": "動",
+  "meaning": "補償する",
+  "example": "The airline compensated passengers for the delay.",
+  "exampleJa": "航空会社は遅延について乗客に補償した。",
+  "level": 3
+ },
+ {
+  "id": "w176",
+  "word": "comprehensive",
+  "pos": "形",
+  "meaning": "包括的な",
+  "example": "The report provides a comprehensive analysis.",
+  "exampleJa": "その報告書は包括的な分析を提供している。",
+  "level": 3
+ },
+ {
+  "id": "w177",
+  "word": "deteriorate",
+  "pos": "動",
+  "meaning": "悪化する",
+  "example": "The road conditions deteriorated overnight.",
+  "exampleJa": "道路状況は一晩で悪化した。",
+  "level": 3
+ },
+ {
+  "id": "w178",
+  "word": "diligent",
+  "pos": "形",
+  "meaning": "勤勉な",
+  "example": "She is a diligent and reliable worker.",
+  "exampleJa": "彼女は勤勉で信頼できる働き手だ。",
+  "level": 3
+ },
+ {
+  "id": "w179",
+  "word": "endorse",
+  "pos": "動",
+  "meaning": "推薦する、承認する",
+  "example": "The plan was endorsed by the city council.",
+  "exampleJa": "その計画は市議会に承認された。",
+  "level": 3
+ },
+ {
+  "id": "w180",
+  "word": "exempt",
+  "pos": "形",
+  "meaning": "免除された",
+  "example": "Small businesses are exempt from the new tax.",
+  "exampleJa": "小規模事業者は新税を免除されている。",
+  "level": 3
+ },
+ {
+  "id": "w181",
+  "word": "fluctuate",
+  "pos": "動",
+  "meaning": "変動する",
+  "example": "Fuel prices fluctuate from week to week.",
+  "exampleJa": "燃料価格は週ごとに変動する。",
+  "level": 3
+ },
+ {
+  "id": "w182",
+  "word": "imperative",
+  "pos": "形",
+  "meaning": "必須の、緊急の",
+  "example": "It is imperative that we finish on time.",
+  "exampleJa": "期限内に終えることが不可欠だ。",
+  "level": 3
+ },
+ {
+  "id": "w183",
+  "word": "in advance",
+  "pos": "副",
+  "meaning": "前もって",
+  "example": "Please book your seat in advance.",
+  "exampleJa": "前もって席を予約してください。",
+  "level": 3
+ },
+ {
+  "id": "w184",
+  "word": "intermittent",
+  "pos": "形",
+  "meaning": "断続的な",
+  "example": "Intermittent rain is expected this afternoon.",
+  "exampleJa": "今日の午後は断続的な雨が予想される。",
+  "level": 3
+ },
+ {
+  "id": "w185",
+  "word": "oversee",
+  "pos": "動",
+  "meaning": "監督する",
+  "example": "He oversees the production team.",
+  "exampleJa": "彼は生産チームを監督している。",
+  "level": 3
+ },
+ {
+  "id": "w186",
+  "word": "precaution",
+  "pos": "名",
+  "meaning": "予防措置",
+  "example": "As a precaution, please back up your files.",
+  "exampleJa": "念のため、ファイルをバックアップしてください。",
+  "level": 3
+ },
+ {
+  "id": "w187",
+  "word": "preliminary",
+  "pos": "形",
+  "meaning": "予備の、準備の",
+  "example": "The preliminary results look promising.",
+  "exampleJa": "予備的な結果は有望そうだ。",
+  "level": 3
+ },
+ {
+  "id": "w188",
+  "word": "redeem",
+  "pos": "動",
+  "meaning": "（クーポンなどを）引き換える",
+  "example": "Coupons can be redeemed at any store.",
+  "exampleJa": "クーポンはどの店舗でも引き換えられる。",
+  "level": 3
+ }
+]

@@ -24,7 +24,7 @@ function ReviewBody({ roadmap }: { roadmap: Roadmap }) {
   const prevTotal = minutesBetween(data, addDays(from, -7), addDays(from, -1))
   const diff = total - prevTotal
   const max = Math.max(60, ...days.map((d) => minutesOn(data, d)))
-  const used = new Set<Category>(data.studyLogs.filter((l) => l.date >= from && l.date <= to).map((l) => l.category))
+  const used = new Set<Category>(days.flatMap((d) => Object.keys(minutesByCategory(data, d)) as Category[]))
   const minimumOnly = days.filter(
     (d) => d <= today && minimumAchieved(data, d, roadmap) && minutesOn(data, d) <= roadmap.minimumLine.minutes,
   ).length

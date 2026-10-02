@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react'
 import { todayKey } from '../lib/date'
+import { speak, speechSupported, useEnglishVoices } from '../lib/speech'
 import { exportJson, importJson, resetData, updateData, useData } from '../lib/store'
 import type { ThemeSetting } from '../types'
 
@@ -14,6 +15,7 @@ export default function Settings() {
   const fileRef = useRef<HTMLInputElement>(null)
   const [msg, setMsg] = useState('')
   const goalHours = data.settings.weeklyGoalMinutes / 60
+  const voices = useEnglishVoices()
 
   const download = () => {
     const blob = new Blob([exportJson()], { type: 'application/json' })
@@ -85,6 +87,50 @@ export default function Settings() {
       </section>
 
       <section className="card">
+        <h2>英語の読み上げ</h2>
+        {!speechSupported ? (
+          <p className="small error">この端末・ブラウザは読み上げ（音声合成）に対応していません。</p>
+        ) : (
+          <>
+            <label className="field">
+              <span>声</span>
+              <select
+                className="select"
+                value={data.settings.voiceURI ?? ''}
+                onChange={(e) =>
+                  updateData((d) => ({ ...d, settings: { ...d.settings, voiceURI: e.target.value || undefined } }))
+                }
+              >
+                <option value="">自動（アメリカ英語を優先）</option>
+                {voices.map((v) => (
+                  <option key={v.voiceURI} value={v.voiceURI}>
+                    {v.name}（{v.lang}）
+                  </option>
+                ))}
+              </select>
+            </label>
+            <div className="btn-row">
+              <button
+                className="btn small"
+                onClick={() =>
+                  speak('Thank you for calling. How may I help you today?', {
+                    rate: data.settings.speechRate,
+                    voiceURI: data.settings.voiceURI,
+                  })
+                }
+              >
+                🔊 試しに聞く
+              </button>
+              <span className="small muted">速さ {data.settings.speechRate.toFixed(1)}（シャドーイング画面で変更できます）</span>
+            </div>
+            <p className="small muted">
+              端末に入っている音声を使うので、オフラインでも再生できます。iPhoneは「設定 → アクセシビリティ → 読み上げコンテンツ → 声」から高品質な英語の声を追加できます。
+            </p>
+          </>
+        )}
+      </section>
+
+      <section className="card">
         <h2>バックアップ</h2>
         <p className="small muted">
           データはこの端末のブラウザ（localStorage）にのみ保存されています。機種変更やブラウザのデータ削除に備えて、定期的にエクスポートしてください。
@@ -102,6 +148,7 @@ export default function Settings() {
         <ul className="plain small muted">
           <li>学習記録：{data.studyLogs.length}件</li>
           <li>スコア：{data.scores.length}件</li>
+          <li>学習した単語：{Object.keys(data.wordProgress).length}語・シャドーイング：{Object.keys(data.shadowProgress).length}教材</li>
           <li>振り返りメモ：{Object.keys(data.reviewMemos).length}件（旧アプリのメモ {Object.keys(data.legacyMemos).length}件）</li>
         </ul>
       </section>
@@ -122,7 +169,7 @@ export default function Settings() {
         >
           すべてのデータを削除
         </button>
-        <p className="small muted">計画データ（ロードマップ）は public/data/plan/toeic-roadmap.json で管理しています。</p>
+        <p className="small muted">計画データは public/data/plan、単語は public/data/vocab、シャドーイングの英文は public/data/shadowing のJSONで管理しています。</p>
       </section>
     </div>
   )

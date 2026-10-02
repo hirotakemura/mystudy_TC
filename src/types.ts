@@ -32,6 +32,37 @@ export interface Roadmap {
   phases: Phase[]
 }
 
+// ===== 教材データ（public/data/vocab, public/data/shadowing） =====
+
+/** 1: 600点レベル、2: 730点レベル、3: 860点レベル */
+export type Level = 1 | 2 | 3
+
+export interface Word {
+  id: string
+  word: string
+  pos: string
+  meaning: string
+  example: string
+  exampleJa: string
+  level: Level
+}
+
+export interface ShadowLine {
+  /** 会話の話者（M/W）、応答問題の Q/A。省略時はナレーション */
+  speaker?: 'M' | 'W' | 'Q' | 'A'
+  en: string
+  ja: string
+}
+
+export interface ShadowItem {
+  id: string
+  part: 1 | 2 | 3 | 4
+  level: Level
+  title: string
+  scene: string
+  lines: ShadowLine[]
+}
+
 // ===== 学習データ（localStorage） =====
 
 /** 学習の内訳。legacy は旧アプリから取り込んだ内訳なしの記録 */
@@ -57,6 +88,20 @@ export interface ScoreRecord {
   note?: string
 }
 
+/** 単語の覚え具合（間隔反復）。box が大きいほど次に出すまでの間隔が長い */
+export interface WordProgress {
+  box: number
+  due: string
+  correct: number
+  wrong: number
+  last: string
+}
+
+export interface ShadowProgress {
+  count: number
+  last: string
+}
+
 export type ThemeSetting = 'system' | 'light' | 'dark'
 
 export interface AppData {
@@ -73,6 +118,19 @@ export interface AppData {
   legacyMemos: Record<string, string>
   /** 単語帳の各周の開始日（length が今の周回数） */
   vocabRounds: string[]
+  /** 演習画面で自動計測した学習時間（日付 → 内訳 → 秒） */
+  autoSeconds: Record<string, Partial<Record<Category, number>>>
+  wordProgress: Record<string, WordProgress>
+  shadowProgress: Record<string, ShadowProgress>
   lastReviewShown?: string
-  settings: { theme: ThemeSetting; weeklyGoalMinutes: number }
+  settings: {
+    theme: ThemeSetting
+    weeklyGoalMinutes: number
+    /** 読み上げの速さ（1 = 標準） */
+    speechRate: number
+    /** 読み上げに使う声（未指定なら英語の声を自動で選ぶ） */
+    voiceURI?: string
+    /** 単語カードを表示したときに自動で読み上げる */
+    autoSpeak: boolean
+  }
 }

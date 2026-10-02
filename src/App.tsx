@@ -4,6 +4,7 @@ import { updateData, useData } from './lib/store'
 import { isSunday, todayKey } from './lib/date'
 import Home from './pages/Home'
 import Log from './pages/Log'
+import Practice from './pages/Practice'
 import RoadmapPage from './pages/Roadmap'
 import Scores from './pages/Scores'
 import Review from './pages/Review'
@@ -12,6 +13,7 @@ import { Icon, type IconName } from './icons'
 
 const NAV: { route: Route; label: string; icon: IconName }[] = [
   { route: 'home', label: 'ホーム', icon: 'home' },
+  { route: 'practice', label: '演習', icon: 'practice' },
   { route: 'log', label: '記録', icon: 'log' },
   { route: 'roadmap', label: 'ロードマップ', icon: 'roadmap' },
   { route: 'scores', label: 'スコア', icon: 'scores' },
@@ -20,6 +22,7 @@ const NAV: { route: Route; label: string; icon: IconName }[] = [
 
 const TITLES: Record<Route, string> = {
   home: '今日やること',
+  practice: '単語・シャドーイング',
   log: '学習の記録',
   roadmap: 'ロードマップ',
   scores: 'スコア記録',
@@ -70,6 +73,7 @@ export default function App() {
       </header>
       <main className="content">
         {route === 'home' && <Home />}
+        {route === 'practice' && <Practice />}
         {route === 'log' && <Log />}
         {route === 'roadmap' && <RoadmapPage />}
         {route === 'scores' && <Scores />}

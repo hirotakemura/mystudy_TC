@@ -1,0 +1,634 @@
+[
+ {
+  "id": "p1-1",
+  "part": 1,
+  "level": 1,
+  "title": "写真描写 1",
+  "scene": "オフィス・店内",
+  "lines": [
+   {
+    "en": "A woman is typing on a keyboard.",
+    "ja": "女性がキーボードで入力している。"
+   },
+   {
+    "en": "Some files have been stacked on a desk.",
+    "ja": "書類が机の上に積み重ねられている。"
+   },
+   {
+    "en": "A man is pouring coffee into a cup.",
+    "ja": "男性がカップにコーヒーを注いでいる。"
+   },
+   {
+    "en": "Customers are waiting in line at a counter.",
+    "ja": "客がカウンターで列に並んで待っている。"
+   },
+   {
+    "en": "Some shelves are being stocked with products.",
+    "ja": "棚に商品が補充されているところだ。"
+   },
+   {
+    "en": "A light has been mounted on the wall.",
+    "ja": "照明が壁に取り付けられている。"
+   }
+  ]
+ },
+ {
+  "id": "p1-2",
+  "part": 1,
+  "level": 1,
+  "title": "写真描写 2",
+  "scene": "屋外・交通",
+  "lines": [
+   {
+    "en": "Some people are crossing the street.",
+    "ja": "何人かが通りを渡っている。"
+   },
+   {
+    "en": "A bicycle is leaning against a fence.",
+    "ja": "自転車がフェンスに立てかけられている。"
+   },
+   {
+    "en": "Cars are parked along the side of the road.",
+    "ja": "車が道路脇に沿って駐車されている。"
+   },
+   {
+    "en": "A worker is climbing a ladder.",
+    "ja": "作業員がはしごを登っている。"
+   },
+   {
+    "en": "Passengers are getting off a train.",
+    "ja": "乗客が電車から降りている。"
+   },
+   {
+    "en": "Some trees are casting shadows on the path.",
+    "ja": "木々が小道に影を落としている。"
+   }
+  ]
+ },
+ {
+  "id": "p1-3",
+  "part": 1,
+  "level": 2,
+  "title": "写真描写 3",
+  "scene": "作業・会議",
+  "lines": [
+   {
+    "en": "They're facing each other across a table.",
+    "ja": "彼らはテーブル越しに向かい合っている。"
+   },
+   {
+    "en": "One of the men is pointing at a screen.",
+    "ja": "男性の一人が画面を指さしている。"
+   },
+   {
+    "en": "Some chairs have been arranged in rows.",
+    "ja": "いくつかの椅子が列になって並べられている。"
+   },
+   {
+    "en": "A woman is reaching for a box on a shelf.",
+    "ja": "女性が棚の上の箱に手を伸ばしている。"
+   },
+   {
+    "en": "Some tools have been left on the ground.",
+    "ja": "いくつかの道具が地面に置かれたままになっている。"
+   },
+   {
+    "en": "A vehicle is being loaded with boxes.",
+    "ja": "車に箱が積み込まれているところだ。"
+   }
+  ]
+ },
+ {
+  "id": "p2-1",
+  "part": 2,
+  "level": 1,
+  "title": "応答問題 1",
+  "scene": "オフィスでのやりとり",
+  "lines": [
+   {
+    "speaker": "Q",
+    "en": "When is the report due?",
+    "ja": "報告書の締め切りはいつですか。"
+   },
+   {
+    "speaker": "A",
+    "en": "By the end of the week.",
+    "ja": "今週末までです。"
+   },
+   {
+    "speaker": "Q",
+    "en": "Where did you put the new brochures?",
+    "ja": "新しいパンフレットはどこに置きましたか。"
+   },
+   {
+    "speaker": "A",
+    "en": "They're in the cabinet by the door.",
+    "ja": "ドアのそばの棚に入っています。"
+   },
+   {
+    "speaker": "Q",
+    "en": "Who's in charge of the sales presentation?",
+    "ja": "営業のプレゼンは誰の担当ですか。"
+   },
+   {
+    "speaker": "A",
+    "en": "Ms. Lee is handling it this time.",
+    "ja": "今回はリーさんが担当しています。"
+   }
+  ]
+ },
+ {
+  "id": "p2-2",
+  "part": 2,
+  "level": 1,
+  "title": "応答問題 2",
+  "scene": "提案・依頼",
+  "lines": [
+   {
+    "speaker": "Q",
+    "en": "Why don't we take a short break?",
+    "ja": "少し休憩しませんか。"
+   },
+   {
+    "speaker": "A",
+    "en": "That sounds like a good idea.",
+    "ja": "いい考えですね。"
+   },
+   {
+    "speaker": "Q",
+    "en": "Could you help me move these boxes?",
+    "ja": "これらの箱を運ぶのを手伝ってもらえますか。"
+   },
+   {
+    "speaker": "A",
+    "en": "Sure, where do you want them?",
+    "ja": "いいですよ、どこに置きますか。"
+   },
+   {
+    "speaker": "Q",
+    "en": "Would you like to join us for lunch?",
+    "ja": "一緒にお昼に行きませんか。"
+   },
+   {
+    "speaker": "A",
+    "en": "Thanks, but I've already eaten.",
+    "ja": "ありがとう、でももう食べました。"
+   }
+  ]
+ },
+ {
+  "id": "p2-3",
+  "part": 2,
+  "level": 2,
+  "title": "応答問題 3",
+  "scene": "間接的な応答",
+  "lines": [
+   {
+    "speaker": "Q",
+    "en": "Has the shipment arrived yet?",
+    "ja": "荷物はもう届きましたか。"
+   },
+   {
+    "speaker": "A",
+    "en": "I'll check with the warehouse.",
+    "ja": "倉庫に確認してみます。"
+   },
+   {
+    "speaker": "Q",
+    "en": "Isn't the meeting scheduled for two o'clock?",
+    "ja": "会議は2時の予定ではないのですか。"
+   },
+   {
+    "speaker": "A",
+    "en": "It's been moved to three.",
+    "ja": "3時に変更になりました。"
+   },
+   {
+    "speaker": "Q",
+    "en": "How much will the repairs cost?",
+    "ja": "修理にはいくらかかりますか。"
+   },
+   {
+    "speaker": "A",
+    "en": "The technician hasn't given us an estimate.",
+    "ja": "技術者からまだ見積もりをもらっていません。"
+   }
+  ]
+ },
+ {
+  "id": "p3-1",
+  "part": 3,
+  "level": 1,
+  "title": "会話 1",
+  "scene": "会議室の予約",
+  "lines": [
+   {
+    "speaker": "W",
+    "en": "Hi, Tom. Did you book a room for the client meeting on Thursday?",
+    "ja": "トム、木曜日の顧客との打ち合わせ用に部屋を予約した？"
+   },
+   {
+    "speaker": "M",
+    "en": "I tried, but the large conference room is already taken.",
+    "ja": "予約しようとしたけど、大会議室はもう埋まっていたんだ。"
+   },
+   {
+    "speaker": "W",
+    "en": "What about the room on the third floor?",
+    "ja": "3階の部屋はどう？"
+   },
+   {
+    "speaker": "M",
+    "en": "That one's free, but it only seats six people.",
+    "ja": "そこは空いているけど、6人しか座れないんだ。"
+   },
+   {
+    "speaker": "W",
+    "en": "That should be enough. Only four of us are attending.",
+    "ja": "それで十分よ。出席するのは4人だけだから。"
+   },
+   {
+    "speaker": "M",
+    "en": "OK, I'll reserve it right away.",
+    "ja": "わかった、すぐに予約するよ。"
+   }
+  ]
+ },
+ {
+  "id": "p3-2",
+  "part": 3,
+  "level": 1,
+  "title": "会話 2",
+  "scene": "注文の問い合わせ",
+  "lines": [
+   {
+    "speaker": "M",
+    "en": "Hello, I'm calling about an order I placed last week.",
+    "ja": "もしもし、先週した注文の件でお電話しました。"
+   },
+   {
+    "speaker": "W",
+    "en": "Certainly. Could I have your order number, please?",
+    "ja": "かしこまりました。注文番号を教えていただけますか。"
+   },
+   {
+    "speaker": "M",
+    "en": "It's 4-5-2-8. The printer was supposed to arrive yesterday.",
+    "ja": "4528です。プリンターは昨日届くはずだったのですが。"
+   },
+   {
+    "speaker": "W",
+    "en": "I see. It looks like there was a delay at our warehouse.",
+    "ja": "承知しました。当社の倉庫で遅れが出ていたようです。"
+   },
+   {
+    "speaker": "W",
+    "en": "It will be shipped today, and we'll cover the delivery fee.",
+    "ja": "本日発送いたします。配送料は当社が負担いたします。"
+   },
+   {
+    "speaker": "M",
+    "en": "Thank you. I appreciate that.",
+    "ja": "ありがとうございます。助かります。"
+   }
+  ]
+ },
+ {
+  "id": "p3-3",
+  "part": 3,
+  "level": 2,
+  "title": "会話 3",
+  "scene": "新しい勤務システム",
+  "lines": [
+   {
+    "speaker": "W",
+    "en": "Have you heard about the new scheduling software?",
+    "ja": "新しいスケジュール管理ソフトのこと聞いた？"
+   },
+   {
+    "speaker": "M",
+    "en": "Yes, we're supposed to start using it next month, right?",
+    "ja": "うん、来月から使うことになっているんだよね？"
+   },
+   {
+    "speaker": "W",
+    "en": "That's right. There's a training session on Friday afternoon.",
+    "ja": "そう。金曜日の午後に研修があるの。"
+   },
+   {
+    "speaker": "M",
+    "en": "I have a client visit then. Is there another session?",
+    "ja": "その時間は顧客訪問があるんだ。ほかの回はある？"
+   },
+   {
+    "speaker": "W",
+    "en": "I think they're recording it, so you can watch it later.",
+    "ja": "録画するらしいから、後で見られると思うわ。"
+   },
+   {
+    "speaker": "M",
+    "en": "Great. I'll ask the IT department for the link.",
+    "ja": "よかった。IT部にリンクを聞いてみるよ。"
+   }
+  ]
+ },
+ {
+  "id": "p3-4",
+  "part": 3,
+  "level": 2,
+  "title": "会話 4",
+  "scene": "出張の手配",
+  "lines": [
+   {
+    "speaker": "M",
+    "en": "Lisa, have you finalized the travel plans for the trade show?",
+    "ja": "リサ、展示会の出張計画は確定した？"
+   },
+   {
+    "speaker": "W",
+    "en": "Almost. The flights are booked, but the hotel near the venue is full.",
+    "ja": "もう少しです。航空券は予約しましたが、会場近くのホテルが満室なんです。"
+   },
+   {
+    "speaker": "M",
+    "en": "Hmm, the show starts early in the morning.",
+    "ja": "うーん、展示会は朝早く始まるからなあ。"
+   },
+   {
+    "speaker": "W",
+    "en": "There's another hotel about ten minutes away by shuttle bus.",
+    "ja": "シャトルバスで10分ほどの別のホテルがあります。"
+   },
+   {
+    "speaker": "M",
+    "en": "That works. Let's go with that one.",
+    "ja": "それでいい。そこにしよう。"
+   },
+   {
+    "speaker": "W",
+    "en": "I'll make the reservation and send you the itinerary.",
+    "ja": "予約をして旅程表をお送りします。"
+   }
+  ]
+ },
+ {
+  "id": "p3-5",
+  "part": 3,
+  "level": 2,
+  "title": "会話 5",
+  "scene": "店舗での返品",
+  "lines": [
+   {
+    "speaker": "W",
+    "en": "Excuse me, I'd like to return this jacket. It's too small.",
+    "ja": "すみません、このジャケットを返品したいのですが。小さすぎて。"
+   },
+   {
+    "speaker": "M",
+    "en": "Do you have the receipt with you?",
+    "ja": "領収書はお持ちですか。"
+   },
+   {
+    "speaker": "W",
+    "en": "Yes, here it is. I bought it on Saturday.",
+    "ja": "はい、こちらです。土曜日に買いました。"
+   },
+   {
+    "speaker": "M",
+    "en": "Would you like a larger size instead of a refund?",
+    "ja": "返金の代わりに大きいサイズはいかがですか。"
+   },
+   {
+    "speaker": "W",
+    "en": "Oh, do you have it in a medium?",
+    "ja": "あら、Mサイズはありますか。"
+   },
+   {
+    "speaker": "M",
+    "en": "Let me check the stockroom. I'll be right back.",
+    "ja": "在庫室を確認してきます。すぐ戻ります。"
+   }
+  ]
+ },
+ {
+  "id": "p3-6",
+  "part": 3,
+  "level": 3,
+  "title": "会話 6",
+  "scene": "予算と業者選び",
+  "lines": [
+   {
+    "speaker": "M",
+    "en": "We need to choose a catering company for the anniversary party.",
+    "ja": "記念パーティーのケータリング業者を決めないといけないね。"
+   },
+   {
+    "speaker": "W",
+    "en": "I got estimates from two companies. Green Table is cheaper.",
+    "ja": "2社から見積もりをもらいました。グリーン・テーブルのほうが安いです。"
+   },
+   {
+    "speaker": "M",
+    "en": "But didn't we have some problems with them last year?",
+    "ja": "でも去年、あそこでちょっと問題がなかったっけ？"
+   },
+   {
+    "speaker": "W",
+    "en": "Yes, the food arrived late. The other company has excellent reviews.",
+    "ja": "はい、料理の到着が遅れました。もう1社は評判がとてもいいです。"
+   },
+   {
+    "speaker": "M",
+    "en": "Then let's pay a little more for reliability.",
+    "ja": "それなら信頼性のために少し多く払おう。"
+   },
+   {
+    "speaker": "W",
+    "en": "I'll check whether it fits within our budget and get back to you.",
+    "ja": "予算内に収まるか確認してご連絡します。"
+   }
+  ]
+ },
+ {
+  "id": "p4-1",
+  "part": 4,
+  "level": 1,
+  "title": "説明文 1",
+  "scene": "館内アナウンス",
+  "lines": [
+   {
+    "en": "Attention, shoppers.",
+    "ja": "ご来店の皆さまにお知らせいたします。"
+   },
+   {
+    "en": "Our store will be closing in fifteen minutes.",
+    "ja": "当店はあと15分で閉店いたします。"
+   },
+   {
+    "en": "Please bring your final purchases to the checkout counters.",
+    "ja": "最後のお買い物をレジまでお持ちください。"
+   },
+   {
+    "en": "We will open again tomorrow morning at nine.",
+    "ja": "明朝は9時に開店いたします。"
+   },
+   {
+    "en": "Thank you for shopping with us.",
+    "ja": "ご来店ありがとうございました。"
+   }
+  ]
+ },
+ {
+  "id": "p4-2",
+  "part": 4,
+  "level": 1,
+  "title": "説明文 2",
+  "scene": "留守番電話",
+  "lines": [
+   {
+    "en": "Hi, this is Karen from Dr. Smith's office.",
+    "ja": "もしもし、スミス医院のカレンです。"
+   },
+   {
+    "en": "I'm calling to remind you of your appointment tomorrow at ten a.m.",
+    "ja": "明日午前10時のご予約の確認でお電話しました。"
+   },
+   {
+    "en": "Please arrive about ten minutes early to fill out a form.",
+    "ja": "書類記入のため、10分ほど早めにお越しください。"
+   },
+   {
+    "en": "If you need to reschedule, please call us back at 555-0142.",
+    "ja": "予約の変更が必要な場合は、555-0142まで折り返しお電話ください。"
+   },
+   {
+    "en": "Thank you, and have a nice day.",
+    "ja": "よろしくお願いします。よい一日を。"
+   }
+  ]
+ },
+ {
+  "id": "p4-3",
+  "part": 4,
+  "level": 2,
+  "title": "説明文 3",
+  "scene": "空港アナウンス",
+  "lines": [
+   {
+    "en": "Good afternoon, passengers on Flight 208 to Vancouver.",
+    "ja": "バンクーバー行き208便をご利用のお客さま、こんにちは。"
+   },
+   {
+    "en": "Due to a mechanical issue, the departure has been delayed by one hour.",
+    "ja": "機材の不具合のため、出発が1時間遅れております。"
+   },
+   {
+    "en": "The new boarding time is three-fifteen.",
+    "ja": "新しい搭乗時刻は3時15分です。"
+   },
+   {
+    "en": "Please note that the gate has also changed to Gate 12.",
+    "ja": "また、搭乗口が12番に変更になっておりますのでご注意ください。"
+   },
+   {
+    "en": "Meal vouchers are available at the service desk.",
+    "ja": "食事券をサービスデスクでお配りしております。"
+   },
+   {
+    "en": "We apologize for the inconvenience.",
+    "ja": "ご迷惑をおかけして申し訳ございません。"
+   }
+  ]
+ },
+ {
+  "id": "p4-4",
+  "part": 4,
+  "level": 2,
+  "title": "説明文 4",
+  "scene": "社内会議",
+  "lines": [
+   {
+    "en": "Thank you all for coming to this morning's meeting.",
+    "ja": "今朝の会議にお集まりいただきありがとうございます。"
+   },
+   {
+    "en": "As you know, our sales increased by twelve percent last quarter.",
+    "ja": "ご存じの通り、前四半期の売上は12%増加しました。"
+   },
+   {
+    "en": "This is mainly due to the success of our online store.",
+    "ja": "これは主にオンラインストアの成功によるものです。"
+   },
+   {
+    "en": "To keep this momentum, we're going to hire three more web designers.",
+    "ja": "この勢いを保つため、ウェブデザイナーをさらに3名採用します。"
+   },
+   {
+    "en": "I'd like each team leader to send me their staffing needs by Friday.",
+    "ja": "各チームリーダーは金曜日までに人員の要望を私に送ってください。"
+   }
+  ]
+ },
+ {
+  "id": "p4-5",
+  "part": 4,
+  "level": 2,
+  "title": "説明文 5",
+  "scene": "ツアーガイド",
+  "lines": [
+   {
+    "en": "Welcome to the Riverside Art Museum.",
+    "ja": "リバーサイド美術館へようこそ。"
+   },
+   {
+    "en": "My name is Daniel, and I'll be your guide today.",
+    "ja": "私はダニエルと申します。本日のガイドを務めます。"
+   },
+   {
+    "en": "Our tour will last about an hour and a half.",
+    "ja": "ツアーは約1時間半です。"
+   },
+   {
+    "en": "Please note that photography is not allowed in the special exhibit.",
+    "ja": "特別展示内では写真撮影が禁止されておりますのでご注意ください。"
+   },
+   {
+    "en": "At the end of the tour, you'll receive a discount coupon for our gift shop.",
+    "ja": "ツアーの最後に、ギフトショップの割引券をお渡しします。"
+   },
+   {
+    "en": "Now, let's begin in the main hall.",
+    "ja": "それでは、メインホールから始めましょう。"
+   }
+  ]
+ },
+ {
+  "id": "p4-6",
+  "part": 4,
+  "level": 3,
+  "title": "説明文 6",
+  "scene": "ラジオニュース",
+  "lines": [
+   {
+    "en": "In local news, the city council has approved a plan to expand the public library.",
+    "ja": "地域のニュースです。市議会は公立図書館の拡張計画を承認しました。"
+   },
+   {
+    "en": "Construction is scheduled to commence in March and will take about a year.",
+    "ja": "工事は3月に始まる予定で、約1年かかる見込みです。"
+   },
+   {
+    "en": "During the renovation, the library will operate from a temporary location on Main Street.",
+    "ja": "改装期間中、図書館はメイン通りの仮の場所で運営されます。"
+   },
+   {
+    "en": "The expanded building will include a new study area and a café.",
+    "ja": "拡張された建物には、新しい学習スペースとカフェが設けられます。"
+   },
+   {
+    "en": "Officials say the project will be funded mainly by a state grant.",
+    "ja": "当局によると、この事業は主に州の補助金で賄われるとのことです。"
+   }
+  ]
+ }
+]

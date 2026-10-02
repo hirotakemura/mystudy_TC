@@ -18,18 +18,42 @@ export function categoryLabel(c: Category): string {
   return CATEGORIES.find((x) => x.id === c)?.label ?? c
 }
 
-export function minutesOn(d: AppData, date: string): number {
-  return d.studyLogs.reduce((s, l) => (l.date === date ? s + l.minutes : s), 0)
+/** 演習画面で自動計測した時間（分、内訳ごとに四捨五入） */
+export function autoMinutesByCategory(d: AppData, date: string): Partial<Record<Category, number>> {
+  const out: Partial<Record<Category, number>> = {}
+  for (const [c, sec] of Object.entries(d.autoSeconds[date] ?? {}) as [Category, number][]) {
+    const m = Math.round(sec / 60)
+    if (m > 0) out[c] = m
+  }
+  return out
 }
 
+export function autoMinutesOn(d: AppData, date: string): number {
+  return Object.values(autoMinutesByCategory(d, date)).reduce((s, m) => s + (m ?? 0), 0)
+}
+
+/** 手動・通勤メニュー・自動計測を合わせた内訳 */
 export function minutesByCategory(d: AppData, date: string): Partial<Record<Category, number>> {
-  const out: Partial<Record<Category, number>> = {}
+  const out = autoMinutesByCategory(d, date)
   for (const l of d.studyLogs) if (l.date === date) out[l.category] = (out[l.category] ?? 0) + l.minutes
   return out
 }
 
+export function minutesOn(d: AppData, date: string): number {
+  return d.studyLogs.reduce((s, l) => (l.date === date ? s + l.minutes : s), autoMinutesOn(d, date))
+}
+
 export function minutesBetween(d: AppData, from: string, to: string): number {
-  return d.studyLogs.reduce((s, l) => (l.date >= from && l.date <= to ? s + l.minutes : s), 0)
+  let total = d.studyLogs.reduce((s, l) => (l.date >= from && l.date <= to ? s + l.minutes : s), 0)
+  for (const date of Object.keys(d.autoSeconds)) if (date >= from && date <= to) total += autoMinutesOn(d, date)
+  return total
+}
+
+/** 学習時間の記録がある日（新しい順） */
+export function studyDates(d: AppData): string[] {
+  const dates = new Set(d.studyLogs.map((l) => l.date))
+  for (const date of Object.keys(d.autoSeconds)) if (autoMinutesOn(d, date) > 0) dates.add(date)
+  return [...dates].sort().reverse()
 }
 
 export function daysBetween(from: string, to: string): string[] {
@@ -41,7 +65,7 @@ export function daysBetween(from: string, to: string): string[] {
 /** 最低ライン（単語15分）を達成したか。チェックしたか、単語の記録が目安以上あれば達成 */
 export function minimumAchieved(d: AppData, date: string, roadmap: Roadmap): boolean {
   if (d.minimumDone[date]) return true
-  const vocab = d.studyLogs.reduce((s, l) => (l.date === date && l.category === 'vocab' ? s + l.minutes : s), 0)
+  const vocab = minutesByCategory(d, date).vocab ?? 0
   return vocab >= roadmap.minimumLine.minutes
 }
 

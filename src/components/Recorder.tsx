@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { addLog, deleteLog } from '../lib/actions'
 import { formatMinutes } from '../lib/date'
 import { useData } from '../lib/store'
-import { INPUT_CATEGORIES, categoryLabel, minutesOn } from '../lib/stats'
+import { INPUT_CATEGORIES, autoMinutesByCategory, categoryLabel, minutesOn } from '../lib/stats'
 import type { Category } from '../types'
 
 /** 学習時間の記録（内訳を選んで +10/+15/+30 か任意の分数） */
@@ -12,6 +12,7 @@ export function Recorder({ date, title }: { date: string; title: string }) {
   const [custom, setCustom] = useState('')
   const logs = data.studyLogs.filter((l) => l.date === date).sort((a, b) => a.createdAt.localeCompare(b.createdAt))
   const total = minutesOn(data, date)
+  const auto = Object.entries(autoMinutesByCategory(data, date)) as [Category, number][]
 
   const addCustom = () => {
     const n = Number(custom)
@@ -64,8 +65,18 @@ export function Recorder({ date, title }: { date: string; title: string }) {
           </button>
         </div>
       </div>
-      {logs.length > 0 && (
+      {logs.length + auto.length > 0 && (
         <ul className="log-items">
+          {auto.map(([c, m]) => (
+            <li key={`auto-${c}`}>
+              <span>
+                <i className={`dot cat-${c}`} aria-hidden />
+                {categoryLabel(c)}
+                <span className="muted small">（演習・自動計測）</span>
+              </span>
+              <span>{formatMinutes(m)}</span>
+            </li>
+          ))}
           {logs.map((l) => (
             <li key={l.id}>
               <span>

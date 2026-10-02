@@ -1,4 +1,4 @@
-// 計画データ（public/data/plan/toeic-roadmap.json）の整合性チェック
+// 計画データ・教材データ（public/data 配下）の整合性チェック
 // 使い方: npm run validate:data
 import { readFileSync } from 'node:fs'
 
@@ -37,8 +37,43 @@ for (const p of r.phases ?? []) {
   }
 }
 
+// ===== 単語（public/data/vocab/words.json） =====
+const words = JSON.parse(readFileSync(new URL('../public/data/vocab/words.json', import.meta.url), 'utf8'))
+const wordIds = new Set()
+const spellings = new Set()
+for (const w of words) {
+  const at = `words[${w.id ?? '?'}]`
+  need(typeof w.id === 'string' && !wordIds.has(w.id), `${at}: id が無いか重複しています`)
+  wordIds.add(w.id)
+  need(!spellings.has(w.word), `${at}: 単語「${w.word}」が重複しています`)
+  spellings.add(w.word)
+  for (const k of ['word', 'pos', 'meaning', 'example', 'exampleJa']) need(typeof w[k] === 'string' && w[k].trim(), `${at}: ${k} が空です`)
+  need([1, 2, 3].includes(w.level), `${at}: level は 1/2/3 のいずれかです`)
+}
+need(new Set(words.map((w) => w.meaning)).size >= 4, '4択の選択肢を作るには意味の異なる単語が4語以上必要です')
+
+// ===== シャドーイング（public/data/shadowing/sentences.json） =====
+const items = JSON.parse(readFileSync(new URL('../public/data/shadowing/sentences.json', import.meta.url), 'utf8'))
+const itemIds = new Set()
+let lineCount = 0
+for (const it of items) {
+  const at = `shadowing[${it.id ?? '?'}]`
+  need(typeof it.id === 'string' && !itemIds.has(it.id), `${at}: id が無いか重複しています`)
+  itemIds.add(it.id)
+  need([1, 2, 3, 4].includes(it.part), `${at}: part は 1〜4 です`)
+  need([1, 2, 3].includes(it.level), `${at}: level は 1/2/3 のいずれかです`)
+  need(Array.isArray(it.lines) && it.lines.length > 0, `${at}: lines が空です`)
+  for (const l of it.lines ?? []) {
+    lineCount++
+    need(typeof l.en === 'string' && l.en.trim() && typeof l.ja === 'string', `${at}: en/ja が不正です`)
+    need(l.speaker === undefined || ['M', 'W', 'Q', 'A'].includes(l.speaker), `${at}: speaker は M/W/Q/A です`)
+  }
+}
+
 if (errors.length) {
   console.error(errors.map((e) => `✗ ${e}`).join('\n'))
   process.exit(1)
 }
 console.log(`✓ 計画データOK（期間${r.phases.length}件・タスク${ids.size - r.phases.length}件）`)
+console.log(`✓ 単語OK（${words.length}語）`)
+console.log(`✓ シャドーイングOK（${items.length}教材・${lineCount}文）`)
