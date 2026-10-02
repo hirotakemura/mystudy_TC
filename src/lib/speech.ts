@@ -3,6 +3,9 @@ import { pingActivity } from './studyTimer'
 
 // 英語の読み上げ（端末の音声合成 Web Speech API を使う。音声ファイルは不要）
 
+/** 単語・例文の読み上げの速さ（シャドーイングの設定とは別に固定） */
+export const WORD_RATE = 1.0
+
 export const speechSupported = typeof window !== 'undefined' && 'speechSynthesis' in window
 
 function englishVoices(): SpeechSynthesisVoice[] {

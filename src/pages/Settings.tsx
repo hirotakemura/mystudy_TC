@@ -121,7 +121,7 @@ export default function Settings() {
               >
                 🔊 試しに聞く
               </button>
-              <span className="small muted">速さ {data.settings.speechRate.toFixed(1)}（シャドーイング画面で変更できます）</span>
+              <span className="small muted">シャドーイングの速さ {data.settings.speechRate.toFixed(1)}（シャドーイング画面で変更。単語は1.0固定）</span>
             </div>
             <p className="small muted">
               端末に入っている音声を使うので、オフラインでも再生できます。iPhoneは「設定 → アクセシビリティ → 読み上げコンテンツ → 声」から高品質な英語の声を追加できます。

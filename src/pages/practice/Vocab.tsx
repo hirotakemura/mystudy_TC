@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { SpeakButton } from '../../components/SpeakButton'
 import { formatMinutes, todayKey } from '../../lib/date'
-import { speak, stopSpeaking } from '../../lib/speech'
+import { speak, stopSpeaking, WORD_RATE } from '../../lib/speech'
 import {
   LEVEL_LABEL,
   MASTERED_BOX,
@@ -169,10 +169,10 @@ function VocabSession({ session, all, onExit }: { session: Session; all: Word[];
   const studied = useStudyTimer(!finished, 'vocab')
   const word = queue[pos]
   const choices = useMemo(() => (session.mode === 'quiz' && word ? choicesFor(word, all) : []), [word, session.mode, all])
-  const { speechRate, voiceURI, autoSpeak } = data.settings
+  const { voiceURI, autoSpeak } = data.settings
 
   useEffect(() => {
-    if (word && autoSpeak) speak(word.word, { rate: speechRate, voiceURI })
+    if (word && autoSpeak) speak(word.word, { rate: WORD_RATE, voiceURI })
     return () => stopSpeaking()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pos])

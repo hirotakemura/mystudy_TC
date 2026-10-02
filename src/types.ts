@@ -126,7 +126,7 @@ export interface AppData {
   settings: {
     theme: ThemeSetting
     weeklyGoalMinutes: number
-    /** 読み上げの速さ（1 = 標準） */
+    /** シャドーイングの読み上げの速さ（1 = 標準）。単語の読み上げは1.0固定 */
     speechRate: number
     /** 読み上げに使う声（未指定なら英語の声を自動で選ぶ） */
     voiceURI?: string
