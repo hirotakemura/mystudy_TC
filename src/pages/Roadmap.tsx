@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import { WithRoadmap } from '../components/Async'
+import RoadmapEditor from './RoadmapEditor'
 import { setCheck } from '../lib/actions'
 import { diffDays, formatJa, formatMinutes, todayKey } from '../lib/date'
 import { commuteTotal, plannedMinutes, planPosition } from '../lib/plan'
@@ -11,6 +13,12 @@ export default function RoadmapPage() {
 }
 
 function RoadmapBody({ roadmap }: { roadmap: Roadmap }) {
+  const [editing, setEditing] = useState(false)
+  if (editing) return <RoadmapEditor roadmap={roadmap} onClose={() => setEditing(false)} />
+  return <RoadmapView roadmap={roadmap} onEdit={() => setEditing(true)} />
+}
+
+function RoadmapView({ roadmap, onEdit }: { roadmap: Roadmap; onEdit: () => void }) {
   const data = useData()
   const today = todayKey()
   const pos = planPosition(roadmap, today)
@@ -20,8 +28,14 @@ function RoadmapBody({ roadmap }: { roadmap: Roadmap }) {
   return (
     <div className="stack">
       <section className="card focus">
-        <div className="label">方針</div>
+        <div className="focus-head">
+          <div className="label">方針</div>
+          <button className="btn small" onClick={onEdit}>
+            ✏️ 期間・内容を編集
+          </button>
+        </div>
         <p>{roadmap.focus}</p>
+        {data.roadmapOverride && <p className="small muted">アプリで編集した計画を表示しています。</p>}
       </section>
 
       <VocabCounter />

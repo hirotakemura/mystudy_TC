@@ -1,0 +1,295 @@
+[
+ {
+  "id": "p7-01",
+  "part": 7,
+  "level": 1,
+  "title": "お知らせ（掲示）",
+  "passages": [
+   {
+    "title": "NOTICE",
+    "text": "The fitness room on the third floor will be closed from July 10 to July 12 for the installation of new equipment. During this period, employees may use the Greenway Gym on Oak Avenue free of charge by showing their employee ID card. The fitness room will reopen on July 13 with extended hours, from 6:00 A.M. to 10:00 P.M.",
+    "ja": "3階のフィットネスルームは新しい機器設置のため、7月10日から12日まで閉鎖します。この期間、社員証を提示すればオーク通りのグリーンウェイ・ジムを無料で利用できます。7月13日に営業時間を延長して再開します（午前6時〜午後10時）。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "What is the purpose of the notice?",
+    "choices": [
+     "To announce a temporary closure",
+     "To introduce a new fitness instructor",
+     "To request employee feedback",
+     "To advertise a gym membership"
+    ],
+    "answer": 0,
+    "explanation": "冒頭で一時閉鎖を知らせているので (A)。"
+   },
+   {
+    "q": "What must employees do to use the Greenway Gym?",
+    "choices": [
+     "Pay a discounted fee",
+     "Show an ID card",
+     "Register online",
+     "Bring their own equipment"
+    ],
+    "answer": 1,
+    "explanation": "by showing their employee ID card なので (B)。"
+   },
+   {
+    "q": "What is indicated about the fitness room after July 13?",
+    "choices": [
+     "It will be larger.",
+     "It will be open longer.",
+     "It will charge a fee.",
+     "It will move to another floor."
+    ],
+    "answer": 1,
+    "explanation": "reopen ... with extended hours → open longer で (B)。"
+   }
+  ]
+ },
+ {
+  "id": "p7-02",
+  "part": 7,
+  "level": 1,
+  "title": "テキストメッセージのやりとり",
+  "passages": [
+   {
+    "title": "Text messages",
+    "text": "Sam Ortiz (9:12 A.M.): Hi, Mia. I'm stuck in traffic on the highway. There was an accident ahead.\nMia Park (9:13 A.M.): Oh no. The client from Medline is arriving at 10:00.\nSam Ortiz (9:14 A.M.): I know. Could you start the meeting without me? The slides are in the shared folder.\nMia Park (9:15 A.M.): No problem. I'll begin with the product demonstration.\nSam Ortiz (9:16 A.M.): Thanks. I should be there by 10:30.",
+    "ja": "サム「高速で渋滞にはまっている。前方で事故があったんだ」ミア「メドラインの顧客が10時に来るのに」サム「僕抜きで会議を始めてくれる？スライドは共有フォルダにあるよ」ミア「大丈夫。製品のデモから始めるね」サム「ありがとう。10時半までには着くはず」"
+   }
+  ],
+  "questions": [
+   {
+    "q": "What problem does Mr. Ortiz have?",
+    "choices": [
+     "He is sick.",
+     "He is delayed by traffic.",
+     "He missed a train.",
+     "He forgot the slides."
+    ],
+    "answer": 1,
+    "explanation": "stuck in traffic なので (B)。"
+   },
+   {
+    "q": "At 9:15 A.M., what does Ms. Park mean when she writes, \"No problem\"?",
+    "choices": [
+     "She agrees to start the meeting.",
+     "She cannot find the slides.",
+     "She will call the client.",
+     "She will drive to the highway."
+    ],
+    "answer": 0,
+    "explanation": "「僕抜きで始めてくれる？」への返事なので、会議を始めることに同意している (A)。意図問題は直前の発言を確認する。"
+   }
+  ]
+ },
+ {
+  "id": "p7-03",
+  "part": 7,
+  "level": 2,
+  "title": "Eメール",
+  "passages": [
+   {
+    "title": "E-mail",
+    "text": "To: Rachel Green <rgreen@bluemail.com>\nFrom: Westfield Dental Clinic <info@westfielddental.com>\nDate: October 3\nSubject: Appointment reminder\n\nDear Ms. Green,\n\nThis is a reminder that you have a dental checkup scheduled for Tuesday, October 8, at 2:30 P.M. with Dr. Hughes.\n\nPlease note that our clinic has moved to a new location at 45 Park Street, across from the central post office. Free parking is available behind the building.\n\nIf you need to change your appointment, please call us at least 24 hours in advance. Appointments canceled with less notice may be charged a $20 fee.\n\nWe look forward to seeing you.\n\nWestfield Dental Clinic",
+    "ja": "10月8日（火）午後2時30分のヒューズ医師による歯科検診のお知らせです。当院はパーク通り45番地（中央郵便局の向かい）に移転しました。建物裏に無料駐車場があります。予約変更は24時間以上前にお電話ください。直前のキャンセルには20ドルの料金がかかる場合があります。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "Why was the e-mail sent?",
+    "choices": [
+     "To confirm an appointment",
+     "To announce a new dentist",
+     "To request a payment",
+     "To offer a discount"
+    ],
+    "answer": 0,
+    "explanation": "Appointment reminder（予約の確認）なので (A)。"
+   },
+   {
+    "q": "What is mentioned about the clinic?",
+    "choices": [
+     "It has a new address.",
+     "It is closed on Tuesdays.",
+     "It has hired Dr. Hughes.",
+     "It is next to a parking garage."
+    ],
+    "answer": 0,
+    "explanation": "has moved to a new location なので (A)。(D) 駐車場は建物の裏で、立体駐車場の隣とは書かれていない。"
+   },
+   {
+    "q": "How should Ms. Green change her appointment?",
+    "choices": [
+     "By sending an e-mail",
+     "By calling a day before",
+     "By visiting the clinic",
+     "By paying a $20 fee"
+    ],
+    "answer": 1,
+    "explanation": "call us at least 24 hours in advance → 前日までに電話 (B)。"
+   }
+  ]
+ },
+ {
+  "id": "p7-04",
+  "part": 7,
+  "level": 2,
+  "title": "広告",
+  "passages": [
+   {
+    "title": "Advertisement",
+    "text": "Clearview Window Cleaning\n\nIs your office looking dull? Clearview has been serving businesses in the Springfield area for over 15 years. Our trained staff use eco-friendly products that are safe for people and pets.\n\n- Regular weekly or monthly service\n- Evening and weekend appointments available\n- Free estimates within 24 hours\n\nNew customers who sign a one-year contract by March 31 will receive their first month of service free. Visit www.clearviewclean.com or call 555-0123 for details.",
+    "ja": "クリアビュー窓清掃。スプリングフィールド地域で15年以上企業向けにサービスを提供。人やペットに安全な環境配慮型の洗剤を使用。週1回・月1回の定期サービス、夜間・週末の予約可、24時間以内の無料見積もり。3月31日までに1年契約を結んだ新規顧客は最初の1か月が無料。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "What is indicated about Clearview?",
+    "choices": [
+     "It recently opened.",
+     "It uses environmentally friendly products.",
+     "It only works on weekdays.",
+     "It cleans private homes only."
+    ],
+    "answer": 1,
+    "explanation": "eco-friendly products → environmentally friendly の言い換えで (B)。(C) 週末も可、(D) 企業向け。"
+   },
+   {
+    "q": "What will new customers receive if they sign a one-year contract by March 31?",
+    "choices": [
+     "A free estimate",
+     "A discount on products",
+     "One month of free service",
+     "A free window inspection"
+    ],
+    "answer": 2,
+    "explanation": "1年契約の新規顧客は first month of service free なので (C)。(A) 無料見積もりは全員向けで、条件付きの特典ではない。"
+   }
+  ]
+ },
+ {
+  "id": "p7-05",
+  "part": 7,
+  "level": 3,
+  "title": "記事",
+  "passages": [
+   {
+    "title": "Local Business News",
+    "text": "HARBOR CITY — Bellini Foods, a family-owned company known for its pasta sauces, announced on Monday that it will build a second factory in the eastern part of the city. The new facility, scheduled to open next September, will create about 120 jobs.\n\nCompany president Lucia Bellini said the expansion was necessary because demand for the company's products has doubled over the past three years, mainly due to strong sales in supermarkets overseas. \"Our current factory is operating at full capacity,\" she explained.\n\nThe new plant will also include a visitor center where guests can watch the production process and take cooking classes. Construction will begin next month.",
+    "ja": "パスタソースで知られる家族経営のベリーニ・フーズは月曜日、市の東部に第2工場を建設すると発表した。来年9月に開業予定で、約120人の雇用を生む。社長によると、主に海外のスーパーでの好調な売上により、この3年で需要が倍増したため拡大が必要になった。現工場はフル稼働している。新工場には生産工程を見学したり料理教室を受けたりできるビジターセンターも併設される。工事は来月始まる。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "What is the article mainly about?",
+    "choices": [
+     "The opening of a new restaurant",
+     "The construction of a new factory",
+     "A change in company leadership",
+     "A new line of pasta products"
+    ],
+    "answer": 1,
+    "explanation": "第2工場の建設が記事の中心なので (B)。"
+   },
+   {
+    "q": "According to the article, why is Bellini Foods expanding?",
+    "choices": [
+     "Its prices have fallen.",
+     "Its current factory is too old.",
+     "Sales abroad have grown.",
+     "The city offered tax benefits."
+    ],
+    "answer": 2,
+    "explanation": "demand ... has doubled ... mainly due to strong sales in supermarkets overseas なので (C)。"
+   },
+   {
+    "q": "When will the new facility open?",
+    "choices": [
+     "Next month",
+     "In three years",
+     "Next September",
+     "In 120 days"
+    ],
+    "answer": 2,
+    "explanation": "scheduled to open next September なので (C)。Construction will begin next month（着工）と混同しないこと。"
+   },
+   {
+    "q": "What will visitors be able to do at the new plant?",
+    "choices": [
+     "Buy products at a discount",
+     "Watch food being made",
+     "Apply for jobs on site",
+     "Meet the company president"
+    ],
+    "answer": 1,
+    "explanation": "guests can watch the production process → watch food being made で (B)。"
+   }
+  ]
+ },
+ {
+  "id": "p7-06",
+  "part": 7,
+  "level": 3,
+  "title": "ダブルパッセージ（Eメール＋請求書）",
+  "passages": [
+   {
+    "title": "E-mail",
+    "text": "To: Order Department, Paperline Supplies\nFrom: Kenji Mori, Sunrise Design Studio\nDate: May 14\nSubject: Order #4471\n\nHello,\n\nWe received our order today. Thank you for the quick delivery. However, there seems to be a problem with the invoice. We ordered 10 boxes of printer paper, but we were charged for 12. Also, our company receives a 10 percent discount as a corporate member, which does not appear on the invoice.\n\nCould you please send a corrected invoice? We will make the payment as soon as we receive it.\n\nBest regards,\nKenji Mori",
+    "ja": "注文品を受け取りました。迅速な配送をありがとうございます。ただ請求書に問題があるようです。コピー用紙は10箱注文しましたが、12箱分請求されています。また当社は法人会員として10%割引を受けられますが、請求書に反映されていません。修正した請求書を送ってください。受け取り次第お支払いします。"
+   },
+   {
+    "title": "Invoice",
+    "text": "Paperline Supplies — INVOICE\nCustomer: Sunrise Design Studio\nOrder #4471 / Date: May 12\n\nPrinter paper (box) ... 12 x $25.00 = $300.00\nInk cartridges ... 4 x $30.00 = $120.00\nSubtotal: $420.00\nShipping: Free\nTotal: $420.00\nPayment due: May 31",
+    "ja": "請求書：コピー用紙 12箱×25ドル＝300ドル、インク 4個×30ドル＝120ドル、小計420ドル、送料無料、合計420ドル、支払期限5月31日"
+   }
+  ],
+  "questions": [
+   {
+    "q": "Why did Mr. Mori write the e-mail?",
+    "choices": [
+     "To complain about a late delivery",
+     "To report errors on an invoice",
+     "To order more ink cartridges",
+     "To cancel a membership"
+    ],
+    "answer": 1,
+    "explanation": "請求書の問題を指摘しているので (B)。配送は quick delivery とほめている。"
+   },
+   {
+    "q": "By how much was Sunrise Design Studio overcharged for printer paper?",
+    "choices": [
+     "$25",
+     "$30",
+     "$50",
+     "$420"
+    ],
+    "answer": 2,
+    "explanation": "注文は10箱なのに12箱分請求 → 2箱×25ドル＝50ドルの過大請求。2つの文書を組み合わせて解く問題。"
+   },
+   {
+    "q": "What is indicated about the invoice?",
+    "choices": [
+     "It was sent late.",
+     "It does not include a member discount.",
+     "It has the wrong customer name.",
+     "It charges for shipping."
+    ],
+    "answer": 1,
+    "explanation": "メールで指摘された10%の法人割引が請求書にない (B)。Shipping は Free なので (D) は誤り。"
+   },
+   {
+    "q": "When will Sunrise Design Studio most likely pay?",
+    "choices": [
+     "When the corrected invoice arrives",
+     "On May 12",
+     "On May 14",
+     "After the next order"
+    ],
+    "answer": 0,
+    "explanation": "We will make the payment as soon as we receive it (a corrected invoice) なので (A)。"
+   }
+  ]
+ }
+]

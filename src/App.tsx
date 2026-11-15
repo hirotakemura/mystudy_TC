@@ -22,7 +22,7 @@ const NAV: { route: Route; label: string; icon: IconName }[] = [
 
 const TITLES: Record<Route, string> = {
   home: '今日やること',
-  practice: '単語・シャドーイング',
+  practice: '演習',
   log: '学習の記録',
   roadmap: 'ロードマップ',
   scores: 'スコア記録',

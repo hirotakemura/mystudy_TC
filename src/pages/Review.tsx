@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import { WithRoadmap } from '../components/Async'
+import { PART_INFO } from '../lib/parts'
+import type { PartNo } from '../types'
 import { CategoryLegend, DayBar } from '../components/DayBar'
 import { addDays, formatJa, formatMinutes, todayKey, weekStart } from '../lib/date'
 import { commuteTotal, finalWeekStart, phasesOverlapping } from '../lib/plan'
@@ -88,6 +90,8 @@ function ReviewBody({ roadmap }: { roadmap: Roadmap }) {
           ))}
         </ul>
       </section>
+
+      <PartWeek from={from} to={to} />
 
       <section className="card">
         <h2>今週記録したスコア</h2>
@@ -228,6 +232,41 @@ function PastMemos({ current, onPick }: { current: string; onPick: (w: string) =
           ))}
         </ul>
       </details>
+    </section>
+  )
+}
+
+function PartWeek({ from, to }: { from: string; to: string }) {
+  const data = useData()
+  const week = data.partHistory.filter((h) => h.d >= from && h.d <= to)
+  const parts = ([1, 2, 3, 4, 5, 6, 7] as PartNo[]).map((p) => {
+    const list = week.filter((h) => h.p === p)
+    return { p, n: list.length, ok: list.filter((h) => h.ok).length }
+  })
+  return (
+    <section className="card">
+      <h2>パート別の演習（{week.length}問）</h2>
+      {week.length === 0 ? (
+        <p className="small muted">この週はパート別問題を解いていません。</p>
+      ) : (
+        <ul className="menu">
+          {parts
+            .filter((x) => x.n > 0)
+            .map((x) => {
+              const rate = Math.round((x.ok / x.n) * 100)
+              return (
+                <li key={x.p}>
+                  <span>
+                    Part {x.p} {PART_INFO[x.p].name}
+                  </span>
+                  <span className={rate < 60 ? 'down' : ''}>
+                    {x.ok}/{x.n}問・<b>{rate}%</b>
+                  </span>
+                </li>
+              )
+            })}
+        </ul>
+      )}
     </section>
   )
 }

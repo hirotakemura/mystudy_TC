@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import type { Roadmap, ShadowItem, Word } from '../types'
+import type { PartNo, PartSet, Roadmap, ShadowItem, Word } from '../types'
 
 // 計画・教材データはアプリ本体と分離して public/data 配下の JSON から読み込む
 const cache = new Map<string, Promise<unknown>>()
@@ -20,6 +20,10 @@ function fetchJson<T>(path: string): Promise<T> {
 export const loadRoadmap = () => fetchJson<Roadmap>('plan/toeic-roadmap.json')
 export const loadWords = () => fetchJson<Word[]>('vocab/words.json')
 export const loadShadowing = () => fetchJson<ShadowItem[]>('shadowing/sentences.json')
+
+export const PART_NOS: PartNo[] = [1, 2, 3, 4, 5, 6, 7]
+export const loadParts = () =>
+  Promise.all(PART_NOS.map((p) => fetchJson<PartSet[]>(`parts/part${p}.json`))).then((lists) => lists.flat())
 
 export type Loadable<T> = { status: 'loading' } | { status: 'error'; error: string } | { status: 'ok'; value: T }
 

@@ -253,7 +253,11 @@ function PracticeCard({ today }: { today: string }) {
     <section className="card">
       <h2>アプリで演習</h2>
       <div className="start-list">
-        <button className="start-btn primary" onClick={() => open('vocab')}>
+        <button className="start-btn primary" onClick={() => open('parts')}>
+          <b>パート別問題</b>
+          <span>Part 1〜7 のオリジナル問題（リスニングは読み上げ音声）</span>
+        </button>
+        <button className="start-btn" onClick={() => open('vocab')}>
           <b>単語</b>
           <span>
             {due === null ? '読み込み中…' : due > 0 ? `今日の復習 ${due}語` : '今日の復習は完了'}

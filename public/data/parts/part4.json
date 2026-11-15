@@ -1,0 +1,250 @@
+[
+ {
+  "id": "p4-01",
+  "part": 4,
+  "level": 1,
+  "title": "店内アナウンス",
+  "talk": [
+   {
+    "en": "Good afternoon, shoppers, and thank you for visiting Greenfield Market.",
+    "ja": "お客さま、こんにちは。グリーンフィールド・マーケットにご来店いただきありがとうございます。"
+   },
+   {
+    "en": "This weekend only, all fresh fruit is twenty percent off.",
+    "ja": "今週末限定で、生鮮果物がすべて20%引きです。"
+   },
+   {
+    "en": "Also, our bakery section has moved to the back of the store, next to the dairy products.",
+    "ja": "また、パン売り場は店の奥、乳製品の隣に移動しました。"
+   },
+   {
+    "en": "If you sign up for our free membership card at the service counter today, you'll receive a reusable shopping bag.",
+    "ja": "本日サービスカウンターで無料の会員カードにお申し込みいただくと、エコバッグを差し上げます。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "Where is the announcement being made?",
+    "choices": [
+     "At a bakery",
+     "At a supermarket",
+     "At a farm",
+     "At a restaurant"
+    ],
+    "answer": 1,
+    "explanation": "Greenfield Market で果物・パン・乳製品を売っているのでスーパー (B)。"
+   },
+   {
+    "q": "What is said about the bakery section?",
+    "choices": [
+     "It has closed.",
+     "It has new hours.",
+     "It has moved.",
+     "It has a new chef."
+    ],
+    "answer": 2,
+    "explanation": "our bakery section has moved to the back なので (C)。"
+   },
+   {
+    "q": "What will customers receive if they sign up for a membership card today?",
+    "choices": [
+     "A discount coupon",
+     "A free bag",
+     "A loaf of bread",
+     "A gift card"
+    ],
+    "answer": 1,
+    "explanation": "reusable shopping bag → free bag で (B)。"
+   }
+  ]
+ },
+ {
+  "id": "p4-02",
+  "part": 4,
+  "level": 2,
+  "title": "留守番電話のメッセージ",
+  "talk": [
+   {
+    "en": "Hello, this is Martin Cole from Brightway Office Supplies, returning your call.",
+    "ja": "もしもし、ブライトウェイ事務用品のマーティン・コールです。折り返しのお電話です。"
+   },
+   {
+    "en": "You asked about ordering fifty desk chairs for your new office.",
+    "ja": "新しい事務所用に机の椅子を50脚ご注文になりたいとのことでした。"
+   },
+   {
+    "en": "Unfortunately, the model you chose is out of stock until next month.",
+    "ja": "あいにく、お選びいただいたモデルは来月まで在庫切れです。"
+   },
+   {
+    "en": "However, we have a similar model in stock, and I can offer it at the same price.",
+    "ja": "ですが、よく似たモデルの在庫がございまして、同じ価格でご提供できます。"
+   },
+   {
+    "en": "I'll e-mail you some pictures of it. Please let me know by Thursday if you'd like to go ahead.",
+    "ja": "写真をメールでお送りします。進める場合は木曜日までにお知らせください。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "What is the purpose of the call?",
+    "choices": [
+     "To confirm a delivery date",
+     "To respond to an inquiry",
+     "To apologize for a billing error",
+     "To announce a sale"
+    ],
+    "answer": 1,
+    "explanation": "returning your call と言い、問い合わせ（椅子の注文）への返答をしているので (B)。"
+   },
+   {
+    "q": "What problem does the speaker mention?",
+    "choices": [
+     "It is no longer made.",
+     "It is currently unavailable.",
+     "Its price has increased.",
+     "It was damaged in shipping."
+    ],
+    "answer": 1,
+    "explanation": "out of stock until next month → currently unavailable の言い換えで (B)。"
+   },
+   {
+    "q": "What does the speaker ask the listener to do?",
+    "choices": [
+     "Visit a showroom",
+     "Pay a deposit",
+     "Reply by Thursday",
+     "Choose a new color"
+    ],
+    "answer": 2,
+    "explanation": "Please let me know by Thursday なので (C)。"
+   }
+  ]
+ },
+ {
+  "id": "p4-03",
+  "part": 4,
+  "level": 2,
+  "title": "工場見学ツアー",
+  "talk": [
+   {
+    "en": "Welcome to the Northwood Chocolate Factory. My name is Emma, and I'll be leading today's tour.",
+    "ja": "ノースウッド・チョコレート工場へようこそ。エマと申します。本日のツアーをご案内します。"
+   },
+   {
+    "en": "First, we'll see how cocoa beans are roasted, and then we'll visit the packaging area.",
+    "ja": "まずカカオ豆の焙煎の様子をご覧いただき、それから包装エリアを見学します。"
+   },
+   {
+    "en": "For safety reasons, please wear the hair nets that were handed out at the entrance.",
+    "ja": "安全のため、入口でお配りしたヘアネットを着用してください。"
+   },
+   {
+    "en": "Photography is allowed everywhere except the packaging area.",
+    "ja": "写真撮影は包装エリア以外ならどこでも可能です。"
+   },
+   {
+    "en": "At the end of the tour, you can taste samples in our gift shop.",
+    "ja": "ツアーの最後には、ギフトショップで試食ができます。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "Who most likely is the speaker?",
+    "choices": [
+     "A tour guide",
+     "A factory manager",
+     "A safety inspector",
+     "A shop clerk"
+    ],
+    "answer": 0,
+    "explanation": "I'll be leading today's tour なのでツアーガイド (A)。"
+   },
+   {
+    "q": "What are the listeners asked to do?",
+    "choices": [
+     "Turn off their phones",
+     "Wear hair nets",
+     "Stay in groups of two",
+     "Sign a form"
+    ],
+    "answer": 1,
+    "explanation": "please wear the hair nets なので (B)。"
+   },
+   {
+    "q": "Where are the listeners NOT allowed to take pictures?",
+    "choices": [
+     "At the entrance",
+     "In the roasting room",
+     "In the packaging area",
+     "In the gift shop"
+    ],
+    "answer": 2,
+    "explanation": "Photography is allowed everywhere except the packaging area なので撮影できないのは (C)。except の聞き取りがポイント。"
+   }
+  ]
+ },
+ {
+  "id": "p4-04",
+  "part": 4,
+  "level": 3,
+  "title": "社内会議での発表",
+  "talk": [
+   {
+    "en": "Before we finish today's meeting, I have an update on our customer service hotline.",
+    "ja": "今日の会議を終える前に、カスタマーサービスの電話窓口について報告があります。"
+   },
+   {
+    "en": "Over the past three months, the average waiting time for callers has increased to almost ten minutes.",
+    "ja": "この3か月で、電話をかけてくるお客さまの平均待ち時間は10分近くまで延びています。"
+   },
+   {
+    "en": "To address this, we're adding an online chat service on our website starting in April.",
+    "ja": "これに対処するため、4月からウェブサイトにオンラインのチャットサービスを追加します。"
+   },
+   {
+    "en": "We'll also hire four additional part-time staff for the busy morning hours.",
+    "ja": "また、混み合う午前中の時間帯に、パートタイムのスタッフを4名追加で採用します。"
+   },
+   {
+    "en": "If you know anyone who might be interested, please refer them to Ms. Patel in human resources.",
+    "ja": "興味がありそうな方をご存じでしたら、人事部のパテルさんに紹介してください。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "What problem does the speaker mention?",
+    "choices": [
+     "Product sales have dropped.",
+     "Customers wait too long on the phone.",
+     "The website is difficult to use.",
+     "Staff members work too much overtime."
+    ],
+    "answer": 1,
+    "explanation": "the average waiting time ... has increased なので (B)。"
+   },
+   {
+    "q": "When will the online chat service begin?",
+    "choices": [
+     "In January",
+     "In March",
+     "In April",
+     "In May"
+    ],
+    "answer": 2,
+    "explanation": "starting in April なので (C)。"
+   },
+   {
+    "q": "What does the speaker ask the listeners to do?",
+    "choices": [
+     "Apply for a new position",
+     "Recommend potential employees",
+     "Work in the mornings",
+     "Answer customer calls"
+    ],
+    "answer": 1,
+    "explanation": "興味がある人を人事部に紹介してほしい（refer them）と言っているので (B)。"
+   }
+  ]
+ }
+]

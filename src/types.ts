@@ -63,6 +63,46 @@ export interface ShadowItem {
   lines: ShadowLine[]
 }
 
+export type PartNo = 1 | 2 | 3 | 4 | 5 | 6 | 7
+
+/** パート別問題の設問。answer は choices の正解の位置（表示時は選択肢をシャッフルする） */
+export interface PartQuestion {
+  /** 設問文（Part 3/4/7）、または空所のある文（Part 5） */
+  q?: string
+  choices: string[]
+  answer: number
+  /** 選択肢の和訳（Part 1/2） */
+  choicesJa?: string[]
+  /** 文の和訳（Part 5） */
+  ja?: string
+  /** 問題の種類（Part 5：品詞・語彙など） */
+  tag?: string
+  explanation: string
+}
+
+/** パート別問題の1セット（Part 1/2/5 は1問、Part 3/4/6/7 は複数問） */
+export interface PartSet {
+  id: string
+  part: PartNo
+  level: Level
+  title?: string
+  /** Part 1：写真の代わりに表示する場面の説明 */
+  scene?: string
+  /** Part 2：質問文、Part 3/4：会話・説明文（読み上げる） */
+  talk?: ShadowLine[]
+  /** Part 6/7：本文（Part 6 は [1]〜[4] が空所） */
+  passages?: { title?: string; text: string; ja?: string }[]
+  questions: PartQuestion[]
+}
+
+export interface PartResult {
+  /** 最後に解いたときに正解したか */
+  ok: boolean
+  /** 解いた回数 */
+  n: number
+  last: string
+}
+
 // ===== 学習データ（localStorage） =====
 
 /** 学習の内訳。legacy は旧アプリから取り込んだ内訳なしの記録 */
@@ -122,6 +162,12 @@ export interface AppData {
   autoSeconds: Record<string, Partial<Record<Category, number>>>
   wordProgress: Record<string, WordProgress>
   shadowProgress: Record<string, ShadowProgress>
+  /** パート別問題の結果（キーは「セットid#設問番号」） */
+  partResults: Record<string, PartResult>
+  /** パート別問題の解答履歴（週ごとの集計用） */
+  partHistory: { d: string; p: PartNo; ok: boolean }[]
+  /** アプリ内で編集した学習計画（無ければ public/data/plan の初期値を使う） */
+  roadmapOverride?: Roadmap
   lastReviewShown?: string
   settings: {
     theme: ThemeSetting

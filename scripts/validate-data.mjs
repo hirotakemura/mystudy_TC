@@ -70,6 +70,36 @@ for (const it of items) {
   }
 }
 
+// ===== パート別問題（public/data/parts/part1〜7.json） =====
+const partCounts = []
+const setIds = new Set()
+for (let part = 1; part <= 7; part++) {
+  const sets = JSON.parse(readFileSync(new URL(`../public/data/parts/part${part}.json`, import.meta.url), 'utf8'))
+  let qs = 0
+  for (const s of sets) {
+    const at = `part${part}[${s.id ?? '?'}]`
+    need(typeof s.id === 'string' && !setIds.has(s.id), `${at}: id が無いか重複しています`)
+    setIds.add(s.id)
+    need(s.part === part, `${at}: part が ${part} ではありません`)
+    need([1, 2, 3].includes(s.level), `${at}: level は 1/2/3 のいずれかです`)
+    need(Array.isArray(s.questions) && s.questions.length > 0, `${at}: questions が空です`)
+    if (part === 1) need(typeof s.scene === 'string' && s.scene.trim(), `${at}: Part 1 には scene（場面の説明）が必要です`)
+    if (part >= 2 && part <= 4) need(Array.isArray(s.talk) && s.talk.length > 0, `${at}: Part 2〜4 には talk（読み上げる文）が必要です`)
+    if (part >= 6) need(Array.isArray(s.passages) && s.passages.length > 0, `${at}: Part 6/7 には passages（本文）が必要です`)
+    if (part === 6) s.questions.forEach((_, i) => need(s.passages.some((p) => p.text.includes(`[${i + 1}]`)), `${at}: 本文に空所 [${i + 1}] がありません`))
+    const nChoices = part === 2 ? 3 : 4
+    for (const [i, q] of (s.questions ?? []).entries()) {
+      qs++
+      need(Array.isArray(q.choices) && q.choices.length === nChoices, `${at} Q${i + 1}: 選択肢は${nChoices}つにしてください`)
+      need(new Set(q.choices).size === q.choices.length, `${at} Q${i + 1}: 選択肢が重複しています`)
+      need(Number.isInteger(q.answer) && q.answer >= 0 && q.answer < q.choices.length, `${at} Q${i + 1}: answer が選択肢の範囲外です`)
+      need(typeof q.explanation === 'string' && q.explanation.trim(), `${at} Q${i + 1}: explanation（解説）が空です`)
+      if (q.choicesJa) need(q.choicesJa.length === q.choices.length, `${at} Q${i + 1}: choicesJa の数が選択肢と合いません`)
+    }
+  }
+  partCounts.push(`Part${part} ${qs}問`)
+}
+
 if (errors.length) {
   console.error(errors.map((e) => `✗ ${e}`).join('\n'))
   process.exit(1)
@@ -77,3 +107,4 @@ if (errors.length) {
 console.log(`✓ 計画データOK（期間${r.phases.length}件・タスク${ids.size - r.phases.length}件）`)
 console.log(`✓ 単語OK（${words.length}語）`)
 console.log(`✓ シャドーイングOK（${items.length}教材・${lineCount}文）`)
+console.log(`✓ パート別問題OK（${partCounts.join('・')}）`)

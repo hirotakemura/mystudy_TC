@@ -1,0 +1,279 @@
+[
+ {
+  "id": "p3-01",
+  "part": 3,
+  "level": 1,
+  "title": "会議室の予約変更",
+  "talk": [
+   {
+    "speaker": "W",
+    "en": "Hi, Daniel. I need to change the room for Thursday's training session.",
+    "ja": "ダニエル、木曜日の研修の部屋を変えたいの。"
+   },
+   {
+    "speaker": "M",
+    "en": "Oh? I thought Room B was big enough.",
+    "ja": "え？B室で十分な広さだと思っていたけど。"
+   },
+   {
+    "speaker": "W",
+    "en": "It was, but twelve more people from the Osaka branch signed up yesterday.",
+    "ja": "そうだったんだけど、昨日、大阪支店からさらに12人申し込んできたの。"
+   },
+   {
+    "speaker": "M",
+    "en": "I see. The auditorium on the first floor is free that day. Shall I reserve it?",
+    "ja": "なるほど。1階の講堂がその日空いているよ。予約しておこうか？"
+   },
+   {
+    "speaker": "W",
+    "en": "That would be great. And could you ask the IT team to set up the projector there?",
+    "ja": "助かるわ。それと、そこにプロジェクターを設置するようIT部に頼んでもらえる？"
+   },
+   {
+    "speaker": "M",
+    "en": "Sure. I'll send them an e-mail right now.",
+    "ja": "いいよ。今すぐメールを送るよ。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "What does the woman want to do?",
+    "choices": [
+     "To cancel a training session",
+     "To change a meeting room",
+     "To order new equipment",
+     "To introduce a new employee"
+    ],
+    "answer": 1,
+    "explanation": "冒頭で I need to change the room と言っているので (B)。目的は冒頭に出ることが多い。"
+   },
+   {
+    "q": "Why does the woman mention the Osaka branch?",
+    "choices": [
+     "The room is being repaired.",
+     "The projector is broken.",
+     "More people will attend.",
+     "The session was moved to Friday."
+    ],
+    "answer": 2,
+    "explanation": "twelve more people ... signed up と言っているので参加者が増えた (C)。言い換え：signed up → will attend。"
+   },
+   {
+    "q": "What will the man probably do next?",
+    "choices": [
+     "Call the Osaka branch",
+     "Contact the IT team",
+     "Print some handouts",
+     "Move some chairs"
+    ],
+    "answer": 1,
+    "explanation": "最後に I'll send them (the IT team) an e-mail と言っているので (B)。send an e-mail → contact の言い換え。"
+   }
+  ]
+ },
+ {
+  "id": "p3-02",
+  "part": 3,
+  "level": 2,
+  "title": "ケータリングの注文",
+  "talk": [
+   {
+    "speaker": "M",
+    "en": "Good morning, Fresh Table Catering. How can I help you?",
+    "ja": "おはようございます、フレッシュ・テーブル・ケータリングです。ご用件を承ります。"
+   },
+   {
+    "speaker": "W",
+    "en": "Hi, I'd like to order lunch for a client meeting next Tuesday. There will be about twenty people.",
+    "ja": "来週火曜日の顧客との会議用に昼食を注文したいのですが。20人ほどです。"
+   },
+   {
+    "speaker": "M",
+    "en": "Certainly. Our sandwich platter is popular for business meetings. Would you like to add salads?",
+    "ja": "かしこまりました。ビジネス会議にはサンドイッチの盛り合わせが人気です。サラダも追加されますか。"
+   },
+   {
+    "speaker": "W",
+    "en": "Yes, please. And a few of our guests don't eat meat.",
+    "ja": "はい、お願いします。それと、ゲストの何人かは肉を食べないんです。"
+   },
+   {
+    "speaker": "M",
+    "en": "No problem. We can prepare vegetarian sandwiches as well. I'll e-mail you a price estimate this afternoon.",
+    "ja": "問題ありません。ベジタリアン用のサンドイッチもご用意できます。今日の午後、お見積もりをメールでお送りします。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "Where does the man most likely work?",
+    "choices": [
+     "At a restaurant",
+     "At a catering company",
+     "At a hotel front desk",
+     "At a grocery store"
+    ],
+    "answer": 1,
+    "explanation": "電話の冒頭 Fresh Table Catering と名乗っているので (B)。"
+   },
+   {
+    "q": "What does the woman say about some guests?",
+    "choices": [
+     "Some guests are vegetarian.",
+     "The meeting was postponed.",
+     "The budget is limited.",
+     "The office has no kitchen."
+    ],
+    "answer": 0,
+    "explanation": "a few of our guests don't eat meat → vegetarian の言い換えで (A)。"
+   },
+   {
+    "q": "What does the man say he will do this afternoon?",
+    "choices": [
+     "Deliver the food",
+     "Visit the woman's office",
+     "Send a price estimate",
+     "Change the menu"
+    ],
+    "answer": 2,
+    "explanation": "I'll e-mail you a price estimate this afternoon なので (C)。"
+   }
+  ]
+ },
+ {
+  "id": "p3-03",
+  "part": 3,
+  "level": 2,
+  "title": "出張の経費精算",
+  "talk": [
+   {
+    "speaker": "W",
+    "en": "Kevin, have you submitted your expense report for the trip to Singapore?",
+    "ja": "ケビン、シンガポール出張の経費報告書はもう出した？"
+   },
+   {
+    "speaker": "M",
+    "en": "Not yet. I can't find the receipt for my hotel.",
+    "ja": "まだなんだ。ホテルの領収書が見つからなくて。"
+   },
+   {
+    "speaker": "W",
+    "en": "You can ask the hotel to send a copy. Most hotels do that by e-mail.",
+    "ja": "ホテルにコピーを送ってもらえばいいわよ。たいていのホテルはメールで送ってくれるわ。"
+   },
+   {
+    "speaker": "M",
+    "en": "Good idea. When is the deadline for the report?",
+    "ja": "いい考えだね。報告書の締め切りはいつ？"
+   },
+   {
+    "speaker": "W",
+    "en": "This Friday. After that, the accounting department won't process it until next month.",
+    "ja": "今週の金曜日よ。それを過ぎると、経理部は来月まで処理してくれないの。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "What are the speakers mainly discussing?",
+    "choices": [
+     "A hotel reservation",
+     "An expense report",
+     "A new client",
+     "A flight schedule"
+    ],
+    "answer": 1,
+    "explanation": "冒頭から expense report の話をしているので (B)。"
+   },
+   {
+    "q": "What problem does the man have?",
+    "choices": [
+     "He lost a receipt.",
+     "He missed a flight.",
+     "He forgot a password.",
+     "He was charged twice."
+    ],
+    "answer": 0,
+    "explanation": "can't find the receipt → lost a receipt の言い換えで (A)。"
+   },
+   {
+    "q": "What does the woman suggest?",
+    "choices": [
+     "Call the accounting department",
+     "Ask the hotel for a copy",
+     "Pay with a credit card",
+     "Book a different hotel"
+    ],
+    "answer": 1,
+    "explanation": "You can ask the hotel to send a copy と提案しているので (B)。"
+   }
+  ]
+ },
+ {
+  "id": "p3-04",
+  "part": 3,
+  "level": 3,
+  "title": "新しい勤怠システム",
+  "talk": [
+   {
+    "speaker": "M",
+    "en": "Linda, are you ready for the switch to the new time-tracking system on Monday?",
+    "ja": "リンダ、月曜日からの新しい勤怠管理システムへの切り替えの準備はできてる？"
+   },
+   {
+    "speaker": "W",
+    "en": "I think so, but I missed the training session last week. I was visiting a supplier.",
+    "ja": "たぶんね。でも先週の研修に出られなかったの。仕入れ先を訪問していて。"
+   },
+   {
+    "speaker": "M",
+    "en": "Don't worry. The slides are posted on the company intranet, and they're pretty clear.",
+    "ja": "心配ないよ。スライドが社内のイントラネットに載っていて、かなりわかりやすいから。"
+   },
+   {
+    "speaker": "W",
+    "en": "Great. But what if I have questions after I start using it?",
+    "ja": "よかった。でも使い始めてから質問が出てきたら？"
+   },
+   {
+    "speaker": "M",
+    "en": "Haruka in human resources is the contact person. She sits right next to the elevators.",
+    "ja": "人事部のハルカさんが担当窓口だよ。エレベーターのすぐ隣の席だよ。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "When will the new system be introduced?",
+    "choices": [
+     "Last week",
+     "This morning",
+     "On Monday",
+     "Next month"
+    ],
+    "answer": 2,
+    "explanation": "the switch to the new time-tracking system on Monday なので (C)。"
+   },
+   {
+    "q": "Why did the woman miss the training session?",
+    "choices": [
+     "She was on vacation.",
+     "She was meeting a supplier.",
+     "She was sick at home.",
+     "She was giving a presentation."
+    ],
+    "answer": 1,
+    "explanation": "I was visiting a supplier → meeting a supplier の言い換えで (B)。"
+   },
+   {
+    "q": "According to the man, what can the woman do if she has questions?",
+    "choices": [
+     "Ask a coworker to explain the slides",
+     "Watch a recorded video",
+     "Talk to someone in human resources",
+     "Read the user manual"
+    ],
+    "answer": 2,
+    "explanation": "質問があれば人事部のハルカさんが窓口だと言っているので (C)。"
+   }
+  ]
+ }
+]

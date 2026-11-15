@@ -1633,3 +1633,229 @@ details > summary {
   font-size: 0.66rem;
   white-space: nowrap;
 }
+
+/* ===== パート別問題 ===== */
+.part-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.part-list > li + li {
+  border-top: 1px solid var(--border);
+}
+.part-row {
+  display: grid;
+  grid-template-columns: 34px 1fr 64px;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 0;
+  border: 0;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+.part-no {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 800;
+}
+.part-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.35;
+  min-width: 0;
+}
+.bar {
+  position: relative;
+  display: block;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+.bar-fill {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+}
+.part-menu {
+  padding: 0 0 12px 44px;
+}
+.part-menu .btn-row {
+  margin-top: 6px;
+}
+.scene {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin: 10px 0 4px;
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--surface-2);
+  font-size: 0.92rem;
+}
+.scene-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+.audio-box {
+  margin-top: 12px;
+}
+.passage {
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface-2);
+}
+.passage p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+.passage-title {
+  font-weight: 800;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  color: var(--text-2);
+}
+.ja-box {
+  margin-top: 8px !important;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+}
+.script {
+  margin-top: 12px;
+}
+.script summary {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.script li {
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.92rem;
+}
+.question.ok {
+  border-color: var(--ok);
+}
+.question.ng {
+  border-color: var(--ng);
+}
+.q-text {
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+.q-label {
+  color: var(--accent);
+}
+.question .options {
+  margin-top: 8px;
+}
+.options.letters {
+  flex-direction: row;
+}
+.options.letters li {
+  flex: 1;
+}
+.options.letters .option {
+  text-align: center;
+  font-size: 1.05rem;
+}
+.option .opt-ja {
+  display: block;
+  margin-top: 2px;
+  font-weight: 400;
+}
+.opt-letter {
+  font-variant-numeric: tabular-nums;
+}
+.explain {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border);
+}
+.verdict {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+}
+.verdict.ok {
+  color: var(--ok);
+}
+.verdict.ng {
+  color: var(--ng);
+}
+.question .option.correct::before,
+.question .option.wrong::before {
+  content: none;
+}
+.question .option.correct .opt-letter::after {
+  content: ' ⭕';
+}
+.question .option.wrong .opt-letter::after {
+  content: ' ❌';
+}
+
+/* ===== 計画の編集 ===== */
+.focus-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.editor input[type='text'],
+.editor input[type='number'],
+.editor input[type='date'],
+.editor textarea {
+  font-size: 16px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.phase-editor-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.dates-note {
+  margin: -6px 0 10px;
+}
+.edit-rows {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.edit-rows li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.edit-rows input[type='text'] {
+  flex: 1;
+  min-width: 0;
+}
+.edit-rows .min-input {
+  width: 64px;
+  flex: none;
+}
+.icon-del {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--surface-2);
+  color: var(--ng);
+  cursor: pointer;
+}

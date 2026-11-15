@@ -1,0 +1,194 @@
+[
+ {
+  "id": "p1-01",
+  "part": 1,
+  "level": 1,
+  "scene": "オフィスで、女性が一人、机に向かってノートパソコンで作業している。机の上にはコーヒーカップが置かれている。",
+  "questions": [
+   {
+    "choices": [
+     "She is drinking from a cup.",
+     "She is working on a laptop.",
+     "She is closing a window.",
+     "She is putting on a jacket."
+    ],
+    "answer": 1,
+    "choicesJa": [
+     "彼女はカップから飲んでいる。",
+     "彼女はノートパソコンで作業している。",
+     "彼女は窓を閉めている。",
+     "彼女は上着を着ているところだ。"
+    ],
+    "explanation": "女性はノートパソコンで作業しているので (B) が正解。(A) カップは机に置かれているだけで、飲んではいない。"
+   }
+  ]
+ },
+ {
+  "id": "p1-02",
+  "part": 1,
+  "level": 1,
+  "scene": "駅のホームに電車が止まっていて、数人の乗客が電車に乗り込んでいる。",
+  "questions": [
+   {
+    "choices": [
+     "A train is departing from the station.",
+     "Some people are buying tickets.",
+     "Passengers are boarding a train.",
+     "The platform is completely empty."
+    ],
+    "answer": 2,
+    "choicesJa": [
+     "電車が駅を出発している。",
+     "何人かが切符を買っている。",
+     "乗客が電車に乗り込んでいる。",
+     "ホームには誰もいない。"
+    ],
+    "explanation": "乗客が電車に乗り込んでいるので (C) が正解。board は「（乗り物に）乗る」。(A) 電車は止まっていて出発していない。"
+   }
+  ]
+ },
+ {
+  "id": "p1-03",
+  "part": 1,
+  "level": 1,
+  "scene": "会議室の長いテーブルの周りに、誰も座っていない椅子がきれいに並べられている。部屋には人がいない。",
+  "questions": [
+   {
+    "choices": [
+     "Some people are sitting at a table.",
+     "A man is moving some chairs.",
+     "Chairs have been arranged around a table.",
+     "A table is being cleaned."
+    ],
+    "answer": 2,
+    "choicesJa": [
+     "何人かがテーブルに着いている。",
+     "男性が椅子を動かしている。",
+     "椅子がテーブルの周りに並べられている。",
+     "テーブルが掃除されているところだ。"
+    ],
+    "explanation": "人がいない写真では「have been + 過去分詞（〜されている状態）」がよく正解になる。椅子が並べられた状態なので (C)。(D) is being cleaned は「今まさに掃除されている」で、人が必要。"
+   }
+  ]
+ },
+ {
+  "id": "p1-04",
+  "part": 1,
+  "level": 1,
+  "scene": "男性が脚立に乗って、天井の電球を交換している。",
+  "questions": [
+   {
+    "choices": [
+     "He is climbing down a ladder.",
+     "He is replacing a light bulb.",
+     "He is painting the ceiling.",
+     "He is carrying a ladder outside."
+    ],
+    "answer": 1,
+    "choicesJa": [
+     "彼ははしごを降りている。",
+     "彼は電球を交換している。",
+     "彼は天井にペンキを塗っている。",
+     "彼ははしごを外へ運んでいる。"
+    ],
+    "explanation": "天井の電球を交換しているので (B)。replace は「交換する」。(A) 降りている、(C) 塗っている動作ではない。"
+   }
+  ]
+ },
+ {
+  "id": "p1-05",
+  "part": 1,
+  "level": 2,
+  "scene": "公園の小道沿いにベンチがいくつか並んでいる。ベンチには誰も座っておらず、木々が小道に影を落としている。",
+  "questions": [
+   {
+    "choices": [
+     "Some benches are lined up along a path.",
+     "People are relaxing on the benches.",
+     "Some trees are being planted.",
+     "A path is being repaired."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "いくつかのベンチが小道沿いに並んでいる。",
+     "人々がベンチでくつろいでいる。",
+     "木が植えられているところだ。",
+     "小道が修理されているところだ。"
+    ],
+    "explanation": "ベンチが小道沿いに並んでいるので (A)。be lined up は「並んでいる」。人がいないので (B)、作業中の (C)(D) は不正解。"
+   }
+  ]
+ },
+ {
+  "id": "p1-06",
+  "part": 1,
+  "level": 2,
+  "scene": "スーパーの売り場で、店員が棚に缶詰を並べて補充している。",
+  "questions": [
+   {
+    "choices": [
+     "A customer is paying at the register.",
+     "A worker is stocking some shelves.",
+     "Some boxes are piled on the floor.",
+     "A clerk is weighing some fruit."
+    ],
+    "answer": 1,
+    "choicesJa": [
+     "客がレジで支払っている。",
+     "従業員が棚に商品を補充している。",
+     "いくつかの箱が床に積まれている。",
+     "店員が果物の重さを量っている。"
+    ],
+    "explanation": "店員が棚に商品を補充しているので (B)。stock は動詞で「（商品を）仕入れる・補充する」。"
+   }
+  ]
+ },
+ {
+  "id": "p1-07",
+  "part": 1,
+  "level": 2,
+  "scene": "港に小さな船が何隻か停泊している。水面は穏やかで、岸には誰もいない。",
+  "questions": [
+   {
+    "choices": [
+     "Some boats are docked in a harbor.",
+     "A boat is sailing toward a bridge.",
+     "People are swimming near the shore.",
+     "Fishermen are unloading their catch."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "何隻かの船が港に停泊している。",
+     "船が橋に向かって進んでいる。",
+     "人々が岸の近くで泳いでいる。",
+     "漁師たちが獲物を降ろしている。"
+    ],
+    "explanation": "船が港に停泊しているので (A)。be docked は「（船が）停泊している」。人がいないので (C)(D) は不正解。"
+   }
+  ]
+ },
+ {
+  "id": "p1-08",
+  "part": 1,
+  "level": 3,
+  "scene": "女性が建物の入口で、ガラスのドアを押さえて開けている。後ろから男性が台車で荷物を運んでくる。",
+  "questions": [
+   {
+    "choices": [
+     "The woman is locking the door.",
+     "The man is lifting a box onto a shelf.",
+     "The woman is holding a door open.",
+     "Some packages are being unloaded from a truck."
+    ],
+    "answer": 2,
+    "choicesJa": [
+     "女性はドアに鍵をかけている。",
+     "男性は箱を棚に持ち上げている。",
+     "女性はドアを押さえて開けている。",
+     "トラックから荷物が降ろされているところだ。"
+    ],
+    "explanation": "女性がドアを押さえて開けているので (C)。hold a door open は「ドアを押さえて開けておく」。(D) トラックからの荷降ろしは写っていない。"
+   }
+  ]
+ }
+]

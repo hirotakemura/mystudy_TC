@@ -84,3 +84,25 @@ export function commuteCategory(item: CommuteItem): Category {
   if (/文法/.test(l)) return 'grammar'
   return 'listening'
 }
+
+/** 編集した計画のチェック。問題があればメッセージの一覧を返す */
+export function validateRoadmap(r: Roadmap): string[] {
+  const errors: string[] = []
+  const DATE = /^\d{4}-\d{2}-\d{2}$/
+  if (!DATE.test(r.exam.date)) errors.push('本番の日付を入力してください')
+  if (!r.exam.name.trim()) errors.push('試験名を入力してください')
+  if (!(r.exam.target >= 10 && r.exam.target <= 990)) errors.push('目標点は10〜990点で入力してください')
+  if (r.phases.length === 0) errors.push('期間を1つ以上作ってください')
+  const sorted = [...r.phases].sort((a, b) => a.start.localeCompare(b.start))
+  sorted.forEach((p, i) => {
+    const name = p.title.trim() || `${i + 1}番目の期間`
+    if (!p.title.trim()) errors.push(`${i + 1}番目の期間に名前を付けてください`)
+    if (!DATE.test(p.start) || !DATE.test(p.end)) errors.push(`「${name}」の開始日と終了日を入力してください`)
+    else if (p.start > p.end) errors.push(`「${name}」の終了日が開始日より前になっています`)
+    if (i > 0 && p.start <= sorted[i - 1].end) errors.push(`「${sorted[i - 1].title}」と「${name}」の日付が重なっています`)
+    if (DATE.test(r.exam.date) && p.end >= r.exam.date) errors.push(`「${name}」は本番の前日までに終わるようにしてください`)
+    if (p.commute.some((c) => !c.label.trim() || !(c.minutes > 0))) errors.push(`「${name}」の通勤メニューに、内容か分数が空の行があります`)
+    if (p.tasks.some((t) => !t.text.trim())) errors.push(`「${name}」のやることに空の行があります`)
+  })
+  return errors
+}

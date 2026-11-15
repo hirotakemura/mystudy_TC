@@ -1,0 +1,602 @@
+[
+ {
+  "id": "p5-01",
+  "part": 5,
+  "level": 1,
+  "questions": [
+   {
+    "q": "The new software makes it ------- to share files with clients.",
+    "choices": [
+     "easy",
+     "easily",
+     "ease",
+     "easier than"
+    ],
+    "answer": 0,
+    "ja": "新しいソフトウェアで顧客とのファイル共有が簡単になる。",
+    "tag": "品詞",
+    "explanation": "make it ＋ 形容詞 ＋ to do「〜するのを…にする」。空所は形容詞なので easy。"
+   }
+  ]
+ },
+ {
+  "id": "p5-02",
+  "part": 5,
+  "level": 1,
+  "questions": [
+   {
+    "q": "Ms. Chen ------- reviewed the contract before signing it.",
+    "choices": [
+     "careful",
+     "carefully",
+     "care",
+     "careless"
+    ],
+    "answer": 1,
+    "ja": "チェンさんは署名する前に契約書を注意深く確認した。",
+    "tag": "品詞",
+    "explanation": "動詞 reviewed を修飾するのは副詞 carefully。"
+   }
+  ]
+ },
+ {
+  "id": "p5-03",
+  "part": 5,
+  "level": 1,
+  "questions": [
+   {
+    "q": "The quarterly sales report ------- to all managers yesterday.",
+    "choices": [
+     "sends",
+     "was sent",
+     "is sending",
+     "will send"
+    ],
+    "answer": 1,
+    "ja": "四半期の売上報告書は昨日、全管理職に送られた。",
+    "tag": "動詞の形",
+    "explanation": "主語 report は「送られる」側で、yesterday があるので過去の受動態 was sent。"
+   }
+  ]
+ },
+ {
+  "id": "p5-04",
+  "part": 5,
+  "level": 1,
+  "questions": [
+   {
+    "q": "The office will be closed ------- the national holiday.",
+    "choices": [
+     "while",
+     "during",
+     "among",
+     "because"
+    ],
+    "answer": 1,
+    "ja": "祝日の間、事務所は閉まります。",
+    "tag": "前置詞・接続詞",
+    "explanation": "後ろが名詞（the national holiday）なので前置詞 during。while と because は後ろに文（主語＋動詞）が来る。among は「（3つ以上）の間で」。"
+   }
+  ]
+ },
+ {
+  "id": "p5-05",
+  "part": 5,
+  "level": 1,
+  "questions": [
+   {
+    "q": "Employees should submit ------- time sheets by Friday.",
+    "choices": [
+     "they",
+     "them",
+     "their",
+     "themselves"
+    ],
+    "answer": 2,
+    "ja": "従業員は金曜日までに勤務表を提出しなければならない。",
+    "tag": "代名詞",
+    "explanation": "名詞 time sheets の前なので所有格 their。"
+   }
+  ]
+ },
+ {
+  "id": "p5-06",
+  "part": 5,
+  "level": 1,
+  "questions": [
+   {
+    "q": "Please ------- the attached form and return it by e-mail.",
+    "choices": [
+     "complete",
+     "arrive",
+     "happen",
+     "agree"
+    ],
+    "answer": 0,
+    "ja": "添付の用紙に記入し、メールで返送してください。",
+    "tag": "語彙",
+    "explanation": "「書類に記入する」は complete a form。arrive / happen は目的語をとらない。"
+   }
+  ]
+ },
+ {
+  "id": "p5-07",
+  "part": 5,
+  "level": 1,
+  "questions": [
+   {
+    "q": "The seminar starts ------- 9:00 A.M. on Tuesday.",
+    "choices": [
+     "at",
+     "in",
+     "on",
+     "by"
+    ],
+    "answer": 0,
+    "ja": "セミナーは火曜日の午前9時に始まる。",
+    "tag": "前置詞・接続詞",
+    "explanation": "時刻の前は at。曜日には on、月や年には in。"
+   }
+  ]
+ },
+ {
+  "id": "p5-08",
+  "part": 5,
+  "level": 1,
+  "questions": [
+   {
+    "q": "Mr. Ito has ------- at this company for ten years.",
+    "choices": [
+     "work",
+     "works",
+     "worked",
+     "working"
+    ],
+    "answer": 2,
+    "ja": "伊藤さんはこの会社で10年間働いている。",
+    "tag": "動詞の形",
+    "explanation": "has ＋ 過去分詞（現在完了）で worked。for ten years は継続を表す。"
+   }
+  ]
+ },
+ {
+  "id": "p5-09",
+  "part": 5,
+  "level": 2,
+  "questions": [
+   {
+    "q": "The hotel received many positive ------- from its guests.",
+    "choices": [
+     "review",
+     "reviewed",
+     "reviews",
+     "reviewing"
+    ],
+    "answer": 2,
+    "ja": "そのホテルは宿泊客から多くの好意的な評価を受けた。",
+    "tag": "品詞",
+    "explanation": "many ＋ 複数名詞 なので reviews。"
+   }
+  ]
+ },
+ {
+  "id": "p5-10",
+  "part": 5,
+  "level": 2,
+  "questions": [
+   {
+    "q": "The marketing team worked ------- to finish the campaign on time.",
+    "choices": [
+     "efficient",
+     "efficiency",
+     "efficiently",
+     "more efficient"
+    ],
+    "answer": 2,
+    "ja": "マーケティングチームは期限内にキャンペーンを終えるため効率的に働いた。",
+    "tag": "品詞",
+    "explanation": "動詞 worked を修飾する副詞 efficiently。"
+   }
+  ]
+ },
+ {
+  "id": "p5-11",
+  "part": 5,
+  "level": 2,
+  "questions": [
+   {
+    "q": "------- the bad weather, the outdoor concert was held as planned.",
+    "choices": [
+     "Although",
+     "Despite",
+     "Because",
+     "Even"
+    ],
+    "answer": 1,
+    "ja": "悪天候にもかかわらず、野外コンサートは予定通り開催された。",
+    "tag": "前置詞・接続詞",
+    "explanation": "後ろが名詞句（the bad weather）なので前置詞 Despite「〜にもかかわらず」。Although は後ろに文が来る。"
+   }
+  ]
+ },
+ {
+  "id": "p5-12",
+  "part": 5,
+  "level": 2,
+  "questions": [
+   {
+    "q": "Please call the front desk ------- you need extra towels.",
+    "choices": [
+     "if",
+     "unless",
+     "so that",
+     "whether to"
+    ],
+    "answer": 0,
+    "ja": "タオルが追加で必要な場合はフロントにお電話ください。",
+    "tag": "前置詞・接続詞",
+    "explanation": "「タオルが必要なら電話してください」なので条件の if。unless は「〜しない限り」。"
+   }
+  ]
+ },
+ {
+  "id": "p5-13",
+  "part": 5,
+  "level": 2,
+  "questions": [
+   {
+    "q": "By the time the manager arrived, the meeting ------- already started.",
+    "choices": [
+     "has",
+     "have",
+     "had",
+     "having"
+    ],
+    "answer": 2,
+    "ja": "部長が到着した時には、会議はすでに始まっていた。",
+    "tag": "動詞の形",
+    "explanation": "過去の時点（arrived）までに完了していたことは過去完了 had started。"
+   }
+  ]
+ },
+ {
+  "id": "p5-14",
+  "part": 5,
+  "level": 2,
+  "questions": [
+   {
+    "q": "The company plans to ------- its operations to South America next year.",
+    "choices": [
+     "expand",
+     "extend to",
+     "grow up",
+     "spread out of"
+    ],
+    "answer": 0,
+    "ja": "その会社は来年、南米に事業を拡大する予定だ。",
+    "tag": "語彙",
+    "explanation": "expand operations to 〜「事業を〜へ拡大する」。"
+   }
+  ]
+ },
+ {
+  "id": "p5-15",
+  "part": 5,
+  "level": 2,
+  "questions": [
+   {
+    "q": "All visitors must ------- at the reception desk upon arrival.",
+    "choices": [
+     "register",
+     "attend",
+     "reach",
+     "participate"
+    ],
+    "answer": 0,
+    "ja": "すべての訪問者は到着時に受付で登録しなければならない。",
+    "tag": "語彙",
+    "explanation": "「受付で記帳・登録する」は register。attend / reach は他動詞で目的語が必要、participate は in が必要。"
+   }
+  ]
+ },
+ {
+  "id": "p5-16",
+  "part": 5,
+  "level": 2,
+  "questions": [
+   {
+    "q": "Mr. Lopez prepared the presentation slides -------.",
+    "choices": [
+     "he",
+     "his",
+     "him",
+     "himself"
+    ],
+    "answer": 3,
+    "ja": "ロペスさんは発表用スライドを自分で準備した。",
+    "tag": "代名詞",
+    "explanation": "「自分で（独力で）」の意味の再帰代名詞 himself。文はすでに完成しているので強調として付け加わる。"
+   }
+  ]
+ },
+ {
+  "id": "p5-17",
+  "part": 5,
+  "level": 2,
+  "questions": [
+   {
+    "q": "The new policy will take ------- on April 1.",
+    "choices": [
+     "effect",
+     "affect",
+     "place in",
+     "part"
+    ],
+    "answer": 0,
+    "ja": "新しい方針は4月1日に施行される。",
+    "tag": "語彙",
+    "explanation": "take effect「（法律・規則が）発効する」。affect は動詞。"
+   }
+  ]
+ },
+ {
+  "id": "p5-18",
+  "part": 5,
+  "level": 2,
+  "questions": [
+   {
+    "q": "The manager asked all staff ------- the safety training.",
+    "choices": [
+     "attend",
+     "to attend",
+     "attending",
+     "attended"
+    ],
+    "answer": 1,
+    "ja": "部長は全スタッフに安全研修への出席を求めた。",
+    "tag": "動詞の形",
+    "explanation": "ask ＋ 人 ＋ to do「人に〜するよう頼む」。"
+   }
+  ]
+ },
+ {
+  "id": "p5-19",
+  "part": 5,
+  "level": 2,
+  "questions": [
+   {
+    "q": "The proposal was rejected because of its high -------.",
+    "choices": [
+     "cost",
+     "costly",
+     "costing",
+     "to cost"
+    ],
+    "answer": 0,
+    "ja": "その提案は費用の高さのために却下された。",
+    "tag": "品詞",
+    "explanation": "所有格 its ＋ 形容詞 high の後なので名詞 cost。"
+   }
+  ]
+ },
+ {
+  "id": "p5-20",
+  "part": 5,
+  "level": 2,
+  "questions": [
+   {
+    "q": "The package will be delivered ------- three business days.",
+    "choices": [
+     "within",
+     "among",
+     "since",
+     "between"
+    ],
+    "answer": 0,
+    "ja": "荷物は3営業日以内に配達されます。",
+    "tag": "前置詞・接続詞",
+    "explanation": "within ＋ 期間「〜以内に」。since は「〜以来」。"
+   }
+  ]
+ },
+ {
+  "id": "p5-21",
+  "part": 5,
+  "level": 3,
+  "questions": [
+   {
+    "q": "Ms. Wong was ------- for her outstanding contribution to the project.",
+    "choices": [
+     "recognized",
+     "realized",
+     "reminded",
+     "reserved"
+    ],
+    "answer": 0,
+    "ja": "ウォンさんはプロジェクトへの顕著な貢献で表彰された。",
+    "tag": "語彙",
+    "explanation": "be recognized for 〜「〜で表彰される・認められる」。"
+   }
+  ]
+ },
+ {
+  "id": "p5-22",
+  "part": 5,
+  "level": 3,
+  "questions": [
+   {
+    "q": "------- you have any questions, please do not hesitate to contact us.",
+    "choices": [
+     "Should",
+     "Would",
+     "Unless",
+     "Whether"
+    ],
+    "answer": 0,
+    "ja": "ご質問がありましたら、遠慮なくご連絡ください。",
+    "tag": "前置詞・接続詞",
+    "explanation": "Should you have 〜 は If you should have 〜 の倒置で「万一〜があれば」。ビジネスメールの定番表現。"
+   }
+  ]
+ },
+ {
+  "id": "p5-23",
+  "part": 5,
+  "level": 3,
+  "questions": [
+   {
+    "q": "The software update is ------- with older versions of the operating system.",
+    "choices": [
+     "compatible",
+     "compatibility",
+     "compatibly",
+     "compete"
+    ],
+    "answer": 0,
+    "ja": "そのソフトウェア更新は、OSの古いバージョンと互換性がある。",
+    "tag": "品詞",
+    "explanation": "be動詞の後で補語になる形容詞 compatible「互換性のある」。"
+   }
+  ]
+ },
+ {
+  "id": "p5-24",
+  "part": 5,
+  "level": 3,
+  "questions": [
+   {
+    "q": "The construction of the new library is expected ------- by next spring.",
+    "choices": [
+     "completing",
+     "to complete",
+     "to be completed",
+     "having completed"
+    ],
+    "answer": 2,
+    "ja": "新しい図書館の建設は来春までに完了する見込みだ。",
+    "tag": "動詞の形",
+    "explanation": "be expected to do の形で、主語 construction は「完了される」側なので受動の to be completed。"
+   }
+  ]
+ },
+ {
+  "id": "p5-25",
+  "part": 5,
+  "level": 3,
+  "questions": [
+   {
+    "q": "Due to ------- demand, the concert has added a second performance.",
+    "choices": [
+     "overwhelming",
+     "overflowing",
+     "overlooking",
+     "overtaking"
+    ],
+    "answer": 0,
+    "ja": "圧倒的な需要により、そのコンサートは2回目の公演を追加した。",
+    "tag": "語彙",
+    "explanation": "overwhelming demand「圧倒的な需要」。"
+   }
+  ]
+ },
+ {
+  "id": "p5-26",
+  "part": 5,
+  "level": 3,
+  "questions": [
+   {
+    "q": "Of the two candidates, the committee chose the one ------- experience was more relevant.",
+    "choices": [
+     "who",
+     "whom",
+     "whose",
+     "which"
+    ],
+    "answer": 2,
+    "ja": "2人の候補者のうち、委員会は経験がより関連性の高い方を選んだ。",
+    "tag": "代名詞",
+    "explanation": "後ろの名詞 experience につながり「その人の経験が」となる関係代名詞の所有格 whose。"
+   }
+  ]
+ },
+ {
+  "id": "p5-27",
+  "part": 5,
+  "level": 3,
+  "questions": [
+   {
+    "q": "The museum will remain open ------- renovations are being carried out.",
+    "choices": [
+     "while",
+     "during",
+     "despite",
+     "throughout"
+    ],
+    "answer": 0,
+    "ja": "改修工事が行われている間も博物館は開館し続ける。",
+    "tag": "前置詞・接続詞",
+    "explanation": "後ろが文（renovations are being carried out）なので接続詞 while。during / despite / throughout は前置詞。"
+   }
+  ]
+ },
+ {
+  "id": "p5-28",
+  "part": 5,
+  "level": 3,
+  "questions": [
+   {
+    "q": "Please keep your receipt as ------- of purchase.",
+    "choices": [
+     "proof",
+     "prove",
+     "approval",
+     "profile"
+    ],
+    "answer": 0,
+    "ja": "購入の証明として領収書を保管してください。",
+    "tag": "語彙",
+    "explanation": "proof of purchase「購入の証明」。prove は動詞。"
+   }
+  ]
+ },
+ {
+  "id": "p5-29",
+  "part": 5,
+  "level": 3,
+  "questions": [
+   {
+    "q": "Applicants must have ------- knowledge of accounting software.",
+    "choices": [
+     "extensive",
+     "extend",
+     "extension",
+     "extensively"
+    ],
+    "answer": 0,
+    "ja": "応募者は会計ソフトの幅広い知識を持っていなければならない。",
+    "tag": "品詞",
+    "explanation": "名詞 knowledge を修飾する形容詞 extensive「幅広い」。"
+   }
+  ]
+ },
+ {
+  "id": "p5-30",
+  "part": 5,
+  "level": 3,
+  "questions": [
+   {
+    "q": "If the shipment had arrived on time, we ------- the order last week.",
+    "choices": [
+     "would complete",
+     "will complete",
+     "would have completed",
+     "had completed"
+    ],
+    "answer": 2,
+    "ja": "荷物が予定通り届いていれば、先週注文を完了できていた。",
+    "tag": "動詞の形",
+    "explanation": "If ＋ 過去完了 の仮定法過去完了なので、帰結節は would have ＋ 過去分詞。"
+   }
+  ]
+ }
+]

@@ -1,0 +1,222 @@
+[
+ {
+  "id": "p6-01",
+  "part": 6,
+  "level": 1,
+  "title": "社内メール：駐車場の工事",
+  "passages": [
+   {
+    "title": "To: All Staff / Subject: Parking Lot Repairs",
+    "text": "Dear Staff,\n\nThe parking lot behind our building will be repaved next week. Work will begin on Monday and is ------- [1] to take five days.\n\nDuring this time, the lot will be closed. ------- [2], employees may park at the City Center Garage on Elm Street. The company will cover the cost of parking there.\n\nPlease keep your parking receipts and submit them to the general affairs department ------- [3] the end of the month. ------- [4]\n\nThank you for your cooperation.\n\nKaren Mills\nFacilities Manager",
+    "ja": "来週、建物裏の駐車場の再舗装を行います。工事は月曜日に始まり、5日間かかる見込みです。この間、駐車場は閉鎖されます。代わりに、エルム通りのシティセンター駐車場をご利用いただけます。費用は会社が負担します。駐車券の領収書を保管し、月末までに総務部に提出してください。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "expected",
+     "expecting",
+     "expectation",
+     "expects"
+    ],
+    "answer": 0,
+    "explanation": "be expected to do「〜する見込みだ」。受動態なので過去分詞 expected。"
+   },
+   {
+    "choices": [
+     "Instead",
+     "However",
+     "Therefore",
+     "Otherwise"
+    ],
+    "answer": 0,
+    "explanation": "駐車場が閉鎖される → 代わりに別の駐車場を使える、という流れなので Instead「その代わりに」。"
+   },
+   {
+    "choices": [
+     "by",
+     "until",
+     "since",
+     "for"
+    ],
+    "answer": 0,
+    "explanation": "「月末までに（期限）」提出するので by。until は「〜までずっと（継続）」。"
+   },
+   {
+    "choices": [
+     "Receipts submitted after that date cannot be reimbursed.",
+     "The parking lot was built ten years ago.",
+     "Elm Street is closed to traffic on weekends.",
+     "New employees will receive parking permits."
+    ],
+    "answer": 0,
+    "explanation": "文挿入問題。直前の「領収書を月末までに提出」に続けて「期限後の提出分は払い戻せない」とする (A) が自然。"
+   }
+  ]
+ },
+ {
+  "id": "p6-02",
+  "part": 6,
+  "level": 2,
+  "title": "お知らせ：図書館の新サービス",
+  "passages": [
+   {
+    "title": "Riverside Public Library News",
+    "text": "Starting May 1, Riverside Public Library will offer a new e-book lending service. Library members will be able to borrow up to five e-books at a time ------- [1] their smartphones or tablets.\n\nTo use the service, members simply need to download the library's free app and log in with their membership number. ------- [2]\n\nThe library has already ------- [3] more than 3,000 titles, and new ones will be added every month. \"We hope this service will make reading more ------- [4] for busy people,\" said head librarian Tom Becker.",
+    "ja": "5月1日から、リバーサイド公立図書館は電子書籍の貸し出しサービスを始めます。会員はスマートフォンやタブレットで一度に5冊まで借りられます。利用するには無料アプリをダウンロードして会員番号でログインするだけです。図書館はすでに3,000冊以上をそろえ、毎月新しい本が追加されます。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "using",
+     "used",
+     "to use",
+     "uses"
+    ],
+    "answer": 0,
+    "explanation": "borrow ... using their smartphones「スマホを使って借りる」という分詞構文。"
+   },
+   {
+    "choices": [
+     "Those without a membership can register at the front desk.",
+     "The library will be closed on May 1.",
+     "Printed books will no longer be available.",
+     "The app costs five dollars per month."
+    ],
+    "answer": 0,
+    "explanation": "文挿入問題。会員番号でログインする説明の後に「会員でない人は受付で登録できる」と補足する (A) が自然。(D) は直前の free app と矛盾。"
+   },
+   {
+    "choices": [
+     "collected",
+     "collecting",
+     "collection",
+     "collects"
+    ],
+    "answer": 0,
+    "explanation": "has already ＋ 過去分詞（現在完了）なので collected。"
+   },
+   {
+    "choices": [
+     "accessible",
+     "access",
+     "accessing",
+     "accessibly"
+    ],
+    "answer": 0,
+    "explanation": "make ＋ 目的語 ＋ 形容詞「〜を…にする」。more accessible「より利用しやすい」。"
+   }
+  ]
+ },
+ {
+  "id": "p6-03",
+  "part": 6,
+  "level": 2,
+  "title": "顧客への手紙：注文の遅れ",
+  "passages": [
+   {
+    "title": "Dear Mr. Harris,",
+    "text": "Thank you for your recent order of office furniture from Lakeview Interiors. We are writing to inform you that the delivery of your desks will be ------- [1] by approximately one week.\n\nOur supplier has experienced unexpected production problems. ------- [2] We sincerely apologize for any inconvenience this may cause.\n\nAs a token of our appreciation for your patience, we would like to offer you a 15 percent discount on your next purchase. The discount will be applied ------- [3] when you place your next order.\n\nIf you have any questions, please contact our customer service team ------- [4] 555-0198.\n\nSincerely,\nAmy Lin\nLakeview Interiors",
+    "ja": "オフィス家具をご注文いただきありがとうございます。机の配送が約1週間遅れることをお知らせします。仕入れ先で予期せぬ生産上の問題が発生しました。ご不便をおかけして申し訳ありません。お待ちいただくお礼として、次回のご購入を15%割引いたします。割引は次回のご注文時に自動で適用されます。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "delayed",
+     "delaying",
+     "delay",
+     "delays"
+    ],
+    "answer": 0,
+    "explanation": "will be ＋ 過去分詞（受動態）で「遅らされる＝遅れる」。"
+   },
+   {
+    "choices": [
+     "As a result, we cannot ship the items on the original date.",
+     "Our chairs are made from recycled materials.",
+     "We have opened a new showroom downtown.",
+     "Your payment has been received in full."
+    ],
+    "answer": 0,
+    "explanation": "文挿入問題。生産上の問題 → その結果、当初の日に発送できない、という因果関係の (A)。"
+   },
+   {
+    "choices": [
+     "automatically",
+     "automatic",
+     "automation",
+     "automate"
+    ],
+    "answer": 0,
+    "explanation": "動詞 will be applied を修飾する副詞 automatically。"
+   },
+   {
+    "choices": [
+     "at",
+     "on",
+     "in",
+     "to"
+    ],
+    "answer": 0,
+    "explanation": "電話番号の前は at。「〜番で（連絡する）」。"
+   }
+  ]
+ },
+ {
+  "id": "p6-04",
+  "part": 6,
+  "level": 3,
+  "title": "求人広告",
+  "passages": [
+   {
+    "title": "Now Hiring: Sales Associate",
+    "text": "Bayside Electronics is looking for an energetic sales associate to join our downtown store. The successful candidate will assist customers, ------- [1] product displays, and handle cash register duties.\n\n------- [2] Previous retail experience is preferred but not required, as full training will be provided.\n\nWe offer competitive wages, an employee discount, and flexible scheduling. ------- [3] interested in the position should submit a résumé through our Web site by June 30. Only applicants ------- [4] for an interview will be contacted.",
+    "ja": "ベイサイド・エレクトロニクスは中心街の店舗で働く販売員を募集しています。採用者は接客、商品陳列の管理、レジ業務を担当します。小売の経験があれば望ましいですが、研修があるので必須ではありません。競争力のある給与、社員割引、柔軟なシフトを提供します。応募者は6月30日までにウェブサイトから履歴書を提出してください。面接に選ばれた方のみご連絡します。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "maintain",
+     "maintaining",
+     "maintained",
+     "to maintaining"
+    ],
+    "answer": 0,
+    "explanation": "assist, ------- , and handle と動詞の原形を並べる並列構造なので maintain。"
+   },
+   {
+    "choices": [
+     "Applicants must be available to work on weekends.",
+     "Our store was founded in 1995.",
+     "The downtown store will close next month.",
+     "Customers can return items within 30 days."
+    ],
+    "answer": 0,
+    "explanation": "文挿入問題。応募条件（経験は不要）を述べる段落なので、条件を示す (A) が自然。(C) は募集と矛盾。"
+   },
+   {
+    "choices": [
+     "Those",
+     "They",
+     "Who",
+     "Whoever"
+    ],
+    "answer": 0,
+    "explanation": "Those interested in 〜「〜に興味のある人々」。Those (who are) interested の省略形。"
+   },
+   {
+    "choices": [
+     "selected",
+     "selecting",
+     "selection",
+     "to select"
+    ],
+    "answer": 0,
+    "explanation": "applicants (who are) selected for an interview「面接に選ばれた応募者」。過去分詞の後置修飾。"
+   }
+  ]
+ }
+]

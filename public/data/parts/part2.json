@@ -1,0 +1,422 @@
+[
+ {
+  "id": "p2-01",
+  "part": 2,
+  "level": 1,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Where is the new printer?",
+    "ja": "新しいプリンターはどこですか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "Next to the copy machine.",
+     "Yes, I printed it.",
+     "It was very expensive."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "コピー機の隣です。",
+     "はい、印刷しました。",
+     "とても高かったです。"
+    ],
+    "explanation": "Where（場所）に対して場所を答える (A)。(B) Where疑問文に Yes/No では答えない。(B) は printer→printed の音のひっかけ。"
+   }
+  ]
+ },
+ {
+  "id": "p2-02",
+  "part": 2,
+  "level": 1,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "When does the meeting start?",
+    "ja": "会議はいつ始まりますか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "In the main conference room.",
+     "At ten thirty.",
+     "Mr. Kim will lead it."
+    ],
+    "answer": 1,
+    "choicesJa": [
+     "大会議室です。",
+     "10時半です。",
+     "キムさんが進行します。"
+    ],
+    "explanation": "When（時）に対して時刻を答える (B)。(A) は場所、(C) は人を答えている。"
+   }
+  ]
+ },
+ {
+  "id": "p2-03",
+  "part": 2,
+  "level": 1,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Who is in charge of the budget report?",
+    "ja": "予算報告書の担当は誰ですか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "By the end of the month.",
+     "Ms. Garcia in accounting.",
+     "It's over budget."
+    ],
+    "answer": 1,
+    "choicesJa": [
+     "月末までです。",
+     "経理部のガルシアさんです。",
+     "予算オーバーです。"
+    ],
+    "explanation": "Who（人）に対して人を答える (B)。(C) は budget の繰り返しによるひっかけ。"
+   }
+  ]
+ },
+ {
+  "id": "p2-04",
+  "part": 2,
+  "level": 1,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Would you like some coffee?",
+    "ja": "コーヒーはいかがですか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "Yes, please. With milk.",
+     "The café on the corner.",
+     "I liked it a lot."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "はい、お願いします。ミルク入りで。",
+     "角のカフェです。",
+     "とても気に入りました。"
+    ],
+    "explanation": "Would you like 〜?（勧誘）に Yes, please で応じる (A)。(C) は like の音のひっかけ。"
+   }
+  ]
+ },
+ {
+  "id": "p2-05",
+  "part": 2,
+  "level": 1,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "How did you get to the airport?",
+    "ja": "空港へはどうやって行きましたか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "About two hours ago.",
+     "I took a taxi.",
+     "Gate fifteen."
+    ],
+    "answer": 1,
+    "choicesJa": [
+     "2時間ほど前です。",
+     "タクシーに乗りました。",
+     "15番ゲートです。"
+    ],
+    "explanation": "How（手段）に対して交通手段を答える (B)。"
+   }
+  ]
+ },
+ {
+  "id": "p2-06",
+  "part": 2,
+  "level": 1,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Why was the shipment delayed?",
+    "ja": "なぜ発送が遅れたのですか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "Because of the snowstorm.",
+     "Twenty boxes.",
+     "I'll ship it today."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "吹雪のせいです。",
+     "20箱です。",
+     "今日発送します。"
+    ],
+    "explanation": "Why（理由）に Because of で理由を答える (A)。(C) は shipment→ship の音のひっかけ。"
+   }
+  ]
+ },
+ {
+  "id": "p2-07",
+  "part": 2,
+  "level": 2,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Should we order lunch or go out?",
+    "ja": "お昼は注文しますか、それとも外に出ますか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "Let's go to the new place downstairs.",
+     "Yes, we should.",
+     "It's out of order."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "下の階の新しい店に行きましょう。",
+     "はい、そうすべきです。",
+     "故障中です。"
+    ],
+    "explanation": "A or B の選択疑問文では Yes/No で答えないのが基本。外に出る方を具体的に答えた (A) が正解。(C) out of order は「故障中」で order のひっかけ。"
+   }
+  ]
+ },
+ {
+  "id": "p2-08",
+  "part": 2,
+  "level": 2,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "You've met our new manager, haven't you?",
+    "ja": "新しい部長にはもう会いましたよね。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "Yes, at the welcome party.",
+     "The meeting room is free.",
+     "He manages the sales team."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "はい、歓迎会で。",
+     "会議室は空いています。",
+     "彼は営業チームを管理しています。"
+    ],
+    "explanation": "付加疑問文「〜ですよね」に Yes で答え、会った場面を補足した (A)。(C) は manager→manages のひっかけ。"
+   }
+  ]
+ },
+ {
+  "id": "p2-09",
+  "part": 2,
+  "level": 2,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Can you send me the file by noon?",
+    "ja": "正午までにファイルを送ってもらえますか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "I'll do it right away.",
+     "It's in the second drawer.",
+     "Noon is fine for lunch."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "すぐにやります。",
+     "2番目の引き出しにあります。",
+     "お昼は正午で大丈夫です。"
+    ],
+    "explanation": "依頼（Can you 〜?）に引き受ける返事をした (A)。(C) は noon の繰り返しのひっかけ。"
+   }
+  ]
+ },
+ {
+  "id": "p2-10",
+  "part": 2,
+  "level": 2,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Isn't the store open on Sundays?",
+    "ja": "その店は日曜日は開いていないのですか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "Only in December.",
+     "I opened the box.",
+     "It's a large store."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "12月だけです。",
+     "箱を開けました。",
+     "大きな店です。"
+    ],
+    "explanation": "否定疑問文は「開いているかどうか」を聞いている。「12月だけ（開いている）」と答えた (A) が自然な応答。"
+   }
+  ]
+ },
+ {
+  "id": "p2-11",
+  "part": 2,
+  "level": 2,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Which hotel did you book for the conference?",
+    "ja": "会議のためにどのホテルを予約しましたか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "The one near the convention center.",
+     "I read that book.",
+     "For three nights."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "コンベンションセンターの近くのところです。",
+     "その本は読みました。",
+     "3泊です。"
+    ],
+    "explanation": "Which（どれ）に対し the one（＝hotel）で答えた (A)。(B) は book（予約する／本）のひっかけ。"
+   }
+  ]
+ },
+ {
+  "id": "p2-12",
+  "part": 2,
+  "level": 3,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Who's going to replace Ms. Tanaka while she's on leave?",
+    "ja": "田中さんが休暇中、誰が代わりを務めるのですか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "They haven't decided yet.",
+     "She left at five.",
+     "Please replace the battery."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "まだ決まっていません。",
+     "彼女は5時に帰りました。",
+     "電池を交換してください。"
+    ],
+    "explanation": "「まだ決まっていない」は Who / When などに対する定番の正解パターン。(B) leave→left、(C) replace の繰り返しはひっかけ。"
+   }
+  ]
+ },
+ {
+  "id": "p2-13",
+  "part": 2,
+  "level": 3,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "The quarterly report needs to be revised.",
+    "ja": "四半期報告書を修正する必要があります。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "Which section should I change?",
+     "Every three months.",
+     "I'll report it to the police."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "どの部分を変えればいいですか。",
+     "3か月ごとです。",
+     "警察に届けます。"
+    ],
+    "explanation": "平叙文（依頼・指摘）に対し、質問で返す (A) が自然。(B) quarterly（四半期の）から連想させるひっかけ。"
+   }
+  ]
+ },
+ {
+  "id": "p2-14",
+  "part": 2,
+  "level": 3,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Why don't you take the afternoon off?",
+    "ja": "午後は休みを取ったらどうですか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "I have a deadline to meet.",
+     "It took off on time.",
+     "Because it was closed."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "締め切りがあるんです。",
+     "定刻に離陸しました。",
+     "閉まっていたからです。"
+    ],
+    "explanation": "Why don't you 〜? は理由ではなく「〜したらどう？」という提案。締め切りがあると遠回しに断る (A)。(C) Because は Why への反射で選ぶと間違える典型。"
+   }
+  ]
+ },
+ {
+  "id": "p2-15",
+  "part": 2,
+  "level": 3,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "How often do you update the website?",
+    "ja": "ウェブサイトはどのくらいの頻度で更新していますか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "Whenever we launch a new product.",
+     "At the top of the page.",
+     "It's an updated version."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "新製品を発売するたびにです。",
+     "ページの上部です。",
+     "更新版です。"
+    ],
+    "explanation": "How often（頻度）に「〜するたびに」と答えた (A)。数字を使わない正解に慣れておく。"
+   }
+  ]
+ }
+]
