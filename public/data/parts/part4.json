@@ -246,5 +246,501 @@
     "explanation": "興味がある人を人事部に紹介してほしい（refer them）と言っているので (B)。"
    }
   ]
+ },
+ {
+  "id": "p4-05",
+  "part": 4,
+  "level": 1,
+  "title": "交通情報",
+  "talk": [
+   {
+    "en": "Good morning. This is Jenny Lee with your morning traffic report.",
+    "ja": "おはようございます。朝の交通情報をジェニー・リーがお伝えします。"
+   },
+   {
+    "en": "Traffic on Highway 9 is moving slowly because of road repairs near the airport exit.",
+    "ja": "国道9号線は、空港出口付近の道路工事のため渋滞しています。"
+   },
+   {
+    "en": "Drivers heading downtown should use Bridge Street instead.",
+    "ja": "中心街方面へ向かう方は、代わりにブリッジ通りをご利用ください。"
+   },
+   {
+    "en": "The repairs are expected to continue until Friday.",
+    "ja": "工事は金曜日まで続く見込みです。"
+   },
+   {
+    "en": "Next, we'll have the weather forecast with Tom Hall.",
+    "ja": "次はトム・ホールによる天気予報です。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "What is causing the delay on Highway 9?",
+    "choices": [
+     "An accident",
+     "Road repairs",
+     "Heavy rain",
+     "A parade"
+    ],
+    "answer": 1,
+    "explanation": "because of road repairs なので (B)。"
+   },
+   {
+    "q": "What does the speaker suggest drivers do?",
+    "choices": [
+     "Leave home early",
+     "Take a train",
+     "Use a different road",
+     "Drive slowly"
+    ],
+    "answer": 2,
+    "explanation": "use Bridge Street instead → 別の道を使う (C)。"
+   },
+   {
+    "q": "What will listeners hear next?",
+    "choices": [
+     "A weather forecast",
+     "A news interview",
+     "Music",
+     "An advertisement"
+    ],
+    "answer": 0,
+    "explanation": "Next, we'll have the weather forecast なので (A)。"
+   }
+  ]
+ },
+ {
+  "id": "p4-06",
+  "part": 4,
+  "level": 1,
+  "title": "美術館の閉館アナウンス",
+  "talk": [
+   {
+    "en": "Attention, visitors. The museum will close in thirty minutes, at five o'clock.",
+    "ja": "ご来館の皆さまにお知らせします。当館はあと30分、5時に閉館いたします。"
+   },
+   {
+    "en": "The gift shop on the first floor will remain open until five thirty.",
+    "ja": "1階のギフトショップは5時半まで営業しております。"
+   },
+   {
+    "en": "If you checked a coat or bag, please pick it up at the cloakroom before leaving.",
+    "ja": "コートやかばんをお預けの方は、お帰りの前にクロークでお受け取りください。"
+   },
+   {
+    "en": "Thank you for visiting, and we hope to see you again soon.",
+    "ja": "ご来館ありがとうございました。またのお越しをお待ちしております。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "Where is the announcement being made?",
+    "choices": [
+     "At an airport",
+     "At a museum",
+     "At a library",
+     "At a theater"
+    ],
+    "answer": 1,
+    "explanation": "The museum will close なので (B)。"
+   },
+   {
+    "q": "What is open until five thirty?",
+    "choices": [
+     "The cafeteria",
+     "The gift shop",
+     "The parking lot",
+     "The special exhibit"
+    ],
+    "answer": 1,
+    "explanation": "The gift shop ... until five thirty なので (B)。"
+   },
+   {
+    "q": "What are some listeners asked to do?",
+    "choices": [
+     "Buy tickets",
+     "Pick up their belongings",
+     "Fill out a survey",
+     "Turn off their phones"
+    ],
+    "answer": 1,
+    "explanation": "預けたコートやかばんを受け取る → pick up their belongings で (B)。"
+   }
+  ]
+ },
+ {
+  "id": "p4-07",
+  "part": 4,
+  "level": 2,
+  "title": "新製品の広告",
+  "talk": [
+   {
+    "en": "Tired of slow Internet at home? Switch to Skyline Fiber today!",
+    "ja": "家のインターネットが遅くてお困りですか？今すぐスカイライン・ファイバーに乗り換えましょう！"
+   },
+   {
+    "en": "Our new service is up to ten times faster than standard connections.",
+    "ja": "新サービスは一般的な回線の最大10倍の速さです。"
+   },
+   {
+    "en": "And for a limited time, new customers get the first three months for just ten dollars a month.",
+    "ja": "さらに期間限定で、新規のお客さまは最初の3か月が月額わずか10ドルです。"
+   },
+   {
+    "en": "Installation is free, and our technicians can visit within forty-eight hours.",
+    "ja": "設置は無料で、48時間以内に技術者が伺います。"
+   },
+   {
+    "en": "Visit our Web site to check if Skyline Fiber is available in your area.",
+    "ja": "お住まいの地域でご利用いただけるか、ウェブサイトでご確認ください。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "What is being advertised?",
+    "choices": [
+     "A mobile phone",
+     "An Internet service",
+     "A computer repair shop",
+     "A delivery company"
+    ],
+    "answer": 1,
+    "explanation": "Skyline Fiber という家庭用インターネット回線の広告なので (B)。"
+   },
+   {
+    "q": "What is offered to new customers?",
+    "choices": [
+     "A free router",
+     "A reduced monthly price",
+     "A gift card",
+     "Free repairs for a year"
+    ],
+    "answer": 1,
+    "explanation": "最初の3か月が月10ドル → 割引された月額料金 (B)。"
+   },
+   {
+    "q": "Why should listeners visit the Web site?",
+    "choices": [
+     "To read customer reviews",
+     "To check service availability",
+     "To download an app",
+     "To schedule a store visit"
+    ],
+    "answer": 1,
+    "explanation": "to check if ... is available in your area なので (B)。"
+   }
+  ]
+ },
+ {
+  "id": "p4-08",
+  "part": 4,
+  "level": 2,
+  "title": "電話の自動音声案内",
+  "talk": [
+   {
+    "en": "Thank you for calling Lakeside Medical Center.",
+    "ja": "レイクサイド医療センターにお電話いただきありがとうございます。"
+   },
+   {
+    "en": "If this is an emergency, please hang up and dial 911.",
+    "ja": "緊急の場合は、電話を切って911におかけください。"
+   },
+   {
+    "en": "To make or change an appointment, press one.",
+    "ja": "予約の受付・変更は1を押してください。"
+   },
+   {
+    "en": "For questions about billing, press two.",
+    "ja": "お支払いに関するご質問は2を押してください。"
+   },
+   {
+    "en": "Please note that our clinic hours have changed. We are now open on Saturdays from nine A.M. to one P.M.",
+    "ja": "診療時間が変更になりましたのでご注意ください。土曜日は午前9時から午後1時まで診療しています。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "Who is the message intended for?",
+    "choices": [
+     "Doctors",
+     "Patients",
+     "Delivery drivers",
+     "Job applicants"
+    ],
+    "answer": 1,
+    "explanation": "医療センターの予約・支払いの案内なので患者 (B)。"
+   },
+   {
+    "q": "What should callers do to ask about a bill?",
+    "choices": [
+     "Press one",
+     "Press two",
+     "Visit the Web site",
+     "Stay on the line"
+    ],
+    "answer": 1,
+    "explanation": "For questions about billing, press two なので (B)。"
+   },
+   {
+    "q": "What has recently changed?",
+    "choices": [
+     "The phone number",
+     "The clinic's location",
+     "The opening hours",
+     "The appointment fee"
+    ],
+    "answer": 2,
+    "explanation": "clinic hours have changed（土曜も診療）なので (C)。"
+   }
+  ]
+ },
+ {
+  "id": "p4-09",
+  "part": 4,
+  "level": 2,
+  "title": "社内研修の案内",
+  "talk": [
+   {
+    "en": "Hi everyone. I'd like to remind you about the online security training next Wednesday.",
+    "ja": "皆さん、来週水曜日のオンラインのセキュリティ研修についてお知らせです。"
+   },
+   {
+    "en": "All employees must complete it by the end of the month.",
+    "ja": "全従業員は月末までに受講を完了しなければなりません。"
+   },
+   {
+    "en": "The session takes about forty-five minutes, and you can join from your own desk.",
+    "ja": "研修は約45分で、自分の席から参加できます。"
+   },
+   {
+    "en": "Please use headphones so you don't disturb the people around you.",
+    "ja": "周りの人の迷惑にならないよう、ヘッドホンを使ってください。"
+   },
+   {
+    "en": "If you can't attend on Wednesday, a recording will be available on the intranet.",
+    "ja": "水曜日に参加できない場合は、イントラネットに録画が公開されます。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "What is the training about?",
+    "choices": [
+     "Customer service",
+     "Online security",
+     "Sales techniques",
+     "Time management"
+    ],
+    "answer": 1,
+    "explanation": "online security training なので (B)。"
+   },
+   {
+    "q": "What are listeners asked to bring or use?",
+    "choices": [
+     "Headphones",
+     "A laptop",
+     "An ID badge",
+     "A notebook"
+    ],
+    "answer": 0,
+    "explanation": "Please use headphones なので (A)。"
+   },
+   {
+    "q": "What can people who miss the session do?",
+    "choices": [
+     "Attend a later session in person",
+     "Watch a recording",
+     "Ask their manager for notes",
+     "Take a written test"
+    ],
+    "answer": 1,
+    "explanation": "a recording will be available なので (B)。"
+   }
+  ]
+ },
+ {
+  "id": "p4-10",
+  "part": 4,
+  "level": 3,
+  "title": "授賞式のスピーチ",
+  "talk": [
+   {
+    "en": "Good evening, and welcome to the annual Riverside Business Awards.",
+    "ja": "こんばんは。年に一度のリバーサイド・ビジネス賞へようこそ。"
+   },
+   {
+    "en": "Our first award, for Best New Business, goes to Green Leaf Café.",
+    "ja": "最初の賞、最優秀新規事業賞はグリーン・リーフ・カフェです。"
+   },
+   {
+    "en": "Since opening just eighteen months ago, the café has become known for using vegetables from local farms.",
+    "ja": "わずか18か月前の開業以来、このカフェは地元農家の野菜を使うことで知られるようになりました。"
+   },
+   {
+    "en": "Owner Maria Santos has also started cooking classes for local high school students.",
+    "ja": "オーナーのマリア・サントスさんは、地元の高校生向けの料理教室も始めました。"
+   },
+   {
+    "en": "Please join me in welcoming Ms. Santos to the stage.",
+    "ja": "サントスさんを拍手で壇上にお迎えください。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "What is the purpose of the event?",
+    "choices": [
+     "To open a new café",
+     "To present business awards",
+     "To introduce a new cooking class",
+     "To announce a merger"
+    ],
+    "answer": 1,
+    "explanation": "Riverside Business Awards の授賞式なので (B)。"
+   },
+   {
+    "q": "What is Green Leaf Café known for?",
+    "choices": [
+     "Its low prices",
+     "Its use of local ingredients",
+     "Its late opening hours",
+     "Its famous chef"
+    ],
+    "answer": 1,
+    "explanation": "vegetables from local farms → local ingredients で (B)。"
+   },
+   {
+    "q": "What will most likely happen next?",
+    "choices": [
+     "Ms. Santos will speak.",
+     "Dinner will be served.",
+     "A video will be shown.",
+     "The next award will be announced."
+    ],
+    "answer": 0,
+    "explanation": "壇上に迎えるので、次はサントスさんの話 (A)。"
+   }
+  ]
+ },
+ {
+  "id": "p4-11",
+  "part": 4,
+  "level": 3,
+  "title": "ラジオのビジネスニュース",
+  "talk": [
+   {
+    "en": "In business news, Ventura Motors announced today that it will open a new electric vehicle plant in Clarksville.",
+    "ja": "ビジネスニュースです。ベンチュラ・モーターズは今日、クラークスビルに新しい電気自動車工場を開設すると発表しました。"
+   },
+   {
+    "en": "The company chose the city because of its skilled workforce and its location near major highways.",
+    "ja": "同社は、熟練した労働力と主要な幹線道路に近い立地を理由にこの市を選びました。"
+   },
+   {
+    "en": "Construction will start in the spring, and the plant is expected to employ about eight hundred people.",
+    "ja": "建設は春に始まり、工場では約800人が雇用される見込みです。"
+   },
+   {
+    "en": "Local officials say the project will also bring new business to restaurants and shops in the area.",
+    "ja": "地元当局によると、この事業は地域の飲食店や商店にも新たな商機をもたらすとのことです。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "What did Ventura Motors announce?",
+    "choices": [
+     "A new car model",
+     "A new factory",
+     "A change in leadership",
+     "A price reduction"
+    ],
+    "answer": 1,
+    "explanation": "new electric vehicle plant（工場）を開設するので (B)。"
+   },
+   {
+    "q": "According to the speaker, why was Clarksville chosen?",
+    "choices": [
+     "It offered low taxes.",
+     "It has skilled workers.",
+     "It is near an airport.",
+     "It has cheap land."
+    ],
+    "answer": 1,
+    "explanation": "because of its skilled workforce なので (B)。(C) 近いのは幹線道路で空港ではない。"
+   },
+   {
+    "q": "What do local officials expect?",
+    "choices": [
+     "Higher housing prices",
+     "More customers for local businesses",
+     "Heavier traffic",
+     "A new train line"
+    ],
+    "answer": 1,
+    "explanation": "bring new business to restaurants and shops → 地元の店の客が増える (B)。"
+   }
+  ]
+ },
+ {
+  "id": "p4-12",
+  "part": 4,
+  "level": 3,
+  "title": "店長から店員への連絡",
+  "talk": [
+   {
+    "en": "Before we open the store this morning, I have a few updates.",
+    "ja": "今朝の開店前に、いくつか連絡があります。"
+   },
+   {
+    "en": "First, our summer sale starts today, so we're expecting a lot of customers.",
+    "ja": "まず、今日から夏のセールが始まるので、多くのお客さまが来店すると見込んでいます。"
+   },
+   {
+    "en": "I've asked two staff members from our Oak Street location to help us at the registers.",
+    "ja": "オーク通り店のスタッフ2名に、レジの応援を頼みました。"
+   },
+   {
+    "en": "Also, the new handheld scanners arrived yesterday. Please make sure you charge them during your lunch break.",
+    "ja": "また、新しいハンディスキャナーが昨日届きました。昼休みの間に必ず充電してください。"
+   },
+   {
+    "en": "Finally, remember that we're closing an hour later than usual all this week.",
+    "ja": "最後に、今週はずっと通常より1時間遅く閉店することを忘れないでください。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "Who most likely are the listeners?",
+    "choices": [
+     "Store employees",
+     "Customers",
+     "Delivery drivers",
+     "Business owners"
+    ],
+    "answer": 0,
+    "explanation": "開店前に店長が店員へ連絡しているので (A)。"
+   },
+   {
+    "q": "Why are staff from another store coming?",
+    "choices": [
+     "To receive training",
+     "To help at the registers",
+     "To deliver new products",
+     "To inspect the store"
+    ],
+    "answer": 1,
+    "explanation": "help us at the registers なので (B)。"
+   },
+   {
+    "q": "What are the listeners asked to do during their lunch break?",
+    "choices": [
+     "Count the inventory",
+     "Charge some devices",
+     "Clean the shelves",
+     "Put up sale signs"
+    ],
+    "answer": 1,
+    "explanation": "charge them (the scanners) → 機器の充電で (B)。"
+   }
+  ]
  }
 ]

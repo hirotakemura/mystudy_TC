@@ -15,6 +15,7 @@ export function emptyData(): AppData {
     legacyMemos: {},
     vocabRounds: [],
     autoSeconds: {},
+    activitySeconds: {},
     wordProgress: {},
     shadowProgress: {},
     partResults: {},

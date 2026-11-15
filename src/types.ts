@@ -1,10 +1,23 @@
 // ===== 計画データ（public/data/plan/toeic-roadmap.json） =====
 
+/**
+ * 通勤メニューで使うアプリ内の演習。
+ * vocab：単語カード、shadowing：シャドーイング、parts：パート別問題（parts で対象のパートを指定）、
+ * wrong：間違えた問題の復習（全パート）、mock：ミニ模試
+ */
+export type CommuteApp = 'vocab' | 'shadowing' | 'parts' | 'wrong' | 'mock'
+
 export interface CommuteItem {
   label: string
   minutes: number
   /** 省略時はラベルから推定する */
   category?: Category
+  /** アプリ内の演習（省略時はラベルから推定し、推定できなければ「行き」「帰り」の手動チェック） */
+  app?: CommuteApp
+  /** app が parts / shadowing のときの対象パート */
+  parts?: PartNo[]
+  /** true なら演習に結びつけず、「行き」「帰り」の手動チェックにする */
+  manual?: boolean
 }
 
 export interface RoadmapTask {
@@ -160,6 +173,9 @@ export interface AppData {
   vocabRounds: string[]
   /** 演習画面で自動計測した学習時間（日付 → 内訳 → 秒） */
   autoSeconds: Record<string, Partial<Record<Category, number>>>
+  /** 演習ごとの自動計測（日付 → 演習 → 秒）。通勤メニューの進み具合に使う。
+   *  キーは vocab / shadowing / part1〜part7 / wrong / mock */
+  activitySeconds: Record<string, Record<string, number>>
   wordProgress: Record<string, WordProgress>
   shadowProgress: Record<string, ShadowProgress>
   /** パート別問題の結果（キーは「セットid#設問番号」） */

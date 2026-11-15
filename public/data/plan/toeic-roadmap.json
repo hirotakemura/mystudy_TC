@@ -25,25 +25,32 @@
       "title": "準備",
       "start": "2026-09-28",
       "end": "2026-10-04",
-      "summary": "現在地の確認と申込の準備",
+      "summary": "ミニ模試で現在地を確認し、申込の準備",
       "commute": [
         {
-          "label": "単語帳を1冊選び、1周目を開始",
-          "minutes": 45
+          "label": "単語カードで新しい単語を覚える",
+          "minutes": 40,
+          "app": "vocab"
         },
         {
-          "label": "中学〜高校基礎文法の参考書を1冊選んで読み始め",
-          "minutes": 45
+          "label": "ミニ模試で現在地を確認",
+          "minutes": 50,
+          "app": "mock"
         },
         {
-          "label": "公式問題集の音声を聞き流し",
-          "minutes": 30
+          "label": "シャドーイング（Part 1・2 の短い文から）",
+          "minutes": 30,
+          "app": "shadowing",
+          "parts": [
+            1,
+            2
+          ]
         }
       ],
       "tasks": [
         {
           "id": "prep-1",
-          "text": "公式問題集で1回分を解いて現在地を確認"
+          "text": "ミニ模試を1回解いて、パートごとの現在地を確認"
         },
         {
           "id": "prep-2",
@@ -59,30 +66,36 @@
       "summary": "通勤2時間で単語・文法・リスニングの土台をつくる",
       "commute": [
         {
-          "label": "単語（TOEIC頻出単語帳を1冊に絞って周回）",
-          "minutes": 45
+          "label": "単語カード（新しい単語＋復習）",
+          "minutes": 45,
+          "app": "vocab"
         },
         {
-          "label": "文法（中学〜高校基礎文法の復習）",
-          "minutes": 45
+          "label": "文法：Part 5 の短文穴埋め（品詞・動詞の形）",
+          "minutes": 45,
+          "app": "parts",
+          "parts": [
+            5
+          ]
         },
         {
-          "label": "リスニング（公式問題集の音声を聞き流し＋シャドーイング）",
-          "minutes": 30
+          "label": "リスニング：シャドーイング（1文ずつ→通し再生）",
+          "minutes": 30,
+          "app": "shadowing"
         }
       ],
       "tasks": [
         {
           "id": "foundation-1",
-          "text": "単語45分（TOEIC頻出単語帳を1冊に絞って周回）"
+          "text": "単語：単語カードで毎日「新しい単語」と「復習」を消化"
         },
         {
           "id": "foundation-2",
-          "text": "文法45分（中学〜高校基礎文法の復習）"
+          "text": "文法：Part 5 の短文穴埋めを、間違えた問題まで解き直す"
         },
         {
           "id": "foundation-3",
-          "text": "リスニング30分（公式問題集の音声を聞き流し＋シャドーイング）"
+          "text": "リスニング：シャドーイングを「1文ずつ」→「通し再生」の順で練習"
         }
       ]
     },
@@ -94,38 +107,53 @@
       "summary": "通勤2時間でPart 5/6・7・3/4を対策",
       "commute": [
         {
-          "label": "Part 5/6 の問題演習 30問",
-          "minutes": 40
+          "label": "Part 5/6 の問題演習",
+          "minutes": 40,
+          "app": "parts",
+          "parts": [
+            5,
+            6
+          ]
         },
         {
-          "label": "Part 7 の長文 1〜2題（時間を計る）",
-          "minutes": 30
+          "label": "Part 7 の読解（時間を計る）",
+          "minutes": 30,
+          "app": "parts",
+          "parts": [
+            7
+          ]
         },
         {
-          "label": "Part 3/4 のシャドーイング",
-          "minutes": 25
+          "label": "Part 3/4 の問題演習",
+          "minutes": 25,
+          "app": "parts",
+          "parts": [
+            3,
+            4
+          ]
         },
         {
-          "label": "単語帳の周回",
-          "minutes": 25
+          "label": "単語カードの復習",
+          "minutes": 25,
+          "app": "vocab"
         }
       ],
       "tasks": [
         {
           "id": "parts-1",
-          "text": "Part 5/6の問題演習を毎日30問"
+          "text": "Part 5/6 の問題演習を毎日（未回答から→間違えた問題）"
         },
         {
           "id": "parts-2",
-          "text": "Part 7の長文を毎日1〜2題（時間を計る）"
+          "text": "Part 7 の読解を毎日1〜2題（時間を計る）"
         },
         {
           "id": "parts-3",
-          "text": "Part 3/4のシャドーイング"
+          "text": "Part 3/4 の問題演習とシャドーイング"
         },
         {
           "id": "parts-4",
-          "text": "単語帳の周回は継続"
+          "text": "単語カードの復習は毎日継続"
         }
       ]
     },
@@ -134,29 +162,32 @@
       "title": "実戦",
       "start": "2026-12-01",
       "end": "2026-12-18",
-      "summary": "週末に模試、平日の通勤は模試の復習",
+      "summary": "ミニ模試と、間違えた問題の復習で仕上げる",
       "commute": [
         {
-          "label": "模試で間違えた問題の復習",
-          "minutes": 60
+          "label": "間違えた問題の復習（全パート）",
+          "minutes": 50,
+          "app": "wrong"
         },
         {
-          "label": "単語帳の周回（間違えた単語中心）",
-          "minutes": 30
+          "label": "ミニ模試",
+          "minutes": 40,
+          "app": "mock"
         },
         {
-          "label": "Part 3/4 の音声で復習・シャドーイング",
-          "minutes": 30
+          "label": "単語カードの復習（間違えた単語中心）",
+          "minutes": 30,
+          "app": "vocab"
         }
       ],
       "tasks": [
         {
           "id": "practice-1",
-          "text": "OutSystemsの受験が落ち着いた週末に、公式問題集で2時間通しの模試"
+          "text": "週末にミニ模試を解く（OutSystemsの受験が落ち着いた週末に）"
         },
         {
           "id": "practice-2",
-          "text": "平日の通勤は模試で間違えた問題の復習"
+          "text": "平日の通勤は間違えた問題の復習"
         },
         {
           "id": "practice-3",

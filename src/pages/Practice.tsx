@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { takePracticeIntent, type ResolvedApp } from '../lib/commute'
 import { Async } from '../components/Async'
 import { loadParts, loadShadowing, loadWords, useLoad } from '../lib/content'
 import { formatMinutes, todayKey } from '../lib/date'
@@ -35,13 +36,20 @@ function initialTab(): PracticeTab {
   }
 }
 
+function tabFor(intent: ResolvedApp): PracticeTab {
+  return intent.app === 'vocab' ? 'vocab' : intent.app === 'shadowing' ? 'shadowing' : 'parts'
+}
+
 export default function Practice() {
-  const [tab, setTab] = useState<PracticeTab>(initialTab)
+  // 通勤メニューの「始める」から開いたときは、その演習を表示する（1回だけ）
+  const [intent, setIntent] = useState(takePracticeIntent)
+  const [tab, setTab] = useState<PracticeTab>(() => (intent ? tabFor(intent) : initialTab()))
   const state = useLoad(() => Promise.all([loadParts(), loadWords(), loadShadowing()]))
   const data = useData()
   const auto = autoMinutesByCategory(data, todayKey())
 
   const choose = (t: PracticeTab) => {
+    setIntent(null) // タブを切り替えたら、通勤メニューからの指定は使い終わり
     setTab(t)
     setPracticeTab(t)
   }
@@ -61,7 +69,13 @@ export default function Practice() {
       {!speechSupported && <p className="caution small">この端末・ブラウザは英語の読み上げに対応していません。</p>}
       <Async state={state}>
         {([parts, words, items]) =>
-          tab === 'parts' ? <Parts sets={parts} /> : tab === 'vocab' ? <Vocab words={words} /> : <Shadowing items={items} />
+          tab === 'parts' ? (
+            <Parts sets={parts} intent={intent && tabFor(intent) === 'parts' ? intent : null} />
+          ) : tab === 'vocab' ? (
+            <Vocab words={words} />
+          ) : (
+            <Shadowing items={items} initialParts={intent?.app === 'shadowing' ? intent.parts : undefined} />
+          )
         }
       </Async>
     </div>

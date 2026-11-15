@@ -61,3 +61,45 @@ export function recordPartAnswer(set: PartSet, i: number, ok: boolean, today: st
     partHistory: [...d.partHistory, { d: today, p: set.part, ok }],
   }))
 }
+
+/** ミニ模試の構成（各パートから出すセット数） */
+const MOCK_SETS: Record<PartNo, number> = { 1: 2, 2: 5, 3: 1, 4: 1, 5: 6, 6: 1, 7: 1 }
+const WRONG_SETS = 10
+
+export type SessionKind = 'parts' | 'wrong' | 'mock'
+
+export interface PartSessionPlan {
+  kind: SessionKind
+  sets: PartSet[]
+  title: string
+}
+
+const byPart = (sets: PartSet[], p: PartNo) => sets.filter((s) => s.part === p)
+const partOrder = (a: PartSet, b: PartSet) => a.part - b.part
+
+/** 指定したパートから出題する（複数パートならパート順に並べる） */
+export function planParts(d: AppData, all: PartSet[], parts: PartNo[], mode: PartMode): PartSessionPlan {
+  const sets = parts.flatMap((p) => pickSets(d, byPart(all, p), mode, PART_INFO[p].perSession))
+  const label = mode === 'wrong' ? '間違えた問題' : mode === 'random' ? 'ランダム' : ''
+  return { kind: 'parts', sets, title: `Part ${parts.join('・')}${label ? ` ${label}` : ''}` }
+}
+
+/** ミニ模試：全パートから少しずつ（未回答を優先）、本番と同じ Part 1→7 の順 */
+export function planMock(d: AppData, all: PartSet[]): PartSessionPlan {
+  const sets = ([1, 2, 3, 4, 5, 6, 7] as PartNo[]).flatMap((p) => pickSets(d, shuffle(byPart(all, p)), 'new', MOCK_SETS[p]))
+  return { kind: 'mock', sets: sets.sort(partOrder), title: 'ミニ模試' }
+}
+
+/** 全パートの間違えた問題をまとめて復習 */
+export function planWrong(d: AppData, all: PartSet[]): PartSessionPlan {
+  return { kind: 'wrong', sets: pickSets(d, all, 'wrong', WRONG_SETS).sort(partOrder), title: '間違えた問題の復習' }
+}
+
+export function wrongCount(d: AppData, all: PartSet[]): number {
+  return partStats(d, all).wrong
+}
+
+/** 自動計測で使う演習の種類（通勤メニューの進み具合に使う） */
+export function sessionActivity(kind: SessionKind, set: PartSet): string {
+  return kind === 'parts' ? `part${set.part}` : kind
+}

@@ -14,17 +14,30 @@ const PART_LABEL: Record<ShadowItem['part'], string> = {
 }
 const RATES = [0.7, 0.8, 0.9, 1.0, 1.1]
 
-export default function Shadowing({ items }: { items: ShadowItem[] }) {
+/** initialParts：通勤メニューから開いたときに絞り込むパート */
+export default function Shadowing({ items, initialParts }: { items: ShadowItem[]; initialParts?: number[] }) {
   const [openId, setOpenId] = useState<string | null>(null)
+  const [filter, setFilter] = useState<number[]>(initialParts ?? [])
   const item = items.find((i) => i.id === openId)
   if (item) return <Player key={item.id} item={item} onExit={() => setOpenId(null)} />
-  return <ShadowList items={items} onOpen={setOpenId} />
+  return <ShadowList items={items} filter={filter} setFilter={setFilter} onOpen={setOpenId} />
 }
 
-function ShadowList({ items, onOpen }: { items: ShadowItem[]; onOpen: (id: string) => void }) {
+function ShadowList({
+  items,
+  filter,
+  setFilter,
+  onOpen,
+}: {
+  items: ShadowItem[]
+  filter: number[]
+  setFilter: (f: number[]) => void
+  onOpen: (id: string) => void
+}) {
   const data = useData()
-  const [part, setPart] = useState<0 | ShadowItem['part']>(0)
-  const shown = part ? items.filter((i) => i.part === part) : items
+  const shown = filter.length ? items.filter((i) => filter.includes(i.part)) : items
+  const isOn = (p: number) => (p === 0 ? filter.length === 0 : filter.length === 1 && filter[0] === p)
+  const multi = filter.length > 1
   const practiced = items.filter((i) => data.shadowProgress[i.id]).length
 
   return (
@@ -42,10 +55,15 @@ function ShadowList({ items, onOpen }: { items: ShadowItem[]; onOpen: (id: strin
       </section>
       <div className="chips" role="radiogroup" aria-label="Part">
         {([0, 1, 2, 3, 4] as const).map((p) => (
-          <button key={p} role="radio" aria-checked={part === p} className={`chip plain-chip${part === p ? ' on' : ''}`} onClick={() => setPart(p)}>
+          <button key={p} role="radio" aria-checked={isOn(p)} className={`chip plain-chip${isOn(p) ? ' on' : ''}`} onClick={() => setFilter(p ? [p] : [])}>
             {p === 0 ? 'すべて' : `Part ${p}`}
           </button>
         ))}
+        {multi && (
+          <button role="radio" aria-checked className="chip plain-chip on">
+            Part {filter.join('・')}
+          </button>
+        )}
       </div>
       <ul className="shadow-list">
         {shown.map((i) => {
@@ -84,7 +102,7 @@ function Player({ item, onExit }: { item: ShadowItem; onExit: () => void }) {
   const [showJa, setShowJa] = useState(false)
   const [revealed, setRevealed] = useState<Set<number>>(new Set())
   const [msg, setMsg] = useState('')
-  const studied = useStudyTimer(true, 'listening')
+  const studied = useStudyTimer(true, 'listening', 'shadowing')
   const runId = useRef(0)
   const progress = data.shadowProgress[item.id]
 

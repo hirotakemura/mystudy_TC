@@ -30,6 +30,8 @@ for (const p of r.phases ?? []) {
   for (const c of p.commute ?? []) {
     need(typeof c.label === 'string' && c.minutes > 0, `${at}: commute の label/minutes が不正です`)
     need(c.category === undefined || CATS.includes(c.category), `${at}: commute.category は ${CATS.join('/')} のいずれかです`)
+    need(c.app === undefined || ['vocab', 'shadowing', 'parts', 'wrong', 'mock'].includes(c.app), `${at}: commute.app は vocab/shadowing/parts/wrong/mock のいずれかです`)
+    need(c.app !== 'parts' || (Array.isArray(c.parts) && c.parts.length > 0 && c.parts.every((p) => p >= 1 && p <= 7)), `${at}: app が parts のときは parts（1〜7）を指定してください`)
   }
   for (const t of p.tasks ?? []) {
     need(!ids.has(t.id), `${at}: タスクid ${t.id} が重複しています`)

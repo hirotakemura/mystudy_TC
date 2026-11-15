@@ -418,5 +418,705 @@
     "explanation": "How often（頻度）に「〜するたびに」と答えた (A)。数字を使わない正解に慣れておく。"
    }
   ]
+ },
+ {
+  "id": "p2-16",
+  "part": 2,
+  "level": 1,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Where can I park my car?",
+    "ja": "車はどこに止められますか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "In the lot behind the building.",
+     "I parked it yesterday.",
+     "About thirty minutes."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "建物の裏の駐車場です。",
+     "昨日止めました。",
+     "30分ほどです。"
+    ],
+    "explanation": "Where に場所で答える (A)。(B) は park の繰り返しのひっかけ。"
+   }
+  ]
+ },
+ {
+  "id": "p2-17",
+  "part": 2,
+  "level": 1,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "What time does the bank close?",
+    "ja": "銀行は何時に閉まりますか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "At four o'clock.",
+     "It's close to the station.",
+     "I opened an account."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "4時です。",
+     "駅の近くです。",
+     "口座を開きました。"
+    ],
+    "explanation": "What time に時刻で答える (A)。(B) close（近い）は close（閉まる）の音のひっかけ。"
+   }
+  ]
+ },
+ {
+  "id": "p2-18",
+  "part": 2,
+  "level": 1,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Who made these copies?",
+    "ja": "これらのコピーを取ったのは誰ですか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "Twenty pages each.",
+     "Mr. Brown did.",
+     "On the copy machine."
+    ],
+    "answer": 1,
+    "choicesJa": [
+     "各20ページです。",
+     "ブラウンさんです。",
+     "コピー機でです。"
+    ],
+    "explanation": "Who に人で答える (B)。"
+   }
+  ]
+ },
+ {
+  "id": "p2-19",
+  "part": 2,
+  "level": 1,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Is this seat taken?",
+    "ja": "この席は空いていますか（誰か座っていますか）。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "No, go ahead.",
+     "I took a taxi.",
+     "It's a comfortable chair."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "いいえ、どうぞ。",
+     "タクシーに乗りました。",
+     "座り心地のいい椅子です。"
+    ],
+    "explanation": "「席は取られていますか」に No（取られていない）＋ go ahead（どうぞ）と答える (A)。"
+   }
+  ]
+ },
+ {
+  "id": "p2-20",
+  "part": 2,
+  "level": 1,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "How much is this jacket?",
+    "ja": "このジャケットはいくらですか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "It's on sale for sixty dollars.",
+     "In size medium.",
+     "I like the color."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "セールで60ドルです。",
+     "Mサイズで。",
+     "色が気に入りました。"
+    ],
+    "explanation": "How much に値段で答える (A)。"
+   }
+  ]
+ },
+ {
+  "id": "p2-21",
+  "part": 2,
+  "level": 1,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "When will the new manager start?",
+    "ja": "新しい部長はいつから来ますか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "Next Monday.",
+     "In the sales department.",
+     "She's very experienced."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "来週の月曜日です。",
+     "営業部です。",
+     "彼女はとても経験豊富です。"
+    ],
+    "explanation": "When に時で答える (A)。(B) 場所、(C) 人物の説明。"
+   }
+  ]
+ },
+ {
+  "id": "p2-22",
+  "part": 2,
+  "level": 1,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Do you know where the restroom is?",
+    "ja": "お手洗いの場所をご存じですか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "Down the hall on your left.",
+     "I need some rest.",
+     "Yes, I know him."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "廊下の先、左側です。",
+     "少し休みたいです。",
+     "はい、彼を知っています。"
+    ],
+    "explanation": "Do you know where 〜? は場所を聞く質問。場所で答える (A)。(B) rest は restroom の音のひっかけ。"
+   }
+  ]
+ },
+ {
+  "id": "p2-23",
+  "part": 2,
+  "level": 1,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Would you like a window or an aisle seat?",
+    "ja": "窓側と通路側、どちらの席がよろしいですか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "A window seat, please.",
+     "Yes, I would.",
+     "The flight leaves at noon."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "窓側でお願いします。",
+     "はい、そうしたいです。",
+     "その便は正午に出発します。"
+    ],
+    "explanation": "A or B の選択疑問文には、どちらかを答える (A)。Yes/No の (B) は不自然。"
+   }
+  ]
+ },
+ {
+  "id": "p2-24",
+  "part": 2,
+  "level": 2,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Why is the office so quiet today?",
+    "ja": "今日はどうしてオフィスがこんなに静かなのですか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "Most of the staff are at the trade show.",
+     "Yes, it's very quiet.",
+     "Please turn down the music."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "スタッフのほとんどが展示会に行っているんです。",
+     "はい、とても静かです。",
+     "音楽の音量を下げてください。"
+    ],
+    "explanation": "Why の理由を答える (A)。Because を使わない理由の答え方に慣れる。"
+   }
+  ]
+ },
+ {
+  "id": "p2-25",
+  "part": 2,
+  "level": 2,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Have you finished the budget proposal?",
+    "ja": "予算案は仕上がりましたか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "I'm still waiting for some figures.",
+     "He proposed a new plan.",
+     "It's within our budget."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "まだいくつかの数字を待っているところです。",
+     "彼が新しい計画を提案しました。",
+     "予算内です。"
+    ],
+    "explanation": "「まだ数字待ち＝終わっていない」と遠回しに答える (A)。(B)(C) は proposal / budget の繰り返しのひっかけ。"
+   }
+  ]
+ },
+ {
+  "id": "p2-26",
+  "part": 2,
+  "level": 2,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Could you help me with this report?",
+    "ja": "この報告書を手伝ってもらえますか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "Sure, what do you need?",
+     "It was reported in the news.",
+     "By Friday afternoon."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "いいですよ、何が必要ですか。",
+     "ニュースで報道されました。",
+     "金曜日の午後までに。"
+    ],
+    "explanation": "依頼に応じて質問を返す (A)。(B) は report の繰り返しのひっかけ。"
+   }
+  ]
+ },
+ {
+  "id": "p2-27",
+  "part": 2,
+  "level": 2,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "The printer on the second floor isn't working.",
+    "ja": "2階のプリンターが動きません。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "I'll call the technician.",
+     "I work on the second floor.",
+     "Print ten copies, please."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "技術者に電話します。",
+     "私は2階で働いています。",
+     "10部印刷してください。"
+    ],
+    "explanation": "問題の報告（平叙文）に対応策で応じる (A)。(B) は working→work のひっかけ。"
+   }
+  ]
+ },
+ {
+  "id": "p2-28",
+  "part": 2,
+  "level": 2,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Which bus goes to the convention center?",
+    "ja": "どのバスがコンベンションセンターに行きますか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "The number 12.",
+     "It's a large convention.",
+     "About twenty minutes."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "12番です。",
+     "大きな会議です。",
+     "20分ほどです。"
+    ],
+    "explanation": "Which bus に番号で答える (A)。"
+   }
+  ]
+ },
+ {
+  "id": "p2-29",
+  "part": 2,
+  "level": 2,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Shouldn't we confirm the reservation first?",
+    "ja": "まず予約を確認すべきではないですか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "I already did this morning.",
+     "At the Italian restaurant.",
+     "For six people."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "今朝もうしました。",
+     "イタリアンのレストランで。",
+     "6人です。"
+    ],
+    "explanation": "否定疑問文「確認すべきでは？」に「もうした」と答える (A)。"
+   }
+  ]
+ },
+ {
+  "id": "p2-30",
+  "part": 2,
+  "level": 2,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Where did you put the client's contract?",
+    "ja": "顧客の契約書はどこに置きましたか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "Isn't it on your desk?",
+     "We signed it last week.",
+     "The client is coming at two."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "あなたの机の上にありませんか。",
+     "先週署名しました。",
+     "顧客は2時に来ます。"
+    ],
+    "explanation": "場所を聞かれて「あなたの机の上では？」と質問で返す (A)。Part 2 では質問返しの正解が多い。"
+   }
+  ]
+ },
+ {
+  "id": "p2-31",
+  "part": 2,
+  "level": 2,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "How long will the renovation take?",
+    "ja": "改装にはどのくらい時間がかかりますか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "About three weeks.",
+     "It's a long hallway.",
+     "The lobby will look great."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "3週間ほどです。",
+     "長い廊下です。",
+     "ロビーがすてきになりますね。"
+    ],
+    "explanation": "How long（期間）に期間で答える (A)。(B) は long の繰り返し。"
+   }
+  ]
+ },
+ {
+  "id": "p2-32",
+  "part": 2,
+  "level": 2,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Let's take a short break before we continue.",
+    "ja": "続ける前に少し休憩しましょう。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "Good idea. I need some coffee.",
+     "The window is broken.",
+     "It was a short meeting."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "いいですね。コーヒーが飲みたいです。",
+     "窓が割れています。",
+     "短い会議でした。"
+    ],
+    "explanation": "提案に賛成する (A)。(B) break（壊す）は break（休憩）の多義語のひっかけ、(C) short の繰り返し。"
+   }
+  ]
+ },
+ {
+  "id": "p2-33",
+  "part": 2,
+  "level": 3,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Who's going to lead the training session tomorrow?",
+    "ja": "明日の研修は誰が担当するのですか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "Check the schedule on the intranet.",
+     "It starts at nine.",
+     "The new employees."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "イントラネットの予定表を見てください。",
+     "9時に始まります。",
+     "新入社員です。"
+    ],
+    "explanation": "「予定表を見て」と情報の在りかを示す (A) が自然。(C) は研修の対象者で、担当者ではない。"
+   }
+  ]
+ },
+ {
+  "id": "p2-34",
+  "part": 2,
+  "level": 3,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Why don't we ask Ms. Ruiz to join the project?",
+    "ja": "ルイズさんにプロジェクトに加わってもらうのはどうですか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "She's already working on two others.",
+     "Because the project was delayed.",
+     "I joined last year."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "彼女はもう他に2つ担当しています。",
+     "プロジェクトが遅れたからです。",
+     "私は去年加わりました。"
+    ],
+    "explanation": "提案に「もう2つ担当している（忙しい）」と遠回しに反対する (A)。(B) は Why への反射で選ぶと間違える。"
+   }
+  ]
+ },
+ {
+  "id": "p2-35",
+  "part": 2,
+  "level": 3,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "I can't find the file you sent me.",
+    "ja": "送ってくれたファイルが見つかりません。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "I'll e-mail it again.",
+     "It's a fine day.",
+     "Please send me the address."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "もう一度メールで送ります。",
+     "いい天気ですね。",
+     "住所を送ってください。"
+    ],
+    "explanation": "問題の指摘に「もう一度送る」と対応する (A)。(B) fine と find の音のひっかけ。"
+   }
+  ]
+ },
+ {
+  "id": "p2-36",
+  "part": 2,
+  "level": 3,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Didn't the shipment arrive this morning?",
+    "ja": "荷物は今朝届かなかったのですか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "It's been delayed until tomorrow.",
+     "We shipped it by air.",
+     "Yes, it's a big ship."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "明日に遅れています。",
+     "航空便で発送しました。",
+     "はい、大きな船です。"
+    ],
+    "explanation": "否定疑問文に、届いていない事情（明日に遅延）で答える (A)。"
+   }
+  ]
+ },
+ {
+  "id": "p2-37",
+  "part": 2,
+  "level": 3,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "How did the presentation go?",
+    "ja": "プレゼンはどうでしたか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "The clients seemed impressed.",
+     "It's in the main hall.",
+     "I'll go at three."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "顧客は感心していたようです。",
+     "大ホールでです。",
+     "3時に行きます。"
+    ],
+    "explanation": "How did 〜 go?「〜はどうだった？」に結果の感想で答える (A)。(C) は go の繰り返し。"
+   }
+  ]
+ },
+ {
+  "id": "p2-38",
+  "part": 2,
+  "level": 3,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Would you mind closing the window?",
+    "ja": "窓を閉めていただけますか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "Not at all.",
+     "It's close to the window.",
+     "I don't mind the noise."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "いいですよ。",
+     "窓に近いです。",
+     "騒音は気になりません。"
+    ],
+    "explanation": "Would you mind 〜ing?「〜してもいいですか（気にしますか）」には Not at all（全然かまいません＝いいですよ）が承諾の返事。"
+   }
+  ]
+ },
+ {
+  "id": "p2-39",
+  "part": 2,
+  "level": 3,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "When is the deadline for the application?",
+    "ja": "申込の締め切りはいつですか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "It was extended to next Friday.",
+     "Please apply online.",
+     "The line is very long."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "来週の金曜日に延長されました。",
+     "オンラインで申し込んでください。",
+     "列がとても長いです。"
+    ],
+    "explanation": "When に「来週金曜に延長された」と時で答える (A)。"
+   }
+  ]
+ },
+ {
+  "id": "p2-40",
+  "part": 2,
+  "level": 3,
+  "talk": [
+   {
+    "speaker": "Q",
+    "en": "Are you taking the train or driving to the conference?",
+    "ja": "会議には電車で行きますか、車で行きますか。"
+   }
+  ],
+  "questions": [
+   {
+    "choices": [
+     "Ms. Kato is giving me a ride.",
+     "The conference was successful.",
+     "Yes, I'm going."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "加藤さんが乗せてくれます。",
+     "会議は成功しました。",
+     "はい、行きます。"
+    ],
+    "explanation": "選択疑問文に、どちらでもない第三の答え（同僚の車に乗せてもらう）で答える (A)。"
+   }
+  ]
  }
 ]

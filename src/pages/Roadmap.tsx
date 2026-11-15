@@ -5,7 +5,11 @@ import RoadmapRebuild from './RoadmapRebuild'
 import { setCheck } from '../lib/actions'
 import { diffDays, formatJa, formatMinutes, todayKey } from '../lib/date'
 import { commuteTotal, plannedMinutes, planPosition } from '../lib/plan'
-import { updateData, useData } from '../lib/store'
+import { useData } from '../lib/store'
+import { appLabel, resolveApp, setPracticeIntent } from '../lib/commute'
+import { loadWords, useLoad } from '../lib/content'
+import { navigate } from '../lib/router'
+import { dueWords, wordStatus } from '../lib/srs'
 import { minutesBetween } from '../lib/stats'
 import type { Roadmap } from '../types'
 
@@ -43,7 +47,7 @@ function RoadmapView({ roadmap, onEdit, onRebuild }: { roadmap: Roadmap; onEdit:
         {data.roadmapOverride && <p className="small muted">アプリで編集した計画を表示しています。</p>}
       </section>
 
-      <VocabCounter />
+      <VocabProgress />
 
       <ol className="timeline">
         {roadmap.phases.map((p) => {
@@ -90,7 +94,10 @@ function RoadmapView({ roadmap, onEdit, onRebuild }: { roadmap: Roadmap; onEdit:
                 <ul className="plain small">
                   {p.commute.map((c, i) => (
                     <li key={i} className="commute-row">
-                      <span>{c.label}</span>
+                      <span>
+                        {c.label}
+                        {resolveApp(c) && <span className="pill app-pill">{appLabel(resolveApp(c)!)}</span>}
+                      </span>
                       <span className="muted">{c.minutes}分</span>
                     </li>
                   ))}
@@ -134,31 +141,36 @@ function RoadmapView({ roadmap, onEdit, onRebuild }: { roadmap: Roadmap; onEdit:
   )
 }
 
-function VocabCounter() {
+/** アプリの単語カードの進み具合 */
+function VocabProgress() {
   const data = useData()
-  const rounds = data.vocabRounds
-  const n = rounds.length
-  const today = todayKey()
+  const words = useLoad(loadWords)
+  if (words.status !== 'ok') return null
+  const all = words.value
+  const mastered = all.filter((w) => wordStatus(data.wordProgress[w.id]) === 'mastered').length
+  const learning = all.filter((w) => wordStatus(data.wordProgress[w.id]) === 'learning').length
+  const due = dueWords(data, all, todayKey()).length
   return (
     <section className="card vocab">
       <div>
-        <div className="label">単語帳の周回</div>
-        <div className="big">{n === 0 ? '未開始' : `${n}周目`}</div>
-        {n > 0 && <div className="small muted">{formatJa(rounds[n - 1])} から</div>}
+        <div className="label">単語カードの進み具合</div>
+        <div className="big">
+          {mastered}
+          <small> / {all.length}語 覚えた</small>
+        </div>
+        <div className="small muted">
+          学習中 {learning}語・今日の復習 {due}語
+        </div>
       </div>
-      <div className="btn-row">
-        <button
-          className="btn small"
-          disabled={n === 0}
-          aria-label="周回数を1つ戻す"
-          onClick={() => updateData((d) => ({ ...d, vocabRounds: d.vocabRounds.slice(0, -1) }))}
-        >
-          −
-        </button>
-        <button className="btn primary small" onClick={() => updateData((d) => ({ ...d, vocabRounds: [...d.vocabRounds, today] }))}>
-          {n === 0 ? '1周目を開始' : `${n + 1}周目へ`}
-        </button>
-      </div>
+      <button
+        className="btn primary small"
+        onClick={() => {
+          setPracticeIntent({ app: 'vocab' })
+          navigate('practice')
+        }}
+      >
+        単語へ
+      </button>
     </section>
   )
 }

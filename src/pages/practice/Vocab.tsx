@@ -166,7 +166,7 @@ function VocabSession({ session, all, onExit }: { session: Session; all: Word[];
   const [picked, setPicked] = useState<string | null>(null)
   const [results, setResults] = useState<Record<string, boolean>>({})
   const finished = pos >= queue.length
-  const studied = useStudyTimer(!finished, 'vocab')
+  const studied = useStudyTimer(!finished, 'vocab', 'vocab')
   const word = queue[pos]
   const choices = useMemo(() => (session.mode === 'quiz' && word ? choicesFor(word, all) : []), [word, session.mode, all])
   const { voiceURI, autoSpeak } = data.settings

@@ -275,5 +275,544 @@
     "explanation": "質問があれば人事部のハルカさんが窓口だと言っているので (C)。"
    }
   ]
+ },
+ {
+  "id": "p3-05",
+  "part": 3,
+  "level": 1,
+  "title": "コピー機の故障",
+  "talk": [
+   {
+    "speaker": "M",
+    "en": "Excuse me, Ms. Park. The copy machine on this floor keeps jamming.",
+    "ja": "パクさん、すみません。この階のコピー機が何度も紙詰まりするんです。"
+   },
+   {
+    "speaker": "W",
+    "en": "Again? It was repaired just last week.",
+    "ja": "また？先週修理したばかりなのに。"
+   },
+   {
+    "speaker": "M",
+    "en": "I need fifty copies of the handout for the two o'clock meeting.",
+    "ja": "2時の会議用に資料を50部コピーしないといけないんです。"
+   },
+   {
+    "speaker": "W",
+    "en": "You can use the one in the marketing department on the fourth floor. I'll call the repair company now.",
+    "ja": "4階のマーケティング部のを使っていいわよ。今から修理会社に電話するわ。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "What problem does the man report?",
+    "choices": [
+     "A machine is not working properly.",
+     "A meeting has been canceled.",
+     "Some handouts are missing.",
+     "A room is not available."
+    ],
+    "answer": 0,
+    "explanation": "The copy machine ... keeps jamming → not working properly で (A)。"
+   },
+   {
+    "q": "What does the man need to do?",
+    "choices": [
+     "Prepare a presentation",
+     "Make copies for a meeting",
+     "Call a client",
+     "Order more paper"
+    ],
+    "answer": 1,
+    "explanation": "fifty copies of the handout for the two o'clock meeting なので (B)。"
+   },
+   {
+    "q": "What will the woman do next?",
+    "choices": [
+     "Go to the fourth floor",
+     "Contact a repair company",
+     "Print the handouts herself",
+     "Reschedule the meeting"
+    ],
+    "answer": 1,
+    "explanation": "I'll call the repair company now なので (B)。(A) 4階に行くのは男性。"
+   }
+  ]
+ },
+ {
+  "id": "p3-06",
+  "part": 3,
+  "level": 1,
+  "title": "レストランの予約",
+  "talk": [
+   {
+    "speaker": "W",
+    "en": "Hello, I'd like to book a table for this Friday evening for eight people.",
+    "ja": "もしもし、今週金曜の夜に8名で予約をしたいのですが。"
+   },
+   {
+    "speaker": "M",
+    "en": "Let me check. We have a table available at six or at eight thirty.",
+    "ja": "確認します。6時か8時半ならお席がございます。"
+   },
+   {
+    "speaker": "W",
+    "en": "Six is a little early. We'll take eight thirty. Do you have a private room?",
+    "ja": "6時は少し早いですね。8時半にします。個室はありますか。"
+   },
+   {
+    "speaker": "M",
+    "en": "Yes, but there's an extra charge of twenty dollars for the private room.",
+    "ja": "はい、ただし個室には20ドルの追加料金がかかります。"
+   },
+   {
+    "speaker": "W",
+    "en": "That's fine. It's a farewell party for a coworker, so we'd like some privacy.",
+    "ja": "大丈夫です。同僚の送別会なので、落ち着いた場所がいいんです。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "Why is the woman calling?",
+    "choices": [
+     "To cancel an order",
+     "To make a reservation",
+     "To complain about a meal",
+     "To ask about job openings"
+    ],
+    "answer": 1,
+    "explanation": "book a table → make a reservation で (B)。"
+   },
+   {
+    "q": "What time will the group most likely arrive?",
+    "choices": [
+     "At 6:00",
+     "At 7:00",
+     "At 8:00",
+     "At 8:30"
+    ],
+    "answer": 3,
+    "explanation": "We'll take eight thirty なので (D)。"
+   },
+   {
+    "q": "What is the purpose of the event?",
+    "choices": [
+     "To welcome a new client",
+     "To celebrate a promotion",
+     "To say goodbye to a coworker",
+     "To launch a product"
+    ],
+    "answer": 2,
+    "explanation": "farewell party for a coworker → 同僚との別れなので (C)。"
+   }
+  ]
+ },
+ {
+  "id": "p3-07",
+  "part": 3,
+  "level": 2,
+  "title": "新しい事務所への引っ越し",
+  "talk": [
+   {
+    "speaker": "M",
+    "en": "Have you heard when we're moving to the new office downtown?",
+    "ja": "中心街の新しい事務所にいつ引っ越すか聞いた？"
+   },
+   {
+    "speaker": "W",
+    "en": "The movers are coming on the twentieth. We need to pack our desks by the nineteenth.",
+    "ja": "引っ越し業者が20日に来るの。19日までに机の中を箱詰めしないといけないわ。"
+   },
+   {
+    "speaker": "M",
+    "en": "That's soon. Where can I get boxes?",
+    "ja": "すぐだね。箱はどこでもらえるの？"
+   },
+   {
+    "speaker": "W",
+    "en": "Facilities left some in the storage room. Oh, and remember to label each box with your name and new desk number.",
+    "ja": "総務が倉庫にいくつか置いてくれたわ。それと、箱ごとに名前と新しい席番号を書くのを忘れないでね。"
+   },
+   {
+    "speaker": "M",
+    "en": "Got it. The commute will be shorter for me, too.",
+    "ja": "わかった。僕は通勤時間も短くなるよ。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "What are the speakers mainly discussing?",
+    "choices": [
+     "An office relocation",
+     "A new hiring policy",
+     "A storage problem",
+     "A business trip"
+    ],
+    "answer": 0,
+    "explanation": "新しい事務所への引っ越しの話なので (A)。relocation は「移転」。"
+   },
+   {
+    "q": "Where can the man get boxes?",
+    "choices": [
+     "From the movers",
+     "From a storage room",
+     "From the reception desk",
+     "From a nearby store"
+    ],
+    "answer": 1,
+    "explanation": "Facilities left some in the storage room なので (B)。"
+   },
+   {
+    "q": "What does the woman remind the man to do?",
+    "choices": [
+     "Back up his files",
+     "Return his keys",
+     "Label his boxes",
+     "Clean his desk"
+    ],
+    "answer": 2,
+    "explanation": "label each box with your name なので (C)。"
+   }
+  ]
+ },
+ {
+  "id": "p3-08",
+  "part": 3,
+  "level": 2,
+  "title": "研修講師の手配",
+  "talk": [
+   {
+    "speaker": "W",
+    "en": "Mark, we still need a speaker for next month's customer service workshop.",
+    "ja": "マーク、来月の顧客対応研修の講師がまだ決まっていないの。"
+   },
+   {
+    "speaker": "M",
+    "en": "What about Julia Chen? She gave a great talk at the industry conference in March.",
+    "ja": "ジュリア・チェンさんはどう？3月の業界会議ですばらしい講演をしていたよ。"
+   },
+   {
+    "speaker": "W",
+    "en": "Good idea, but I heard her fee is quite high.",
+    "ja": "いい考えね。でも講演料がかなり高いと聞いたわ。"
+   },
+   {
+    "speaker": "M",
+    "en": "We have some budget left from the canceled seminar in the spring. That should cover it.",
+    "ja": "春に中止になったセミナーの予算が残っているよ。それで賄えるはずだ。"
+   },
+   {
+    "speaker": "W",
+    "en": "Great. I'll e-mail her today and ask if she's available on the fifteenth.",
+    "ja": "よかった。今日彼女にメールして、15日が空いているか聞いてみるわ。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "What are the speakers planning?",
+    "choices": [
+     "A product launch",
+     "A training workshop",
+     "An industry conference",
+     "A company picnic"
+    ],
+    "answer": 1,
+    "explanation": "customer service workshop の講師を探しているので (B)。"
+   },
+   {
+    "q": "What concern does the woman mention?",
+    "choices": [
+     "The speaker may be too expensive.",
+     "The venue is too small.",
+     "The date conflicts with a holiday.",
+     "The topic is not popular."
+    ],
+    "answer": 0,
+    "explanation": "her fee is quite high → too expensive で (A)。"
+   },
+   {
+    "q": "How will the cost be covered?",
+    "choices": [
+     "By charging participants",
+     "By using leftover funds",
+     "By finding a sponsor",
+     "By reducing the workshop length"
+    ],
+    "answer": 1,
+    "explanation": "canceled seminar の残りの予算を使う → leftover funds で (B)。"
+   }
+  ]
+ },
+ {
+  "id": "p3-09",
+  "part": 3,
+  "level": 2,
+  "title": "店での在庫の問い合わせ",
+  "talk": [
+   {
+    "speaker": "M",
+    "en": "Excuse me, I'm looking for the wireless headphones that were in your advertisement this week.",
+    "ja": "すみません、今週の広告に載っていたワイヤレスヘッドホンを探しているのですが。"
+   },
+   {
+    "speaker": "W",
+    "en": "I'm sorry, we sold out of those yesterday. We're expecting a new shipment on Thursday.",
+    "ja": "申し訳ありません、昨日売り切れてしまいました。木曜日に入荷予定です。"
+   },
+   {
+    "speaker": "M",
+    "en": "Will they still be on sale then? The ad said the sale ends Wednesday.",
+    "ja": "そのときもセール価格ですか？広告ではセールは水曜日までとなっていましたが。"
+   },
+   {
+    "speaker": "W",
+    "en": "I can give you a rain check. Just show this slip on Thursday and you'll get the sale price.",
+    "ja": "引換券をお出しします。木曜日にこの紙を見せていただければ、セール価格になります。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "What is the man looking for?",
+    "choices": [
+     "A smartphone",
+     "Headphones",
+     "A laptop",
+     "A speaker"
+    ],
+    "answer": 1,
+    "explanation": "wireless headphones なので (B)。"
+   },
+   {
+    "q": "What is the problem?",
+    "choices": [
+     "The product is out of stock.",
+     "The advertisement had the wrong price.",
+     "The store is closing early.",
+     "The product is damaged."
+    ],
+    "answer": 0,
+    "explanation": "sold out → out of stock で (A)。"
+   },
+   {
+    "q": "What does the woman offer the man?",
+    "choices": [
+     "A full refund",
+     "A free gift",
+     "A slip for the sale price",
+     "Home delivery"
+    ],
+    "answer": 2,
+    "explanation": "rain check（後日セール価格で買える引換券）を渡すので (C)。"
+   }
+  ]
+ },
+ {
+  "id": "p3-10",
+  "part": 3,
+  "level": 3,
+  "title": "プロジェクトの締め切り延長",
+  "talk": [
+   {
+    "speaker": "W",
+    "en": "Ken, how is the Henderson Hotel Web site project going?",
+    "ja": "ケン、ヘンダーソン・ホテルのウェブサイトの案件はどう？"
+   },
+   {
+    "speaker": "M",
+    "en": "Not great. The client changed the design twice, so we're about a week behind schedule.",
+    "ja": "あまりよくないんだ。顧客がデザインを2回変えたので、予定より1週間ほど遅れているよ。"
+   },
+   {
+    "speaker": "W",
+    "en": "Have you told them the launch date will probably need to move?",
+    "ja": "公開日をずらす必要がありそうだと先方に伝えた？"
+   },
+   {
+    "speaker": "M",
+    "en": "Not yet. I wanted to check with you first.",
+    "ja": "まだなんだ。まず君に確認したくて。"
+   },
+   {
+    "speaker": "W",
+    "en": "Let's set up a video call with their manager tomorrow. If we explain how the changes affected the schedule, I think they'll understand.",
+    "ja": "明日、先方の担当部長とビデオ会議を設定しましょう。変更がスケジュールにどう影響したか説明すれば、わかってもらえると思うわ。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "What type of business do the speakers most likely work for?",
+    "choices": [
+     "A hotel",
+     "A Web design company",
+     "A travel agency",
+     "A construction firm"
+    ],
+    "answer": 1,
+    "explanation": "ホテルの「ウェブサイト」を制作しているので (B)。ホテルは顧客。"
+   },
+   {
+    "q": "Why is the project behind schedule?",
+    "choices": [
+     "A team member was sick.",
+     "The client requested changes.",
+     "The budget was reduced.",
+     "Some equipment broke."
+    ],
+    "answer": 1,
+    "explanation": "The client changed the design twice → requested changes で (B)。"
+   },
+   {
+    "q": "What does the woman suggest?",
+    "choices": [
+     "Hiring more staff",
+     "Holding a meeting with the client",
+     "Working over the weekend",
+     "Canceling the contract"
+    ],
+    "answer": 1,
+    "explanation": "set up a video call with their manager → 顧客との会議で (B)。"
+   }
+  ]
+ },
+ {
+  "id": "p3-11",
+  "part": 3,
+  "level": 3,
+  "title": "社員旅行の行き先",
+  "talk": [
+   {
+    "speaker": "M",
+    "en": "Sophie, have you decided where to hold this year's company retreat?",
+    "ja": "ソフィー、今年の社員旅行の行き先は決まった？"
+   },
+   {
+    "speaker": "W",
+    "en": "I'm choosing between a mountain resort and a hotel by the lake. The resort has better meeting rooms.",
+    "ja": "山のリゾートと湖畔のホテルで迷っているの。リゾートのほうが会議室がいいのよ。"
+   },
+   {
+    "speaker": "M",
+    "en": "But isn't the resort a four-hour drive from here?",
+    "ja": "でもリゾートはここから車で4時間じゃない？"
+   },
+   {
+    "speaker": "W",
+    "en": "That's true. The lake hotel is only ninety minutes away, and they offer a free shuttle from the station.",
+    "ja": "そうなの。湖畔のホテルは90分だけで、駅から無料のシャトルもあるの。"
+   },
+   {
+    "speaker": "M",
+    "en": "Then I'd go with the lake hotel. People won't want to spend a whole day traveling.",
+    "ja": "それなら湖畔のホテルがいいと思う。みんな移動に丸一日かけたくないだろうから。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "What is the woman organizing?",
+    "choices": [
+     "A client dinner",
+     "A company retreat",
+     "A training course",
+     "A trade show"
+    ],
+    "answer": 1,
+    "explanation": "company retreat（社員旅行・研修旅行）の行き先を決めているので (B)。"
+   },
+   {
+    "q": "What advantage of the mountain resort does the woman mention?",
+    "choices": [
+     "Its low price",
+     "Its meeting facilities",
+     "Its location near a station",
+     "Its free shuttle"
+    ],
+    "answer": 1,
+    "explanation": "The resort has better meeting rooms → meeting facilities で (B)。(D) シャトルは湖畔のホテル。"
+   },
+   {
+    "q": "Why does the man prefer the lake hotel?",
+    "choices": [
+     "It is closer.",
+     "It is newer.",
+     "It has a restaurant.",
+     "It has larger rooms."
+    ],
+    "answer": 0,
+    "explanation": "移動に時間をかけたくない＝近いほうがよいので (A)。"
+   }
+  ]
+ },
+ {
+  "id": "p3-12",
+  "part": 3,
+  "level": 3,
+  "title": "3人の会話：新しい会計ソフト",
+  "talk": [
+   {
+    "speaker": "W",
+    "en": "Thanks for meeting with us, Mr. Ross. We're interested in your accounting software for our three stores.",
+    "ja": "ロスさん、お時間ありがとうございます。3店舗で御社の会計ソフトの導入を検討しています。"
+   },
+   {
+    "speaker": "M",
+    "en": "My pleasure. This is my colleague, Brian, who handles installation.",
+    "ja": "どういたしまして。こちらは設置を担当している同僚のブライアンです。"
+   },
+   {
+    "speaker": "M",
+    "en": "Hi. Our software can be set up at all three locations in about two days.",
+    "ja": "こんにちは。3店舗すべてで、約2日で設置できます。"
+   },
+   {
+    "speaker": "W",
+    "en": "That's faster than we expected. What about training for our staff?",
+    "ja": "思ったより早いですね。スタッフの研修はどうなりますか。"
+   },
+   {
+    "speaker": "M",
+    "en": "We include two online training sessions with every package at no extra cost.",
+    "ja": "すべてのパッケージに、オンライン研修2回が追加料金なしで含まれています。"
+   },
+   {
+    "speaker": "W",
+    "en": "Excellent. Could you send us a formal quote by the end of the week?",
+    "ja": "すばらしいです。今週末までに正式な見積もりを送っていただけますか。"
+   }
+  ],
+  "questions": [
+   {
+    "q": "Who most likely is the woman?",
+    "choices": [
+     "A software developer",
+     "A business owner",
+     "A training instructor",
+     "A store clerk"
+    ],
+    "answer": 1,
+    "explanation": "3店舗の会計ソフト導入を検討している側なので、事業主 (B) が最も適切。"
+   },
+   {
+    "q": "What is Brian responsible for?",
+    "choices": [
+     "Sales",
+     "Installation",
+     "Accounting",
+     "Customer reviews"
+    ],
+    "answer": 1,
+    "explanation": "Brian, who handles installation なので (B)。"
+   },
+   {
+    "q": "What is included at no extra cost?",
+    "choices": [
+     "Hardware",
+     "Training sessions",
+     "Repairs",
+     "Software updates for five years"
+    ],
+    "answer": 1,
+    "explanation": "two online training sessions ... at no extra cost なので (B)。"
+   }
+  ]
  }
 ]

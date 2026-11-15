@@ -16,17 +16,25 @@ export function pingActivity() {
   window.dispatchEvent(new Event(ACTIVITY_EVENT))
 }
 
-function addSeconds(category: Category, sec: number) {
+function addSeconds(category: Category, activity: string, sec: number) {
   if (sec <= 0) return
   const day = todayKey()
   updateData((d) => {
     const today = d.autoSeconds[day] ?? {}
-    return { ...d, autoSeconds: { ...d.autoSeconds, [day]: { ...today, [category]: (today[category] ?? 0) + sec } } }
+    const act = d.activitySeconds[day] ?? {}
+    return {
+      ...d,
+      autoSeconds: { ...d.autoSeconds, [day]: { ...today, [category]: (today[category] ?? 0) + sec } },
+      activitySeconds: { ...d.activitySeconds, [day]: { ...act, [activity]: (act[activity] ?? 0) + sec } },
+    }
   })
 }
 
-/** active の間だけ計測する。戻り値の ref には、この画面で計測した合計秒数が入る */
-export function useStudyTimer(active: boolean, category: Category) {
+/**
+ * active の間だけ計測する。戻り値の ref には、この画面で計測した合計秒数が入る。
+ * category は学習時間の内訳、activity は通勤メニューの進み具合に使う演習の種類（vocab / shadowing / part1 など）
+ */
+export function useStudyTimer(active: boolean, category: Category, activity: string) {
   const total = useRef(0)
   useEffect(() => {
     if (!active) return
@@ -40,7 +48,7 @@ export function useStudyTimer(active: boolean, category: Category) {
       if (end > lastTick) {
         const sec = (end - lastTick) / 1000
         total.current += sec
-        addSeconds(category, sec)
+        addSeconds(category, activity, sec)
       }
       lastTick = end < now ? null : now // 放置が続いたら次の操作まで一時停止
     }
@@ -69,6 +77,6 @@ export function useStudyTimer(active: boolean, category: Category) {
       events.forEach((e) => window.removeEventListener(e, onActivity))
       document.removeEventListener('visibilitychange', onVisibility)
     }
-  }, [active, category])
+  }, [active, category, activity])
   return total
 }

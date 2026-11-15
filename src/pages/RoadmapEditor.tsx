@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { addDays, formatJa } from '../lib/date'
+import { APP_CHOICES, appValue } from '../lib/commute'
 import { commuteTotal, validateRoadmap, weekdaysBetween } from '../lib/plan'
 import { newId, updateData, useData } from '../lib/store'
 import type { CommuteItem, Phase, Roadmap, RoadmapTask } from '../types'
@@ -198,9 +199,10 @@ function PhaseEditor({
 
       <div className="field">
         <span>通勤メニュー（1日 {commuteTotal(phase)}分）</span>
-        <ul className="edit-rows">
+        <ul className="edit-rows commute-edit">
           {phase.commute.map((c, j) => (
             <li key={j}>
+              <div className="edit-line">
               <input type="text" placeholder="内容" value={c.label} onChange={(e) => setCommute(j, { label: e.target.value })} />
               <input
                 type="number"
@@ -215,10 +217,27 @@ function PhaseEditor({
               <button className="icon-del" aria-label="この行を削除" onClick={() => onChange({ commute: phase.commute.filter((_, k) => k !== j) })}>
                 ✕
               </button>
+              </div>
+              <select
+                className="select"
+                aria-label="アプリの演習"
+                value={appValue(c)}
+                onChange={(e) => {
+                  const choice = APP_CHOICES.find((x) => x.value === e.target.value)
+                  // 「手動でチェック」は app を外すだけでなく、ラベルからの推定もしない
+                  setCommute(j, choice?.app ? { app: choice.app.app, parts: choice.app.parts } : { app: undefined, parts: undefined, manual: true })
+                }}
+              >
+                {APP_CHOICES.map((x) => (
+                  <option key={x.value} value={x.value}>
+                    演習：{x.label}
+                  </option>
+                ))}
+              </select>
             </li>
           ))}
         </ul>
-        <button className="link" onClick={() => onChange({ commute: [...phase.commute, { label: '', minutes: 30 }] })}>
+        <button className="link" onClick={() => onChange({ commute: [...phase.commute, { label: '', minutes: 30, app: 'vocab' }] })}>
           ＋ メニューを追加
         </button>
       </div>

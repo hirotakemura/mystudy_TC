@@ -190,5 +190,293 @@
     "explanation": "女性がドアを押さえて開けているので (C)。hold a door open は「ドアを押さえて開けておく」。(D) トラックからの荷降ろしは写っていない。"
    }
   ]
+ },
+ {
+  "id": "p1-09",
+  "part": 1,
+  "level": 1,
+  "scene": "レストランで、ウェイターが客のテーブルに料理の皿を運んでいる。",
+  "questions": [
+   {
+    "choices": [
+     "Some customers are paying the bill.",
+     "A server is carrying plates to a table.",
+     "A server is wiping a table.",
+     "All of the tables are empty."
+    ],
+    "answer": 1,
+    "choicesJa": [
+     "何人かの客が会計をしている。",
+     "給仕係がテーブルに皿を運んでいる。",
+     "給仕係がテーブルを拭いている。",
+     "すべてのテーブルが空いている。"
+    ],
+    "explanation": "ウェイターが皿を運んでいるので (B)。server は「給仕係」。(D) 客がいるので不正解。"
+   }
+  ]
+ },
+ {
+  "id": "p1-10",
+  "part": 1,
+  "level": 1,
+  "scene": "図書館で、女性が本棚から本を一冊取り出している。",
+  "questions": [
+   {
+    "choices": [
+     "She is returning a book to the counter.",
+     "She is taking a book off a shelf.",
+     "She is reading a newspaper.",
+     "She is arranging some chairs."
+    ],
+    "answer": 1,
+    "choicesJa": [
+     "彼女はカウンターに本を返している。",
+     "彼女は棚から本を取り出している。",
+     "彼女は新聞を読んでいる。",
+     "彼女は椅子を並べている。"
+    ],
+    "explanation": "本棚から本を取り出しているので (B)。take A off B は「BからAを取る」。"
+   }
+  ]
+ },
+ {
+  "id": "p1-11",
+  "part": 1,
+  "level": 1,
+  "scene": "オフィスのロビーで、スーツ姿の男性二人が握手をしている。",
+  "questions": [
+   {
+    "choices": [
+     "The men are shaking hands.",
+     "The men are exchanging business cards.",
+     "One of the men is opening a door.",
+     "The men are sitting on a sofa."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "男性たちは握手をしている。",
+     "男性たちは名刺を交換している。",
+     "男性の一人がドアを開けている。",
+     "男性たちはソファに座っている。"
+    ],
+    "explanation": "握手しているので (A)。(B) 名刺交換はしていない。動作の聞き分けがポイント。"
+   }
+  ]
+ },
+ {
+  "id": "p1-12",
+  "part": 1,
+  "level": 1,
+  "scene": "建物の前に、自転車が何台も一列に止めてある。周りに人はいない。",
+  "questions": [
+   {
+    "choices": [
+     "Some people are riding bicycles.",
+     "A bicycle is being repaired.",
+     "Some bicycles are parked in a row.",
+     "A building is under construction."
+    ],
+    "answer": 2,
+    "choicesJa": [
+     "何人かが自転車に乗っている。",
+     "自転車が修理されているところだ。",
+     "何台かの自転車が一列に止めてある。",
+     "建物が建設中だ。"
+    ],
+    "explanation": "人のいない写真で、自転車が一列に止めてある状態なので (C)。in a row は「一列に」。(B) is being repaired は修理している人が必要。"
+   }
+  ]
+ },
+ {
+  "id": "p1-13",
+  "part": 1,
+  "level": 2,
+  "scene": "工事現場で、ヘルメットをかぶった作業員がレンガを積んでいる。",
+  "questions": [
+   {
+    "choices": [
+     "A worker is taking off his helmet.",
+     "A worker is stacking some bricks.",
+     "A worker is painting a wall.",
+     "Some bricks are being unloaded from a truck."
+    ],
+    "answer": 1,
+    "choicesJa": [
+     "作業員がヘルメットを脱いでいる。",
+     "作業員がレンガを積んでいる。",
+     "作業員が壁にペンキを塗っている。",
+     "トラックからレンガが降ろされているところだ。"
+    ],
+    "explanation": "レンガを積んでいるので (B)。stack は「積み重ねる」。(A) take off は「脱ぐ」動作で、写真はかぶっている状態。"
+   }
+  ]
+ },
+ {
+  "id": "p1-14",
+  "part": 1,
+  "level": 1,
+  "scene": "会議室で、女性がホワイトボードに図を書いていて、数人が座ってそれを見ている。",
+  "questions": [
+   {
+    "choices": [
+     "A woman is writing on a whiteboard.",
+     "A woman is erasing a whiteboard.",
+     "Some people are leaving the room.",
+     "A woman is handing out documents."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "女性がホワイトボードに書いている。",
+     "女性がホワイトボードを消している。",
+     "何人かが部屋を出ようとしている。",
+     "女性が書類を配っている。"
+    ],
+    "explanation": "ホワイトボードに書いているので (A)。(B) erase は「消す」。"
+   }
+  ]
+ },
+ {
+  "id": "p1-15",
+  "part": 1,
+  "level": 2,
+  "scene": "誰もいないオフィスの机の上に、書類が積み重ねられている。パソコンの画面は消えている。",
+  "questions": [
+   {
+    "choices": [
+     "Some papers have been stacked on a desk.",
+     "A computer is being turned on.",
+     "Someone is filing some documents.",
+     "A desk is being moved."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "書類が机の上に積み重ねられている。",
+     "パソコンの電源が入れられているところだ。",
+     "誰かが書類をファイルにとじている。",
+     "机が動かされているところだ。"
+    ],
+    "explanation": "人がいない写真で、書類が積み重ねられた状態なので現在完了の受動態 (A)。(B)(C)(D) は動作をしている人が必要。"
+   }
+  ]
+ },
+ {
+  "id": "p1-16",
+  "part": 1,
+  "level": 2,
+  "scene": "駐車場で、男性が車のトランクにスーツケースを積み込んでいる。",
+  "questions": [
+   {
+    "choices": [
+     "He is getting into a car.",
+     "He is loading a suitcase into a car.",
+     "He is pulling a suitcase through an airport.",
+     "He is closing the car window."
+    ],
+    "answer": 1,
+    "choicesJa": [
+     "彼は車に乗り込んでいる。",
+     "彼は車にスーツケースを積み込んでいる。",
+     "彼は空港でスーツケースを引いている。",
+     "彼は車の窓を閉めている。"
+    ],
+    "explanation": "トランクにスーツケースを積み込んでいるので (B)。load A into B「AをBに積み込む」。"
+   }
+  ]
+ },
+ {
+  "id": "p1-17",
+  "part": 1,
+  "level": 2,
+  "scene": "カフェの窓際の席で、女性がカップを両手で持って外を眺めている。",
+  "questions": [
+   {
+    "choices": [
+     "She is pouring some tea.",
+     "She is looking out a window.",
+     "She is ordering at a counter.",
+     "She is cleaning a window."
+    ],
+    "answer": 1,
+    "choicesJa": [
+     "彼女はお茶を注いでいる。",
+     "彼女は窓から外を眺めている。",
+     "彼女はカウンターで注文している。",
+     "彼女は窓を掃除している。"
+    ],
+    "explanation": "窓から外を眺めているので (B)。look out a window「窓から外を見る」。(A) 注いではいない。"
+   }
+  ]
+ },
+ {
+  "id": "p1-18",
+  "part": 1,
+  "level": 3,
+  "scene": "建物の入口の脇に傘立てがあり、何本かの傘が立てかけてある。人はいない。",
+  "questions": [
+   {
+    "choices": [
+     "Some umbrellas have been left near an entrance.",
+     "People are opening their umbrellas.",
+     "An entrance is crowded with visitors.",
+     "Some umbrellas are being sold."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "何本かの傘が入口の近くに置かれている。",
+     "人々が傘を開いている。",
+     "入口が訪問者で混雑している。",
+     "傘が売られている。"
+    ],
+    "explanation": "人がいない写真で、傘が置かれた状態なので (A)。be left は「置かれたままになっている」。"
+   }
+  ]
+ },
+ {
+  "id": "p1-19",
+  "part": 1,
+  "level": 2,
+  "scene": "ホテルのロビーで、清掃員の男性が床にモップをかけている。",
+  "questions": [
+   {
+    "choices": [
+     "A man is mopping the floor.",
+     "A man is vacuuming a carpet.",
+     "A man is checking in at the front desk.",
+     "The floor is being painted."
+    ],
+    "answer": 0,
+    "choicesJa": [
+     "男性が床にモップをかけている。",
+     "男性がカーペットに掃除機をかけている。",
+     "男性がフロントでチェックインしている。",
+     "床にペンキが塗られているところだ。"
+    ],
+    "explanation": "モップをかけているので (A)。mop は動詞で「モップで拭く」。(B) vacuum は「掃除機をかける」で道具が違う。"
+   }
+  ]
+ },
+ {
+  "id": "p1-20",
+  "part": 1,
+  "level": 3,
+  "scene": "噴水のある広場で、数人がベンチに座って話している。",
+  "questions": [
+   {
+    "choices": [
+     "Some people are swimming in a fountain.",
+     "Some people are seated near a fountain.",
+     "A fountain is being installed.",
+     "Some people are standing in line."
+    ],
+    "answer": 1,
+    "choicesJa": [
+     "何人かが噴水で泳いでいる。",
+     "何人かが噴水の近くに座っている。",
+     "噴水が設置されているところだ。",
+     "何人かが列に並んで立っている。"
+    ],
+    "explanation": "ベンチに座っているので (B)。be seated は「座っている」の丁寧な言い方で、Part 1 の頻出表現。"
+   }
+  ]
  }
 ]

@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { formatMinutes, todayKey } from '../../lib/date'
-import { PART_INFO, partCategory, partStats, pickSets, recordPartAnswer, type PartMode } from '../../lib/parts'
+import { PART_INFO, partCategory, partStats, planMock, planParts, planWrong, recordPartAnswer, sessionActivity, wrongCount, type PartMode, type PartSessionPlan } from '../../lib/parts'
+import type { ResolvedApp } from '../../lib/commute'
 import { speak, stopSpeaking, wait, WORD_RATE } from '../../lib/speech'
 import { LEVEL_LABEL, shuffle } from '../../lib/srs'
 import { useStudyTimer } from '../../lib/studyTimer'
@@ -9,15 +10,24 @@ import type { PartNo, PartQuestion, PartSet, ShadowLine } from '../../types'
 
 const LETTERS = 'ABCD'
 
-interface Session {
-  part: PartNo
-  sets: PartSet[]
-  title: string
-}
+type Session = PartSessionPlan
 
-export default function Parts({ sets }: { sets: PartSet[] }) {
-  const [session, setSession] = useState<Session | null>(null)
-  const [open, setOpen] = useState<PartNo | null>(null)
+/** intent：通勤メニューの「始める」から開いたときの演習（そのまま出題を始める） */
+export default function Parts({ sets, intent }: { sets: PartSet[]; intent?: ResolvedApp | null }) {
+  const data = useData()
+  const [session, setSession] = useState<Session | null>(() => {
+    if (!intent) return null
+    const plan =
+      intent.app === 'mock'
+        ? planMock(data, sets)
+        : intent.app === 'wrong'
+          ? planWrong(data, sets)
+          : intent.app === 'parts' && intent.parts?.length
+            ? planParts(data, sets, intent.parts, 'new')
+            : null
+    return plan && plan.sets.length ? plan : null
+  })
+  const [open, setOpen] = useState<PartNo | null>(intent?.parts?.length === 1 ? intent.parts[0] : null)
   if (session) return <PartSession key={session.sets.map((s) => s.id).join()} session={session} onExit={() => setSession(null)} />
   return <PartsHome sets={sets} open={open} setOpen={setOpen} onStart={setSession} />
 }
@@ -35,12 +45,26 @@ function PartsHome({
 }) {
   const data = useData()
   const parts = ([1, 2, 3, 4, 5, 6, 7] as const).filter((p) => sets.some((s) => s.part === p))
+  const wrong = wrongCount(data, sets)
+  const total = partStats(data, sets)
 
   return (
     <>
       <p className="small muted">
-        TOEIC L&amp;R の形式に合わせたオリジナル問題です。リスニングは端末の読み上げ音声で再生します（Part 1 は写真の代わりに場面の説明を表示）。
+        TOEIC L&amp;R の形式に合わせたオリジナル問題（全{total.total}問）です。リスニングは端末の読み上げ音声で再生します（Part 1 は写真の代わりに場面の説明を表示）。
       </p>
+      <section className="card">
+        <div className="start-list">
+          <button className="start-btn primary" onClick={() => onStart(planMock(data, sets))}>
+            <b>ミニ模試</b>
+            <span>Part 1〜7 から少しずつ、本番と同じ順に約25問</span>
+          </button>
+          <button className="start-btn" disabled={wrong === 0} onClick={() => onStart(planWrong(data, sets))}>
+            <b>間違えた問題の復習</b>
+            <span>{wrong ? `全パートの間違えた問題 ${wrong}問から` : '間違えた問題はありません'}</span>
+          </button>
+        </div>
+      </section>
       {(['L', 'R'] as const).map((sec) => (
         <section key={sec} className="card">
           <h2>{sec === 'L' ? 'リスニング（Part 1〜4）' : 'リーディング（Part 5〜7）'}</h2>
@@ -51,8 +75,7 @@ function PartsHome({
                 const ps = sets.filter((s) => s.part === p)
                 const st = partStats(data, ps)
                 const isOpen = open === p
-                const start = (mode: PartMode, label: string) =>
-                  onStart({ part: p, sets: pickSets(data, ps, mode, PART_INFO[p].perSession), title: `Part ${p} ${label}` })
+                const start = (mode: PartMode) => onStart(planParts(data, sets, [p], mode))
                 return (
                   <li key={p} className={isOpen ? 'open' : ''}>
                     <button className="part-row" onClick={() => setOpen(isOpen ? null : p)} aria-expanded={isOpen}>
@@ -72,13 +95,13 @@ function PartsHome({
                       <div className="part-menu">
                         <p className="small muted">{PART_INFO[p].hint}</p>
                         <div className="btn-row">
-                          <button className="btn primary small" onClick={() => start('new', st.answered < st.total ? '未回答から' : '復習')}>
+                          <button className="btn primary small" onClick={() => start('new')}>
                             {st.answered < st.total ? '未回答から解く' : 'もう一度解く'}
                           </button>
-                          <button className="btn small" disabled={st.wrong === 0} onClick={() => start('wrong', '間違えた問題')}>
+                          <button className="btn small" disabled={st.wrong === 0} onClick={() => start('wrong')}>
                             間違えた問題（{st.wrong}）
                           </button>
-                          <button className="btn small" onClick={() => start('random', 'ランダム')}>
+                          <button className="btn small" onClick={() => start('random')}>
                             ランダム
                           </button>
                         </div>
@@ -104,8 +127,9 @@ function PartSession({ session, onExit }: { session: Session; onExit: () => void
   const [pos, setPos] = useState(0)
   const [answers, setAnswers] = useState<Answers>({})
   const finished = pos >= session.sets.length
-  const studied = useStudyTimer(!finished, partCategory(session.part))
   const set = session.sets[pos]
+  const current = set ?? session.sets[session.sets.length - 1]
+  const studied = useStudyTimer(!finished, partCategory(current.part), sessionActivity(session.kind, current))
   const order: Order = useMemo(() => (set ? set.questions.map((qq) => shuffle(qq.choices.map((_, i) => i))) : []), [set])
 
   useEffect(() => () => stopSpeaking(), [pos])
@@ -129,6 +153,7 @@ function PartSession({ session, onExit }: { session: Session; onExit: () => void
           <small> / {list.length}問正解</small>
         </div>
         <p className="sub">演習時間 {formatMinutes(Math.max(1, Math.round(studied.current / 60)))}（学習時間に自動で記録済み）</p>
+        <ResultByPart session={session} answers={answers} />
         <button className="btn primary block" onClick={onExit}>
           パート一覧に戻る
         </button>
@@ -173,6 +198,30 @@ function PartSession({ session, onExit }: { session: Session; onExit: () => void
         </button>
       )}
     </div>
+  )
+}
+
+function ResultByPart({ session, answers }: { session: Session; answers: Answers }) {
+  const parts = [...new Set(session.sets.map((s) => s.part))]
+  if (parts.length < 2) return null
+  return (
+    <ul className="menu result-parts">
+      {parts.map((p) => {
+        const keys = session.sets.filter((s) => s.part === p).flatMap((s) => s.questions.map((_, i) => `${s.id}#${i}`))
+        const ok = keys.filter((k) => answers[k]?.ok).length
+        const rate = keys.length ? Math.round((ok / keys.length) * 100) : 0
+        return (
+          <li key={p}>
+            <span>
+              Part {p} {PART_INFO[p].name}
+            </span>
+            <span className={rate < 60 ? 'down' : 'up'}>
+              {ok}/{keys.length}（{rate}%）
+            </span>
+          </li>
+        )
+      })}
+    </ul>
   )
 }
 

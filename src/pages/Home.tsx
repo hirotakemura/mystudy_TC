@@ -4,6 +4,7 @@ import { setCheck, setMinimumDone, toggleCommute } from '../lib/actions'
 import { addDays, diffDays, formatJa, formatMinutes, todayKey, weekStart } from '../lib/date'
 import { cautions, commuteKey, commuteTotal, planPosition } from '../lib/plan'
 import { loadWords, useLoad } from '../lib/content'
+import { appLabel, appSeconds, resolveApp, setPracticeIntent, type ResolvedApp } from '../lib/commute'
 import { navigate } from '../lib/router'
 import { dueWords, newWords } from '../lib/srs'
 import { setPracticeTab, type PracticeTab } from './Practice'
@@ -195,8 +196,18 @@ function PhaseCard({ roadmap, today }: { roadmap: Roadmap; today: string }) {
 function CommuteCard({ phase, today }: { phase: Phase; today: string }) {
   const data = useData()
   const slotOf = (i: number) => data.studyLogs.find((l) => l.date === today && l.commute?.key === commuteKey(phase, i))?.commute?.slot
-  const doneMin = phase.commute.reduce((s, c, i) => (slotOf(i) ? s + c.minutes : s), 0)
+  const rows = phase.commute.map((c, i) => {
+    const app = resolveApp(c)
+    // アプリ内の演習は自動計測の時間、アプリ外のメニューは「行き」「帰り」のチェック
+    const done = app ? Math.round(appSeconds(data, today, app) / 60) : slotOf(i) ? c.minutes : 0
+    return { c, i, app, done }
+  })
+  const doneMin = rows.reduce((s, r) => s + Math.min(r.done, r.c.minutes), 0)
   const total = commuteTotal(phase)
+  const start = (app: ResolvedApp) => {
+    setPracticeIntent(app)
+    navigate('practice')
+  }
 
   return (
     <section className="card">
@@ -206,31 +217,48 @@ function CommuteCard({ phase, today }: { phase: Phase; today: string }) {
           {formatMinutes(doneMin)} / {formatMinutes(total)}
         </span>
       </div>
-      <p className="small muted">
-        単語帳・問題集などアプリ以外でやった項目を「行き」「帰り」でタップすると、学習時間に加算されます（もう一度タップで取り消し）。
-        アプリの演習（単語・シャドーイング）の時間は自動で記録されるので、チェックは不要です。
-      </p>
+      <p className="small muted">「始める」でアプリの演習を開きます。演習した時間は自動で記録され、ここに反映されます。</p>
       <ul className="commute">
-        {phase.commute.map((c, i) => {
-          const slot = slotOf(i)
+        {rows.map(({ c, i, app, done }) => {
+          const complete = done >= c.minutes
+          if (!app) {
+            const slot = slotOf(i)
+            return (
+              <li key={i} className={slot ? 'done' : ''}>
+                <div className="commute-text">
+                  <span>{c.label}</span>
+                  <span className="small muted">目安 {c.minutes}分・アプリ外（やったらタップ）</span>
+                </div>
+                <div className="slot-btns">
+                  {(['go', 'back'] as const).map((sl) => (
+                    <button
+                      key={sl}
+                      className={`slot${slot === sl ? ' on' : ''}`}
+                      aria-pressed={slot === sl}
+                      onClick={() => toggleCommute(today, phase, i, sl)}
+                    >
+                      {sl === 'go' ? '行き' : '帰り'}
+                    </button>
+                  ))}
+                </div>
+              </li>
+            )
+          }
           return (
-            <li key={i} className={slot ? 'done' : ''}>
+            <li key={i} className={complete ? 'done' : ''}>
               <div className="commute-text">
                 <span>{c.label}</span>
-                <span className="small muted">目安 {c.minutes}分</span>
+                <span className="small muted">
+                  {appLabel(app)}・{complete ? '✓ ' : ''}
+                  {done}分 / {c.minutes}分
+                </span>
+                <span className="bar commute-bar" aria-hidden>
+                  <span className={`bar-fill${complete ? ' done' : ''}`} style={{ width: `${Math.min(100, (done / c.minutes) * 100)}%` }} />
+                </span>
               </div>
-              <div className="slot-btns">
-                {(['go', 'back'] as const).map((s) => (
-                  <button
-                    key={s}
-                    className={`slot${slot === s ? ' on' : ''}`}
-                    aria-pressed={slot === s}
-                    onClick={() => toggleCommute(today, phase, i, s)}
-                  >
-                    {s === 'go' ? '行き' : '帰り'}
-                  </button>
-                ))}
-              </div>
+              <button className={`btn small${complete ? '' : ' primary'} start-small`} onClick={() => start(app)}>
+                {complete ? 'もう一度' : done > 0 ? '続ける' : '始める'}
+              </button>
             </li>
           )
         })}
