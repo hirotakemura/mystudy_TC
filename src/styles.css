@@ -1859,3 +1859,19 @@ details > summary {
   color: var(--ng);
   cursor: pointer;
 }
+.focus-label {
+  margin-top: 12px;
+}
+.rebuild-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.rebuild-list li {
+  padding: 8px 0 8px 12px;
+  border-left: 3px solid var(--accent);
+  margin-bottom: 8px;
+}
+.rebuild-list li:last-child {
+  border-left-color: var(--ng);
+}

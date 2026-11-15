@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { WithRoadmap } from '../components/Async'
 import RoadmapEditor from './RoadmapEditor'
+import RoadmapRebuild from './RoadmapRebuild'
 import { setCheck } from '../lib/actions'
 import { diffDays, formatJa, formatMinutes, todayKey } from '../lib/date'
 import { commuteTotal, plannedMinutes, planPosition } from '../lib/plan'
@@ -13,12 +14,13 @@ export default function RoadmapPage() {
 }
 
 function RoadmapBody({ roadmap }: { roadmap: Roadmap }) {
-  const [editing, setEditing] = useState(false)
-  if (editing) return <RoadmapEditor roadmap={roadmap} onClose={() => setEditing(false)} />
-  return <RoadmapView roadmap={roadmap} onEdit={() => setEditing(true)} />
+  const [mode, setMode] = useState<'view' | 'edit' | 'rebuild'>('view')
+  if (mode === 'edit') return <RoadmapEditor roadmap={roadmap} onClose={() => setMode('view')} />
+  if (mode === 'rebuild') return <RoadmapRebuild current={roadmap} onClose={() => setMode('view')} />
+  return <RoadmapView roadmap={roadmap} onEdit={() => setMode('edit')} onRebuild={() => setMode('rebuild')} />
 }
 
-function RoadmapView({ roadmap, onEdit }: { roadmap: Roadmap; onEdit: () => void }) {
+function RoadmapView({ roadmap, onEdit, onRebuild }: { roadmap: Roadmap; onEdit: () => void; onRebuild: () => void }) {
   const data = useData()
   const today = todayKey()
   const pos = planPosition(roadmap, today)
@@ -28,12 +30,15 @@ function RoadmapView({ roadmap, onEdit }: { roadmap: Roadmap; onEdit: () => void
   return (
     <div className="stack">
       <section className="card focus">
-        <div className="focus-head">
-          <div className="label">方針</div>
+        <div className="btn-row">
+          <button className="btn primary small" onClick={onRebuild}>
+            🔄 期間を設定して作り直す
+          </button>
           <button className="btn small" onClick={onEdit}>
             ✏️ 期間・内容を編集
           </button>
         </div>
+        <div className="label focus-label">方針</div>
         <p>{roadmap.focus}</p>
         {data.roadmapOverride && <p className="small muted">アプリで編集した計画を表示しています。</p>}
       </section>

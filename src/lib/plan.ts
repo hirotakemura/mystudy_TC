@@ -106,3 +106,58 @@ export function validateRoadmap(r: Roadmap): string[] {
   })
   return errors
 }
+
+/**
+ * 開始日〜受験日の前日を、元の計画（テンプレート）の期間の流れに沿って割り振り直す。
+ * 準備 → 土台づくり → Part別対策 → 実戦 の順で、期間が短いときは前のほうの期間を省く。
+ */
+export function rebuildRoadmap(template: Roadmap, start: string, examDate: string, target: number): Roadmap {
+  const days = diffDays(start, examDate) // 開始日〜受験日の前日までの日数
+  const [prep, foundation, parts, practice] = template.phases
+  // 各期間の日数を決める
+  let plan: [Phase, number][]
+  if (days >= 42) {
+    const prac = Math.min(28, Math.max(14, Math.round(days * 0.22)))
+    const rest = days - 7 - prac
+    const found = Math.ceil(rest / 2)
+    plan = [
+      [prep, 7],
+      [foundation, found],
+      [parts, rest - found],
+      [practice, prac],
+    ]
+  } else if (days >= 21) {
+    const found = Math.round(days * 0.3)
+    const pts = Math.round(days * 0.35)
+    plan = [
+      [foundation, found],
+      [parts, pts],
+      [practice, days - found - pts],
+    ]
+  } else if (days >= 14) {
+    plan = [
+      [parts, days - 7],
+      [practice, 7],
+    ]
+  } else {
+    plan = [[practice, Math.max(days, 1)]]
+  }
+
+  const finalWeek = addDays(examDate, -7)
+  const examMonth = Number(examDate.slice(5, 7))
+  const md = (key: string) => `${Number(key.slice(5, 7))}/${Number(key.slice(8, 10))}`
+  let cursor = start
+  const phases = plan.map(([p, n]) => {
+    const phase: Phase = {
+      ...structuredClone(p),
+      start: cursor,
+      end: addDays(cursor, n - 1),
+      // 「12月試験」など受験月を含む文言は、新しい受験月に合わせる
+      tasks: p.tasks.map((t) => ({ ...t, text: t.text.replace(/\d+月試験/, `${examMonth}月試験`) })),
+      notes: p.notes ? p.notes.map((note) => note.replace(/\d+\/\d+以降/, `${md(finalWeek)}以降`)) : undefined,
+    }
+    cursor = addDays(phase.end, 1)
+    return phase
+  })
+  return { ...structuredClone(template), exam: { ...template.exam, date: examDate, target }, phases }
+}
