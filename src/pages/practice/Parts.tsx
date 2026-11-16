@@ -229,11 +229,28 @@ function ResultByPart({ session, answers }: { session: Session; answers: Answers
 const PITCH: Record<NonNullable<ShadowLine['speaker']>, number> = { M: 0.85, W: 1.2, Q: 1.0, A: 1.15 }
 
 /** 読み上げる内容（Part 1/2 は選択肢も音声だけで出題する） */
-function audioScript(set: PartSet, order: Order): { text: string; pitch: number }[] {
-  const lines = (set.talk ?? []).map((l) => ({ text: l.en, pitch: l.speaker ? PITCH[l.speaker] : 1 }))
-  if (set.part === 1 || set.part === 2) {
+/** 記号（A. B. …）を読んだあと、選択肢の文を読むまでの間（ミリ秒） */
+const PAUSE_AFTER_LETTER = 600
+/** 選択肢・Part 2 の質問文を読んだあとの間 */
+const PAUSE_AFTER_CHOICE = 1200
+/** Part 3/4 の会話・説明文の1文ごとの間 */
+const PAUSE_AFTER_LINE = 400
+
+function audioScript(set: PartSet, order: Order): { text: string; pitch: number; pause: number }[] {
+  const shortParts = set.part === 1 || set.part === 2
+  const lines = (set.talk ?? []).map((l) => ({
+    text: l.en,
+    pitch: l.speaker ? PITCH[l.speaker] : 1,
+    pause: shortParts ? PAUSE_AFTER_CHOICE : PAUSE_AFTER_LINE,
+  }))
+  if (shortParts) {
     const qq = set.questions[0]
-    order[0].forEach((orig, shown) => lines.push({ text: `${LETTERS[shown]}. ${qq.choices[orig]}`, pitch: set.part === 2 ? PITCH.A : 1 }))
+    const pitch = set.part === 2 ? PITCH.A : 1
+    // 記号と文を別々に読み、間をあける（本番と同じように「A.」→ 少し間 → 選択肢）
+    order[0].forEach((orig, shown) => {
+      lines.push({ text: `${LETTERS[shown]}.`, pitch, pause: PAUSE_AFTER_LETTER })
+      lines.push({ text: qq.choices[orig], pitch, pause: PAUSE_AFTER_CHOICE })
+    })
   }
   return lines
 }
@@ -253,7 +270,7 @@ function AudioPlayer({ set, order }: { set: PartSet; order: Order }) {
       // 本番と同じ速さ（1.0）で読み上げる
       const ok = await speak(l.text, { rate: WORD_RATE, voiceURI, pitch: l.pitch })
       if (!ok || my !== run.current) return
-      await wait(set.part <= 2 ? 700 : 400)
+      await wait(l.pause)
       if (my !== run.current) return
     }
     setPlaying(false)
