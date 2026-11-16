@@ -194,5 +194,7 @@ export interface AppData {
     voiceURI?: string
     /** 単語カードを表示したときに自動で読み上げる */
     autoSpeak: boolean
+    /** 正解したときに効果音を鳴らす */
+    sound: boolean
   }
 }

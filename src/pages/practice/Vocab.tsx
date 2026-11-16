@@ -13,13 +13,13 @@ import {
   shuffle,
   wordStatus,
 } from '../../lib/srs'
+import { playCorrect } from '../../lib/sound'
 import { useStudyTimer } from '../../lib/studyTimer'
 import { updateData, useData } from '../../lib/store'
 import type { Level, Word } from '../../types'
 
-type Mode = 'card' | 'quiz'
+// 単語はすべて4択（英単語を見て意味を選ぶ）。間違えた単語はセッションの最後にもう一度出す
 interface Session {
-  mode: Mode
   words: Word[]
   title: string
 }
@@ -88,7 +88,7 @@ function VocabHome({ words, onStart }: { words: Word[]; onStart: (s: Session) =>
           <button
             className="start-btn primary"
             disabled={due.length === 0}
-            onClick={() => onStart({ mode: 'card', words: due.slice(0, REVIEW_MAX), title: '復習' })}
+            onClick={() => onStart({ words: shuffle(due.slice(0, REVIEW_MAX)), title: '復習' })}
           >
             <b>復習する</b>
             <span>{due.length ? `今日復習する単語 ${due.length}語` : '今日の復習はありません 🎉'}</span>
@@ -96,22 +96,21 @@ function VocabHome({ words, onStart }: { words: Word[]; onStart: (s: Session) =>
           <button
             className="start-btn"
             disabled={fresh.length === 0}
-            onClick={() => onStart({ mode: 'card', words: fresh.slice(0, NEW_PER_SESSION), title: '新しい単語' })}
+            onClick={() => onStart({ words: fresh.slice(0, NEW_PER_SESSION), title: '新しい単語' })}
           >
             <b>新しい単語を覚える</b>
-            <span>{fresh.length ? `${Math.min(NEW_PER_SESSION, fresh.length)}語（カードで意味と例文を確認）` : 'すべて学習済みです'}</span>
+            <span>{fresh.length ? `${Math.min(NEW_PER_SESSION, fresh.length)}語（4択で意味を選び、例文で確認）` : 'すべて学習済みです'}</span>
           </button>
           <button
             className="start-btn"
             onClick={() =>
               onStart({
-                mode: 'quiz',
                 words: shuffle(studied.length >= 4 ? studied : pool).slice(0, QUIZ_SIZE),
                 title: '4択テスト',
               })
             }
           >
-            <b>4択テスト</b>
+            <b>ランダムテスト</b>
             <span>{studied.length >= 4 ? `学習した単語から${QUIZ_SIZE}問` : `${QUIZ_SIZE}問（まだ学習した単語が少ないので全体から）`}</span>
           </button>
         </div>
@@ -121,7 +120,7 @@ function VocabHome({ words, onStart }: { words: Word[]; onStart: (s: Session) =>
             checked={data.settings.autoSpeak}
             onChange={(e) => updateData((d) => ({ ...d, settings: { ...d.settings, autoSpeak: e.target.checked } }))}
           />
-          カードを表示したら自動で読み上げる
+          問題を表示したら単語を自動で読み上げる
         </label>
       </section>
 
@@ -162,13 +161,13 @@ function VocabSession({ session, all, onExit }: { session: Session; all: Word[];
   const today = todayKey()
   const [queue, setQueue] = useState(session.words)
   const [pos, setPos] = useState(0)
-  const [revealed, setRevealed] = useState(false)
   const [picked, setPicked] = useState<string | null>(null)
   const [results, setResults] = useState<Record<string, boolean>>({})
   const finished = pos >= queue.length
   const studied = useStudyTimer(!finished, 'vocab', 'vocab')
   const word = queue[pos]
-  const choices = useMemo(() => (session.mode === 'quiz' && word ? choicesFor(word, all) : []), [word, session.mode, all])
+  // pos ごとに選択肢を作り直す（同じ単語が再出題されたときも並びを変える）
+  const choices = useMemo(() => (word ? choicesFor(word, all) : []), [word, pos, all])
   const { voiceURI, autoSpeak } = data.settings
 
   useEffect(() => {
@@ -179,26 +178,20 @@ function VocabSession({ session, all, onExit }: { session: Session; all: Word[];
 
   const next = () => {
     setPos(pos + 1)
-    setRevealed(false)
     setPicked(null)
   }
 
-  const answerCard = (ok: boolean) => {
-    // 1回目の答えだけを記録する。「まだ」の単語はセッションの最後にもう一度出す
+  const answer = (meaning: string) => {
+    if (picked) return
+    const ok = meaning === word.meaning
+    setPicked(meaning)
+    if (ok) playCorrect()
+    // 覚え具合は1回目の答えだけで記録する。間違えた単語は最後にもう一度出す
     if (!(word.id in results)) {
       recordAnswer(word.id, ok, today)
       setResults({ ...results, [word.id]: ok })
     }
     if (!ok && queue.indexOf(word, pos + 1) === -1) setQueue([...queue, word])
-    next()
-  }
-
-  const answerQuiz = (meaning: string) => {
-    if (picked) return
-    const ok = meaning === word.meaning
-    setPicked(meaning)
-    recordAnswer(word.id, ok, today)
-    setResults({ ...results, [word.id]: ok })
   }
 
   if (finished) {
@@ -212,7 +205,7 @@ function VocabSession({ session, all, onExit }: { session: Session; all: Word[];
           <small> / {session.words.length}</small>
         </div>
         <p className="sub">
-          {session.mode === 'quiz' ? '正解' : '1回目で覚えていた単語'}・演習時間 {formatMinutes(Math.max(1, Math.round(studied.current / 60)))}
+          1回目で正解・演習時間 {formatMinutes(Math.max(1, Math.round(studied.current / 60)))}
         </p>
         {wrong.length > 0 && (
           <>
@@ -259,29 +252,21 @@ function VocabSession({ session, all, onExit }: { session: Session; all: Word[];
           {word.pos}・{LEVEL_LABEL[word.level]}レベル
         </div>
 
-        {session.mode === 'card' && !revealed && (
-          <button className="btn block reveal" onClick={() => setRevealed(true)}>
-            意味と例文を見る
-          </button>
-        )}
-
-        {session.mode === 'quiz' && (
-          <ul className="options">
+        <ul className="options">
             {choices.map((c) => (
               <li key={c}>
                 <button
                   className={`option${picked ? (c === word.meaning ? ' correct' : c === picked ? ' wrong' : ' dim') : ''}`}
                   disabled={!!picked}
-                  onClick={() => answerQuiz(c)}
+                  onClick={() => answer(c)}
                 >
                   {c}
                 </button>
               </li>
             ))}
           </ul>
-        )}
 
-        {(revealed || picked) && (
+        {picked && (
           <div className="answer">
             <div className="meaning">{word.meaning}</div>
             <div className="example">
@@ -294,20 +279,13 @@ function VocabSession({ session, all, onExit }: { session: Session; all: Word[];
         )}
       </section>
 
-      {session.mode === 'card' && revealed && (
-        <div className="grid-2">
-          <button className="btn big-btn again" onClick={() => answerCard(false)}>
-            まだ
+      {picked && (
+        <>
+          {picked !== word.meaning && <p className="small muted center">この単語は最後にもう一度出ます。</p>}
+          <button className="btn primary block big-btn" onClick={next}>
+            {pos + 1 < queue.length ? '次へ' : '結果を見る'}
           </button>
-          <button className="btn big-btn primary" onClick={() => answerCard(true)}>
-            覚えた
-          </button>
-        </div>
-      )}
-      {session.mode === 'quiz' && picked && (
-        <button className="btn primary block big-btn" onClick={next}>
-          {pos + 1 < queue.length ? '次へ' : '結果を見る'}
-        </button>
+        </>
       )}
     </div>
   )

@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react'
 import { todayKey } from '../lib/date'
+import { playCorrect } from '../lib/sound'
 import { speak, speechSupported, useEnglishVoices } from '../lib/speech'
 import { exportJson, importJson, resetData, updateData, useData } from '../lib/store'
 import type { ThemeSetting } from '../types'
@@ -84,6 +85,22 @@ export default function Settings() {
           )}
         </div>
         <p className="small muted">既定は10時間（通勤2時間 × 平日5日）。ホームと振り返りの達成率に使います。</p>
+      </section>
+
+      <section className="card">
+        <h2>効果音</h2>
+        <label className="toggle-line">
+          <input
+            type="checkbox"
+            checked={data.settings.sound}
+            onChange={(e) => {
+              updateData((d) => ({ ...d, settings: { ...d.settings, sound: e.target.checked } }))
+              if (e.target.checked) setTimeout(playCorrect, 0)
+            }}
+          />
+          正解したときに音を鳴らす（単語・パート別問題）
+        </label>
+        <p className="small muted">iPhoneは、本体のマナーモード（消音）がオンだと鳴りません。</p>
       </section>
 
       <section className="card">

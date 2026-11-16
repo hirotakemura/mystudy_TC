@@ -4,6 +4,7 @@ import { PART_INFO, partCategory, partStats, planMock, planParts, planWrong, rec
 import type { ResolvedApp } from '../../lib/commute'
 import { speak, stopSpeaking, wait, WORD_RATE } from '../../lib/speech'
 import { LEVEL_LABEL, shuffle } from '../../lib/srs'
+import { playCorrect } from '../../lib/sound'
 import { useStudyTimer } from '../../lib/studyTimer'
 import { useData } from '../../lib/store'
 import type { PartNo, PartQuestion, PartSet, ShadowLine } from '../../types'
@@ -139,6 +140,7 @@ function PartSession({ session, onExit }: { session: Session; onExit: () => void
     if (key in answers) return
     const ok = order[qi][shown] === set.questions[qi].answer
     setAnswers({ ...answers, [key]: { shown, ok } })
+    if (ok) playCorrect()
     recordPartAnswer(set, qi, ok, today)
   }
 

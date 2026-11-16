@@ -20,7 +20,7 @@ export function emptyData(): AppData {
     shadowProgress: {},
     partResults: {},
     partHistory: [],
-    settings: { theme: 'system', weeklyGoalMinutes: DEFAULT_WEEKLY_GOAL, speechRate: 0.9, autoSpeak: true },
+    settings: { theme: 'system', weeklyGoalMinutes: DEFAULT_WEEKLY_GOAL, speechRate: 0.9, autoSpeak: true, sound: true },
   }
 }
 
