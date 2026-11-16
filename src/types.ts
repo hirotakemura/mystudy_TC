@@ -192,6 +192,9 @@ export interface AppData {
     speechRate: number
     /** 読み上げに使う声（未指定なら英語の声を自動で選ぶ） */
     voiceURI?: string
+    /** 会話の男性・女性の話者に使う声（未指定なら声の名前から自動で選ぶ） */
+    maleVoiceURI?: string
+    femaleVoiceURI?: string
     /** 単語カードを表示したときに自動で読み上げる */
     autoSpeak: boolean
     /** 正解したときに効果音を鳴らす */

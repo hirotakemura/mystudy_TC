@@ -2,12 +2,12 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { formatMinutes, todayKey } from '../../lib/date'
 import { PART_INFO, partCategory, partStats, planMock, planParts, planWrong, recordPartAnswer, sessionActivity, wrongCount, type PartMode, type PartSessionPlan } from '../../lib/parts'
 import type { ResolvedApp } from '../../lib/commute'
-import { speak, stopSpeaking, wait, WORD_RATE } from '../../lib/speech'
+import { speak, speakerRole, stopSpeaking, wait, WORD_RATE, type VoiceRole } from '../../lib/speech'
 import { LEVEL_LABEL, shuffle } from '../../lib/srs'
 import { playCorrect } from '../../lib/sound'
 import { useStudyTimer } from '../../lib/studyTimer'
 import { useData } from '../../lib/store'
-import type { PartNo, PartQuestion, PartSet, ShadowLine } from '../../types'
+import type { PartNo, PartQuestion, PartSet } from '../../types'
 
 const LETTERS = 'ABCD'
 
@@ -227,8 +227,6 @@ function ResultByPart({ session, answers }: { session: Session; answers: Answers
   )
 }
 
-/** 会話の話者ごとに声の高さを変える */
-const PITCH: Record<NonNullable<ShadowLine['speaker']>, number> = { M: 0.85, W: 1.2, Q: 1.0, A: 1.15 }
 
 /** 読み上げる内容（Part 1/2 は選択肢も音声だけで出題する） */
 /** 記号（A. B. …）を読んだあと、選択肢の文を読むまでの間（ミリ秒） */
@@ -238,20 +236,21 @@ const PAUSE_AFTER_CHOICE = 1200
 /** Part 3/4 の会話・説明文の1文ごとの間 */
 const PAUSE_AFTER_LINE = 400
 
-function audioScript(set: PartSet, order: Order): { text: string; pitch: number; pause: number }[] {
+function audioScript(set: PartSet, order: Order): { text: string; role?: VoiceRole; pause: number }[] {
   const shortParts = set.part === 1 || set.part === 2
   const lines = (set.talk ?? []).map((l) => ({
     text: l.en,
-    pitch: l.speaker ? PITCH[l.speaker] : 1,
+    role: speakerRole(l.speaker),
     pause: shortParts ? PAUSE_AFTER_CHOICE : PAUSE_AFTER_LINE,
   }))
   if (shortParts) {
     const qq = set.questions[0]
-    const pitch = set.part === 2 ? PITCH.A : 1
+    // Part 2 は質問（男性）と応答（女性）を別の声で読む
+    const role = set.part === 2 ? speakerRole('A') : undefined
     // 記号と文を別々に読み、間をあける（本番と同じように「A.」→ 少し間 → 選択肢）
     order[0].forEach((orig, shown) => {
-      lines.push({ text: `${LETTERS[shown]}.`, pitch, pause: PAUSE_AFTER_LETTER })
-      lines.push({ text: qq.choices[orig], pitch, pause: PAUSE_AFTER_CHOICE })
+      lines.push({ text: `${LETTERS[shown]}.`, role, pause: PAUSE_AFTER_LETTER })
+      lines.push({ text: qq.choices[orig], role, pause: PAUSE_AFTER_CHOICE })
     })
   }
   return lines
@@ -270,7 +269,7 @@ function AudioPlayer({ set, order }: { set: PartSet; order: Order }) {
     setPlaying(true)
     for (const l of audioScript(set, order)) {
       // 本番と同じ速さ（1.0）で読み上げる
-      const ok = await speak(l.text, { rate: WORD_RATE, voiceURI, pitch: l.pitch })
+      const ok = await speak(l.text, { rate: WORD_RATE, voiceURI, role: l.role })
       if (!ok || my !== run.current) return
       await wait(l.pause)
       if (my !== run.current) return

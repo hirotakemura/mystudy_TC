@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 import { formatJa, formatMinutes, todayKey } from '../../lib/date'
-import { speak, stopSpeaking, wait } from '../../lib/speech'
+import { speak, speakerRole, stopSpeaking, wait } from '../../lib/speech'
 import { LEVEL_LABEL } from '../../lib/srs'
 import { useStudyTimer } from '../../lib/studyTimer'
 import { updateData, useData } from '../../lib/store'
-import type { ShadowItem, ShadowLine } from '../../types'
+import type { ShadowItem } from '../../types'
 
 const PART_LABEL: Record<ShadowItem['part'], string> = {
   1: 'Part 1 写真描写',
@@ -91,7 +91,6 @@ function ShadowList({
 }
 
 /** 会話の話者ごとに声の高さを変えて聞き分けやすくする */
-const PITCH: Record<NonNullable<ShadowLine['speaker']>, number> = { M: 0.85, W: 1.2, Q: 1.0, A: 1.15 }
 
 function Player({ item, onExit }: { item: ShadowItem; onExit: () => void }) {
   const data = useData()
@@ -110,7 +109,7 @@ function Player({ item, onExit }: { item: ShadowItem; onExit: () => void }) {
 
   const say = (i: number) => {
     const line = item.lines[i]
-    return speak(line.en, { rate: speechRate, voiceURI, pitch: line.speaker ? PITCH[line.speaker] : 1 })
+    return speak(line.en, { rate: speechRate, voiceURI, role: speakerRole(line.speaker) })
   }
 
   const stop = () => {

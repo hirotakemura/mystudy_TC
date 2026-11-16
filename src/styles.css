@@ -1939,3 +1939,12 @@ details > summary {
   z-index: 5;
   box-shadow: 0 6px 20px rgb(0 0 0 / 0.25);
 }
+.voice-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.voice-row .select {
+  flex: 1;
+  min-width: 0;
+}

@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
 import { todayKey } from '../lib/date'
 import { playCorrect } from '../lib/sound'
-import { speak, speechSupported, useEnglishVoices } from '../lib/speech'
+import { autoRoleVoice, speak, speechSupported, useEnglishVoices, voiceGender, type VoiceRole } from '../lib/speech'
 import { exportJson, importJson, resetData, updateData, useData } from '../lib/store'
 import type { ThemeSetting } from '../types'
 
@@ -140,8 +140,12 @@ export default function Settings() {
               </button>
               <span className="small muted">シャドーイングの速さ {data.settings.speechRate.toFixed(1)}（シャドーイング画面で変更。単語は1.0固定）</span>
             </div>
+            <h3>会話の声（Part 2〜4・シャドーイング）</h3>
+            {(['male', 'female'] as VoiceRole[]).map((role) => (
+              <RoleVoice key={role} role={role} voices={voices} />
+            ))}
             <p className="small muted">
-              端末に入っている音声を使うので、オフラインでも再生できます。iPhoneは「設定 → アクセシビリティ → 読み上げコンテンツ → 声」から高品質な英語の声を追加できます。
+              端末に入っている音声を使うので、オフラインでも再生できます。iPhoneで男性の声が見つからない場合は「設定 → アクセシビリティ → 読み上げコンテンツ → 声 → 英語」から男性の声（Aaron、Fred、Daniel など）を追加してください。
             </p>
           </>
         )}
@@ -188,6 +192,43 @@ export default function Settings() {
         </button>
         <p className="small muted">計画データは public/data/plan、単語は public/data/vocab、シャドーイングの英文は public/data/shadowing のJSONで管理しています。</p>
       </section>
+    </div>
+  )
+}
+
+/** 会話の男性・女性の話者に使う声を選ぶ */
+function RoleVoice({ role, voices }: { role: VoiceRole; voices: SpeechSynthesisVoice[] }) {
+  const data = useData()
+  const key = role === 'male' ? 'maleVoiceURI' : 'femaleVoiceURI'
+  const auto = autoRoleVoice(role, voices)
+  const label = role === 'male' ? '男性' : '女性'
+  // その性別と判定できた声を先に並べる
+  const sorted = [...voices].sort((a, b) => Number(voiceGender(b) === role) - Number(voiceGender(a) === role))
+  return (
+    <div className="field">
+      <span>{label}の声</span>
+      <div className="voice-row">
+        <select
+          className="select"
+          value={data.settings[key] ?? ''}
+          onChange={(e) => updateData((d) => ({ ...d, settings: { ...d.settings, [key]: e.target.value || undefined } }))}
+        >
+          <option value="">自動（{auto ? auto.name : `${label}の声が見つかりません`}）</option>
+          {sorted.map((v) => (
+            <option key={v.voiceURI} value={v.voiceURI}>
+              {v.name}（{v.lang}）{voiceGender(v) === role ? '' : voiceGender(v) ? ` ※${voiceGender(v) === 'male' ? '男性' : '女性'}` : ''}
+            </option>
+          ))}
+        </select>
+        <button
+          className="btn small"
+          aria-label={`${label}の声を試しに聞く`}
+          onClick={() => speak(role === 'male' ? 'Hi, did you book a room for the meeting?' : 'Yes, the large conference room is free.', { rate: 1, role })}
+        >
+          🔊
+        </button>
+      </div>
+      {!auto && !data.settings[key] && <small className="error">{label}の声が見つからないため、声の高さを変えて読み分けます（iPhoneでは効かない場合があります）。</small>}
     </div>
   )
 }
