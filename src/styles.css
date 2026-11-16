@@ -35,6 +35,8 @@
   --c-legacy: #a3abb9;
   --grid: #e4e8ef;
   --radius: 12px;
+  /* 下部タブバーの高さ（セーフエリアを除く） */
+  --tabbar-h: 60px;
   --shadow: 0 1px 2px rgb(16 24 40 / 0.06);
 }
 
@@ -1911,4 +1913,29 @@ details > summary {
   font-size: 0.85rem;
   min-height: 34px;
   padding: 4px 8px;
+}
+
+/* 例文：読み上げボタンを左に固定 */
+.example {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.example .speak-btn {
+  margin-top: 2px;
+}
+.example-text {
+  flex: 1;
+  min-width: 0;
+}
+.example-text p {
+  margin: 0 0 4px;
+}
+
+/* 解答後の「次へ」：スクロールしなくても押せるよう、タブバーのすぐ上に固定 */
+.next-sticky {
+  position: sticky;
+  bottom: calc(var(--tabbar-h) + 10px + env(safe-area-inset-bottom));
+  z-index: 5;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.25);
 }

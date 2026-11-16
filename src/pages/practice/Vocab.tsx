@@ -269,11 +269,13 @@ function VocabSession({ session, all, onExit }: { session: Session; all: Word[];
         {picked && (
           <div className="answer">
             <div className="meaning">{word.meaning}</div>
+            {/* 読み上げボタンは例文の長さに関係なく左に固定 */}
             <div className="example">
-              <p>
-                {word.example} <SpeakButton text={word.example} label="例文を読み上げ" />
-              </p>
-              <p className="small muted">{word.exampleJa}</p>
+              <SpeakButton text={word.example} label="例文を読み上げ" />
+              <div className="example-text">
+                <p>{word.example}</p>
+                <p className="small muted">{word.exampleJa}</p>
+              </div>
             </div>
           </div>
         )}
@@ -282,7 +284,7 @@ function VocabSession({ session, all, onExit }: { session: Session; all: Word[];
       {picked && (
         <>
           {picked !== word.meaning && <p className="small muted center">この単語は最後にもう一度出ます。</p>}
-          <button className="btn primary block big-btn" onClick={next}>
+          <button className="btn primary block big-btn next-sticky" onClick={next}>
             {pos + 1 < queue.length ? '次へ' : '結果を見る'}
           </button>
         </>

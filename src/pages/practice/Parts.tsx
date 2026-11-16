@@ -189,7 +189,7 @@ function PartSession({ session, onExit }: { session: Session; onExit: () => void
 
       {allAnswered && (
         <button
-          className="btn primary block big-btn"
+          className="btn primary block big-btn next-sticky"
           onClick={() => {
             stopSpeaking()
             setPos(pos + 1)
