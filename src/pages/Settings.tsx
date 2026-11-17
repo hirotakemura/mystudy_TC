@@ -169,7 +169,7 @@ export default function Settings() {
         <ul className="plain small muted">
           <li>学習記録：{data.studyLogs.length}件</li>
           <li>スコア：{data.scores.length}件</li>
-          <li>学習した単語：{Object.keys(data.wordProgress).length}語・シャドーイング：{Object.keys(data.shadowProgress).length}教材</li>
+          <li>学習した単語：{Object.keys(data.wordProgress).length}語（★ {Object.keys(data.favoriteWords).length}語）・シャドーイング：{Object.keys(data.shadowProgress).length}教材</li>
           <li>振り返りメモ：{Object.keys(data.reviewMemos).length}件（旧アプリのメモ {Object.keys(data.legacyMemos).length}件）</li>
         </ul>
       </section>

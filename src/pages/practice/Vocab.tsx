@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { SpeakButton } from '../../components/SpeakButton'
+import { StarButton } from '../../components/StarButton'
 import { formatMinutes, todayKey } from '../../lib/date'
 import { speak, stopSpeaking, WORD_RATE } from '../../lib/speech'
 import {
@@ -7,9 +8,11 @@ import {
   MASTERED_BOX,
   choicesFor,
   dueWords,
+  favoriteWords,
   filterLevel,
   newWords,
   recordAnswer,
+  setFavorite,
   shuffle,
   wordStatus,
 } from '../../lib/srs'
@@ -22,6 +25,8 @@ import type { Level, Word } from '../../types'
 interface Session {
   words: Word[]
   title: string
+  /** ★の単語だけの復習 */
+  favorites?: boolean
 }
 
 const NEW_PER_SESSION = 10
@@ -39,7 +44,9 @@ function VocabHome({ words, onStart }: { words: Word[]; onStart: (s: Session) =>
   const today = todayKey()
   const [level, setLevel] = useState<Level | 0>(0)
   const [query, setQuery] = useState('')
+  const [favOnly, setFavOnly] = useState(false)
   const pool = filterLevel(words, level)
+  const favs = favoriteWords(data, pool)
   const due = dueWords(data, pool, today)
   const fresh = newWords(data, pool)
   const mastered = pool.filter((w) => wordStatus(data.wordProgress[w.id]) === 'mastered').length
@@ -47,7 +54,8 @@ function VocabHome({ words, onStart }: { words: Word[]; onStart: (s: Session) =>
   const studied = pool.filter((w) => data.wordProgress[w.id])
 
   const q = query.trim().toLowerCase()
-  const listed = q ? pool.filter((w) => w.word.toLowerCase().includes(q) || w.meaning.includes(q)) : pool
+  const base = favOnly ? favs : pool
+  const listed = q ? base.filter((w) => w.word.toLowerCase().includes(q) || w.meaning.includes(q)) : base
 
   return (
     <>
@@ -94,6 +102,18 @@ function VocabHome({ words, onStart }: { words: Word[]; onStart: (s: Session) =>
             <span>{due.length ? `今日復習する単語 ${due.length}語` : '今日の復習はありません 🎉'}</span>
           </button>
           <button
+            className="start-btn fav"
+            disabled={favs.length === 0}
+            onClick={() => onStart({ words: shuffle(favs).slice(0, REVIEW_MAX), title: '★ 苦手な単語', favorites: true })}
+          >
+            <b>苦手な単語だけ復習</b>
+            <span>
+              {favs.length
+                ? `★を付けた単語 ${favs.length}語${favs.length > REVIEW_MAX ? `（1回 ${REVIEW_MAX}語まで）` : ''}`
+                : 'まだありません。わからない単語に★を付けるとここにたまります'}
+            </span>
+          </button>
+          <button
             className="start-btn"
             disabled={fresh.length === 0}
             onClick={() => onStart({ words: fresh.slice(0, NEW_PER_SESSION), title: '新しい単語' })}
@@ -122,6 +142,14 @@ function VocabHome({ words, onStart }: { words: Word[]; onStart: (s: Session) =>
           />
           問題を表示したら単語を自動で読み上げる
         </label>
+        <label className="toggle-line small">
+          <input
+            type="checkbox"
+            checked={data.settings.autoFavorite}
+            onChange={(e) => updateData((d) => ({ ...d, settings: { ...d.settings, autoFavorite: e.target.checked } }))}
+          />
+          間違えた単語に自動で★を付ける
+        </label>
       </section>
 
       <section className="card">
@@ -130,6 +158,14 @@ function VocabHome({ words, onStart }: { words: Word[]; onStart: (s: Session) =>
             <b>単語一覧</b>（{pool.length}語）
           </summary>
           <input type="text" className="search" placeholder="英語・日本語で検索" value={query} onChange={(e) => setQuery(e.target.value)} />
+          <div className="chips">
+            <button className={`chip plain-chip${!favOnly ? ' on' : ''}`} onClick={() => setFavOnly(false)}>
+              すべて
+            </button>
+            <button className={`chip plain-chip${favOnly ? ' on' : ''}`} onClick={() => setFavOnly(true)}>
+              ★のみ（{favs.length}）
+            </button>
+          </div>
           <ul className="word-list">
             {listed.map((w) => {
               const st = wordStatus(data.wordProgress[w.id])
@@ -143,12 +179,15 @@ function VocabHome({ words, onStart }: { words: Word[]; onStart: (s: Session) =>
                   </div>
                   <div className="word-line">
                     <span className="small">{w.meaning}</span>
-                    <SpeakButton text={w.word} />
+                    <span className="word-actions">
+                      <SpeakButton text={w.word} />
+                      <StarButton wordId={w.id} word={w.word} />
+                    </span>
                   </div>
                 </li>
               )
             })}
-            {listed.length === 0 && <li className="small muted">見つかりませんでした</li>}
+            {listed.length === 0 && <li className="small muted">{favOnly && !q ? '★を付けた単語はまだありません' : '見つかりませんでした'}</li>}
           </ul>
         </details>
       </section>
@@ -192,6 +231,8 @@ function VocabSession({ session, all, onExit }: { session: Session; all: Word[];
       setResults({ ...results, [word.id]: ok })
     }
     if (!ok && queue.indexOf(word, pos + 1) === -1) setQueue([...queue, word])
+    // わからなかった単語は★にためる（設定でオフにできる）
+    if (!ok && data.settings.autoFavorite) setFavorite(word.id, true, today)
   }
 
   if (finished) {
@@ -216,7 +257,10 @@ function VocabSession({ session, all, onExit }: { session: Session; all: Word[];
                   <span>
                     <b>{w.word}</b> {w.meaning}
                   </span>
-                  <SpeakButton text={w.word} />
+                  <span className="word-actions">
+                    <SpeakButton text={w.word} />
+                    <StarButton wordId={w.id} word={w.word} />
+                  </span>
                 </li>
               ))}
             </ul>
@@ -247,6 +291,7 @@ function VocabSession({ session, all, onExit }: { session: Session; all: Word[];
         <div className="flash-word">
           <b>{word.word}</b>
           <SpeakButton text={word.word} />
+          <StarButton wordId={word.id} word={word.word} />
         </div>
         <div className="small muted">
           {word.pos}・{LEVEL_LABEL[word.level]}レベル
@@ -268,6 +313,15 @@ function VocabSession({ session, all, onExit }: { session: Session; all: Word[];
 
         {picked && (
           <div className="answer">
+            {/* 案内は「次へ」ボタンに隠れないよう、答えの欄の上に出す */}
+            {picked !== word.meaning ? (
+              <p className="small muted center answer-note">
+                この単語は最後にもう一度出ます。{data.settings.autoFavorite && '★に追加しました。'}
+              </p>
+            ) : (
+              session.favorites &&
+              word.id in data.favoriteWords && <p className="small muted center answer-note">覚えたら単語の横の ★ をタップして外しましょう。</p>
+            )}
             <div className="meaning">{word.meaning}</div>
             {/* 読み上げボタンは例文の長さに関係なく左に固定 */}
             <div className="example">
@@ -282,12 +336,9 @@ function VocabSession({ session, all, onExit }: { session: Session; all: Word[];
       </section>
 
       {picked && (
-        <>
-          {picked !== word.meaning && <p className="small muted center">この単語は最後にもう一度出ます。</p>}
-          <button className="btn primary block big-btn next-sticky" onClick={next}>
-            {pos + 1 < queue.length ? '次へ' : '結果を見る'}
-          </button>
-        </>
+        <button className="btn primary block big-btn next-sticky" onClick={next}>
+          {pos + 1 < queue.length ? '次へ' : '結果を見る'}
+        </button>
       )}
     </div>
   )

@@ -177,6 +177,8 @@ export interface AppData {
    *  キーは vocab / shadowing / part1〜part7 / wrong / mock */
   activitySeconds: Record<string, Record<string, number>>
   wordProgress: Record<string, WordProgress>
+  /** ★を付けた苦手な単語（単語id → 付けた日） */
+  favoriteWords: Record<string, string>
   shadowProgress: Record<string, ShadowProgress>
   /** パート別問題の結果（キーは「セットid#設問番号」） */
   partResults: Record<string, PartResult>
@@ -199,5 +201,7 @@ export interface AppData {
     autoSpeak: boolean
     /** 正解したときに効果音を鳴らす */
     sound: boolean
+    /** 単語を間違えたら自動で★を付ける */
+    autoFavorite: boolean
   }
 }

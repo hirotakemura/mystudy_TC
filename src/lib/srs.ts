@@ -69,3 +69,24 @@ export function choicesFor(word: Word, all: Word[]): string[] {
 }
 
 export const LEVEL_LABEL: Record<Level, string> = { 1: '600点', 2: '730点', 3: '860点' }
+
+// ===== ★（苦手な単語） =====
+
+export function isFavorite(d: AppData, wordId: string): boolean {
+  return wordId in d.favoriteWords
+}
+
+export function setFavorite(wordId: string, on: boolean, today: string) {
+  updateData((d) => {
+    if (on === wordId in d.favoriteWords) return d
+    const favoriteWords = { ...d.favoriteWords }
+    if (on) favoriteWords[wordId] = today
+    else delete favoriteWords[wordId]
+    return { ...d, favoriteWords }
+  })
+}
+
+/** ★の単語（付けた日が新しい順） */
+export function favoriteWords(d: AppData, words: Word[]): Word[] {
+  return words.filter((w) => w.id in d.favoriteWords).sort((a, b) => d.favoriteWords[b.id].localeCompare(d.favoriteWords[a.id]))
+}

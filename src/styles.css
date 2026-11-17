@@ -1948,3 +1948,33 @@ details > summary {
   flex: 1;
   min-width: 0;
 }
+
+/* ===== ★（苦手な単語） ===== */
+.star-btn {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--surface-2);
+  color: var(--muted);
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.star-btn.on {
+  color: #e8a400;
+  background: var(--warn-soft);
+}
+.word-actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.start-btn.fav b::before {
+  content: '★ ';
+  color: #e8a400;
+}
+.answer-note {
+  margin: 0 0 8px;
+}

@@ -17,10 +17,11 @@ export function emptyData(): AppData {
     autoSeconds: {},
     activitySeconds: {},
     wordProgress: {},
+    favoriteWords: {},
     shadowProgress: {},
     partResults: {},
     partHistory: [],
-    settings: { theme: 'system', weeklyGoalMinutes: DEFAULT_WEEKLY_GOAL, speechRate: 0.9, autoSpeak: true, sound: true },
+    settings: { theme: 'system', weeklyGoalMinutes: DEFAULT_WEEKLY_GOAL, speechRate: 0.9, autoSpeak: true, sound: true, autoFavorite: true },
   }
 }
 
